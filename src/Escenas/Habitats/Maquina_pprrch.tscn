@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://Codigos/Locales/Habitats/Maquina_pprrch.gd" type="Script" id=2]
-
-[node name="Maquina_pprrch" type="Node2D"]
-script = ExtResource( 2 )
