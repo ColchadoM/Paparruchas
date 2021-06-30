@@ -8,22 +8,32 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Resource",
+"class": "ScriptableFigura",
+"language": "GDScript",
+"path": "res://Codigos/Locales/Scriptables/ScriptableFigura.gd"
+} ]
 _global_script_class_icons={
-
+"ScriptableFigura": ""
 }
 
 [application]
 
 config/name="Paparruchas"
-run/main_scene="res://Escenas/Ambientes/Zona_juego.tscn"
+run/main_scene="res://Escenas/Ambientes/ZonaJuego.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Constants="*res://Codigos/Globales/Constants.gd"
 
 [display]
 
-window/size/width=1920
-window/size/height=1080
-window/stretch/aspect="keep"
+window/size/width=1280
+window/size/height=720
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [physics]
 

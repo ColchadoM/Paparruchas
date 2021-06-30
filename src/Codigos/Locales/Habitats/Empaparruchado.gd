@@ -20,22 +20,8 @@
 
 extends RigidBody2D
 
-
-
-
-# Declare member variables here. Examples:
-
-onready var colision = $CollisionShape2D
-onready var sprite = $Sprite
-var escala: Vector2
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	var r_escala = rand_range(0.5,1.4)
-	escala = Vector2(r_escala, r_escala)
-	colision.scale = escala
-	sprite.scale = Vector2(escala.x + 0.43, escala.y + 0.43)
+	pass
 	
 
 
