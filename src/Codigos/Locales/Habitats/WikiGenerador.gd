@@ -20,5 +20,5 @@ func spawnWiki():
 	var wiki = wikiPacked.instance();
 	var wikiH = wiki.get_node("Sprite").texture.get_height();
 	var wikiW = wiki.get_node("Sprite").texture.get_width();
-	wiki.position = Vector2(rand_range(playzoneStart,screenWidth) + (wikiW/2) , -(wikiH/2) - 100);
+	wiki.position = Vector2(rand_range(playzoneStart + (wikiW/2),screenWidth -(wikiW/2)) , -(wikiH/2) - 100);
 	add_child(wiki);
