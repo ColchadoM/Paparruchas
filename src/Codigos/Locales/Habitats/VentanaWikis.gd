@@ -2,6 +2,8 @@ extends RigidBody2D
 
 onready var colision = $CollisionShape2D
 onready var sprite = $Sprite
+onready var audioClick = $AudioClick
+onready var tween = $Tween
 export var speed: float = 180;
 
 func _ready():
@@ -21,3 +23,19 @@ func _physics_process(delta):
 	position.y += speed * delta
 	if(position.y > get_viewport().size.y + get_node("Sprite").texture.get_height()):
 		queue_free()
+
+func _input(event):
+	if event is InputEventMouseButton && event.pressed && event.button_index == BUTTON_LEFT:
+		if sprite.get_rect().has_point(to_local(event.position)):
+			audioClick.play()
+			closeAnimation()
+			
+func closeAnimation():
+	tween.interpolate_property(sprite, "scale",
+		sprite.scale, Vector2(0, 0), 0.5,
+		Tween.TRANS_BACK , Tween.EASE_IN)
+	tween.start()
+
+
+func _on_Tween_tween_completed(object, key):
+	queue_free()

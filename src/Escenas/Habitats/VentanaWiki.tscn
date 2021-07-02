@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Recursos/Visuales/Interfaz/Wiki.png" type="Texture" id=1]
-[ext_resource path="res://Codigos/Locales/Habitats/Ventana_wikis.gd" type="Script" id=2]
+[ext_resource path="res://Codigos/Locales/Habitats/VentanaWikis.gd" type="Script" id=2]
 [ext_resource path="res://Recursos/Visuales/Sprites/Figuras/Cuadro.png" type="Texture" id=3]
+[ext_resource path="res://Recursos/Sonoros/Incidentales/Click.mp3" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 97.1728, 110.036 )
@@ -28,3 +29,10 @@ texture = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -3, 0 )
 shape = SubResource( 1 )
+
+[node name="AudioClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]
