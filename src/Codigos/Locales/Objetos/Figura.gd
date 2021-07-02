@@ -1,6 +1,6 @@
 extends Control
 
-export(Constants.FIGURA) var figura;
+export(Constants.FIGURA) var tipo;
 
 func _ready():
 	var figures_data = {
@@ -8,5 +8,5 @@ func _ready():
 		Constants.FIGURA.Cuadro: load("res://Codigos/Locales/Objetos/Cuadro.tres"),
 		Constants.FIGURA.Estrella: load("res://Codigos/Locales/Objetos/Estrella.tres")
 	}
-	var image = get_node("TextureRect")
-	image.texture = figures_data[figura].image
+	var image = get_node("Img")
+	image.texture = figures_data[tipo].image
