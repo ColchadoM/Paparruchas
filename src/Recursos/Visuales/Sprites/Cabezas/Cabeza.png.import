@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Garza.png-e9b681bfbd0aad683fc9df974862a91a.stex"
+path="res://.import/Cabeza.png-8aee2c3d9d2f09a0a9619647c7d87030.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Recursos/Visuales/Sprites/Personajes/Garza.png"
-dest_files=[ "res://.import/Garza.png-e9b681bfbd0aad683fc9df974862a91a.stex" ]
+source_file="res://Recursos/Visuales/Sprites/Cabezas/Cabeza.png"
+dest_files=[ "res://.import/Cabeza.png-8aee2c3d9d2f09a0a9619647c7d87030.stex" ]
 
 [params]
 

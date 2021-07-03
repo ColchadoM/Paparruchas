@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Camaron.png-ef92b5d5c028213b2a3517cce042f26f.stex"
+path="res://.import/SeleccionAccion.png-0df5f4588b919d247995b89d8e112b34.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Recursos/Visuales/Sprites/Personajes/Camaron.png"
-dest_files=[ "res://.import/Camaron.png-ef92b5d5c028213b2a3517cce042f26f.stex" ]
+source_file="res://Recursos/Visuales/Interfaz/SeleccionAccion.png"
+dest_files=[ "res://.import/SeleccionAccion.png-0df5f4588b919d247995b89d8e112b34.stex" ]
 
 [params]
 

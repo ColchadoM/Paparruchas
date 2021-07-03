@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Caiman.png-4ab80bfdef34dc78c7c4fca62718a5b3.stex"
+path="res://.import/Camaron.png-b1f5ec7cbfdb5386dd97619c6371e12d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Recursos/Visuales/Sprites/Personajes/Caiman.png"
-dest_files=[ "res://.import/Caiman.png-4ab80bfdef34dc78c7c4fca62718a5b3.stex" ]
+source_file="res://Recursos/Visuales/Sprites/Cabezas/Camaron.png"
+dest_files=[ "res://.import/Camaron.png-b1f5ec7cbfdb5386dd97619c6371e12d.stex" ]
 
 [params]
 
