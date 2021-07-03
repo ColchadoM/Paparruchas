@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Alex.png-6bccb7df88150d0c5027a00da7dc4a96.stex"
+path="res://.import/Randal01.png-4e8e8ee7e56a752e2a60fcc3ee7f8d7c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Recursos/Visuales/Sprites/Personajes/Alex.png"
-dest_files=[ "res://.import/Alex.png-6bccb7df88150d0c5027a00da7dc4a96.stex" ]
+source_file="res://Recursos/Visuales/Sprites/Empaparruchados/Randal01.png"
+dest_files=[ "res://.import/Randal01.png-4e8e8ee7e56a752e2a60fcc3ee7f8d7c.stex" ]
 
 [params]
 

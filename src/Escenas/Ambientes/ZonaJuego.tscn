@@ -3,11 +3,11 @@
 [ext_resource path="res://Escenas/Habitats/WikiGenerador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Habitats/GUI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Recursos/Visuales/Interfaz/unknown.png" type="Texture" id=3]
-[ext_resource path="res://Recursos/Visuales/Sprites/Personajes/Randal.png" type="Texture" id=4]
-[ext_resource path="res://Recursos/Visuales/Sprites/Personajes/Garza.png" type="Texture" id=5]
-[ext_resource path="res://Recursos/Visuales/Sprites/Personajes/Alex.png" type="Texture" id=6]
+[ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/Randal.png" type="Texture" id=4]
+[ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/Garza.png" type="Texture" id=5]
+[ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/Alex.png" type="Texture" id=6]
 [ext_resource path="res://Codigos/Locales/Interfaz/FondoIzqResponsivo.gd" type="Script" id=7]
-[ext_resource path="res://Recursos/Visuales/Interfaz/Bote.png" type="Texture" id=8]
+[ext_resource path="res://Escenas/Habitats/AccionesJuego.tscn" type="PackedScene" id=8]
 
 [node name="ZonaJuego" type="Node"]
 
@@ -52,7 +52,7 @@ scale = Vector2( 0.547001, 0.547001 )
 texture = ExtResource( 5 )
 
 [node name="Randal" type="Sprite" parent="."]
-position = Vector2( 152.228, 226.437 )
+position = Vector2( 153.815, 232.787 )
 scale = Vector2( 0.547001, 0.547001 )
 texture = ExtResource( 4 )
 
@@ -61,7 +61,4 @@ position = Vector2( 152.923, 543.828 )
 scale = Vector2( 0.606233, 0.606233 )
 texture = ExtResource( 6 )
 
-[node name="Bote" type="Sprite" parent="."]
-position = Vector2( 1213.29, 480.08 )
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 8 )
+[node name="Acciones" parent="." instance=ExtResource( 8 )]

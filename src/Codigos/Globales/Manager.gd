@@ -1,12 +1,14 @@
 extends Node
 
-var estadoJuego = Constants.ESTADO_JUEGO.Jugando;
-
-# Variables Zona de Juego
-var empaparruchometro: int = 0;
-
-func _ready():
-	pass # Replace with function body.
+# Varialbes del juego
+var empaparruchometro: int = 30;
+var figurasVerdaderas: Array = [] #{'tipo':valorFigura, 'objeto': figura}
+var eliminandoNoticias: bool = true # si es false esta compartiendo
 
 func empaparruchar(cantidad=1):
-	empaparruchometro += cantidad
+	Manager.empaparruchometro += cantidad
+	#print(Manager.empaparruchometro)
+
+func desempaparruchar(cantidad=1):
+	Manager.empaparruchometro -= cantidad
+	#print(Manager.empaparruchometro)

@@ -1,7 +1,7 @@
 extends Node2D
 
 #Imports
-onready var wikiPaquete = preload("res://Escenas/Habitats/VentanaWiki.tscn")
+onready var wikiPaquete = preload("res://Escenas/Objetos/VentanaWiki.tscn")
 
 var generating:bool = false;
 

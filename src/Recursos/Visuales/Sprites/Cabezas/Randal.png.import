@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Randal.png-67eb3af98c5e3164865b7954fa81eb28.stex"
+path="res://.import/Randal.png-1bf07f135264169b3f9f7586fa0ee029.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Recursos/Visuales/Sprites/Personajes/Randal.png"
-dest_files=[ "res://.import/Randal.png-67eb3af98c5e3164865b7954fa81eb28.stex" ]
+source_file="res://Recursos/Visuales/Sprites/Cabezas/Randal.png"
+dest_files=[ "res://.import/Randal.png-1bf07f135264169b3f9f7586fa0ee029.stex" ]
 
 [params]
 
