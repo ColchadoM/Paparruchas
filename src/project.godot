@@ -8,16 +8,29 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Resource",
+"class": "ScriptableFigura",
+"language": "GDScript",
+"path": "res://Codigos/Locales/Scriptables/ScriptableFigura.gd"
+} ]
 _global_script_class_icons={
-
+"ScriptableFigura": ""
 }
 
 [application]
 
 config/name="Paparruchas"
+
 run/main_scene="res://Escenas/Ambientes/Intro_Paparruchas.tscn"
+
 config/icon="res://icon.png"
+
+[autoload]
+
+Constants="*res://Codigos/Globales/Constants.gd"
+Manager="*res://Codigos/Globales/Manager.gd"
+Helpers="*res://Codigos/Globales/Helpers.gd"
 
 [display]
 
@@ -25,12 +38,32 @@ window/size/width=2560
 window/size/height=1440
 window/size/test_width=1280
 window/size/test_height=720
-window/stretch/mode="2d"
+
+window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
 [locale]
 
 translations=PoolStringArray( "res://Recursos/Textos/Espanol/intro_texto.es.translation" )
+
+[input]
+
+Delete={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":81,"unicode":0,"echo":false,"script":null)
+ ]
+}
+Add={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
+ ]
+}
+Change={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":80,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
 
 [physics]
 
