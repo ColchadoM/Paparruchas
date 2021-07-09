@@ -1,0 +1,172 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Recursos/Visuales/Interfaz/contenedor_texto.png" type="Texture" id=1]
+[ext_resource path="res://Recursos/Visuales/Interfaz/triangulo_texto.png" type="Texture" id=2]
+[ext_resource path="res://Recursos/Visuales/Sprites/randal_texto.png" type="Texture" id=3]
+[ext_resource path="res://Recursos/Visuales/Sprites/alex_texto.png" type="Texture" id=4]
+[ext_resource path="res://Recursos/Visuales/Sprites/fondo_textos.png" type="Texture" id=5]
+[ext_resource path="res://Escenas/Ambientes/Escena_textos.gd" type="Script" id=6]
+[ext_resource path="res://Recursos/Textos/Espanol/intro_texto.es.translation" type="Translation" id=7]
+[ext_resource path="res://Recursos/Textos/Fuentes/Bebas.tres" type="DynamicFont" id=8]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Recursos/Textos/Fuentes/DaxlinePro-Bold.otf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 72
+font_data = SubResource( 1 )
+
+[node name="Escena_textos" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 1280, 720 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+texto = ExtResource( 7 )
+
+[node name="Fondo" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Contenedor_personajes" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Contenedor_1" type="CenterContainer" parent="Contenedor_personajes"]
+margin_right = 1278.0
+margin_bottom = 1440.0
+size_flags_horizontal = 3
+
+[node name="Personaje_1" type="TextureRect" parent="Contenedor_personajes/Contenedor_1"]
+margin_left = 127.0
+margin_top = 208.0
+margin_right = 1151.0
+margin_bottom = 1232.0
+rect_min_size = Vector2( 1024, 1024 )
+rect_pivot_offset = Vector2( 512, 512 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Contenedor_2" type="CenterContainer" parent="Contenedor_personajes"]
+margin_left = 1282.0
+margin_right = 2560.0
+margin_bottom = 1440.0
+size_flags_horizontal = 3
+
+[node name="Personaje_2" type="TextureRect" parent="Contenedor_personajes/Contenedor_2"]
+margin_left = 127.0
+margin_top = 208.0
+margin_right = 1151.0
+margin_bottom = 1232.0
+rect_min_size = Vector2( 1024, 1024 )
+rect_pivot_offset = Vector2( 512, 512 )
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Contenedor_fondo_texto" type="CenterContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -1280.0
+margin_top = -500.0
+margin_right = 1280.0
+rect_min_size = Vector2( 1280, 300 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fondo_texto" type="TextureRect" parent="Contenedor_fondo_texto"]
+margin_left = 180.0
+margin_top = 100.0
+margin_right = 2380.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 2200, 300 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Contenedor_fondo" type="HBoxContainer" parent="Contenedor_fondo_texto"]
+margin_left = 220.0
+margin_top = 150.0
+margin_right = 2340.0
+margin_bottom = 350.0
+rect_min_size = Vector2( 2120, 100 )
+size_flags_vertical = 4
+
+[node name="Texto_cuadro" type="RichTextLabel" parent="Contenedor_fondo_texto/Contenedor_fondo"]
+margin_right = 1980.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 1980, 200 )
+rect_clip_content = false
+size_flags_vertical = 4
+custom_fonts/normal_font = ExtResource( 8 )
+custom_colors/default_color = Color( 1, 0.94902, 0.901961, 1 )
+meta_underlined = false
+fit_content_height = true
+scroll_active = false
+
+[node name="Contenedor_boton" type="CenterContainer" parent="Contenedor_fondo_texto/Contenedor_fondo"]
+margin_left = 1984.0
+margin_right = 2120.0
+margin_bottom = 200.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Boton_siguiente" type="Button" parent="Contenedor_fondo_texto/Contenedor_fondo/Contenedor_boton"]
+margin_left = 8.0
+margin_top = 40.0
+margin_right = 128.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 120, 120 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = ExtResource( 2 )
+flat = true
+expand_icon = true
+
+[node name="Contenedor_texto" type="CenterContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -1280.0
+margin_top = -478.0
+margin_right = 1280.0
+rect_min_size = Vector2( 1280, 300 )
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Texto" type="RichTextLabel" parent="Contenedor_texto"]
+margin_left = 355.0
+margin_top = 159.0
+margin_right = 2205.0
+margin_bottom = 319.0
+rect_min_size = Vector2( 1850, 100 )
+rect_clip_content = false
+size_flags_vertical = 4
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 1, 0.94902, 0.901961, 1 )
+bbcode_enabled = true
+bbcode_text = "INTRO_1_1"
+meta_underlined = false
+text = "INTRO_1_1"
+fit_content_height = true
+scroll_active = false
+[connection signal="pressed" from="Contenedor_fondo_texto/Contenedor_fondo/Contenedor_boton/Boton_siguiente" to="." method="_on_Boton_siguiente_pressed"]
