@@ -12,3 +12,7 @@ func empaparruchar(cantidad=1):
 func desempaparruchar(cantidad=1):
 	Manager.empaparruchometro -= cantidad
 	#print(Manager.empaparruchometro)
+
+
+func _on_Manager_s_empaparruchar():
+	pass # Replace with function body.

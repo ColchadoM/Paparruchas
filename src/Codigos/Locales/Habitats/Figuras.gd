@@ -14,7 +14,7 @@ func _ready():
 # Añadir figura (si llega al maximo, elimina la primer figura)
 func inicializarFiguras():
 	for i in figurasIniciales:
-		var pos = 110*i + 50
+		var pos = 160*i + 50
 		agregarFigura(false,pos)
 
 func _input(event):
@@ -37,7 +37,7 @@ func agregarFigura(animacion=true, newPosX=null):
 		valorFigura = rng.randi_range(0,Constants.FIGURA.size() -1)
 	figura.tipo = valorFigura; # cambiar imágen
 
-	var posX = 110*Manager.figurasVerdaderas.size() + 50
+	var posX = 160*Manager.figurasVerdaderas.size() + 50
 	if(newPosX):
 		posX = newPosX
 	figura.rect_position = Vector2(posX, figura.rect_position.y);
@@ -73,6 +73,6 @@ func recorrerFiguras():
 		var tween = f.objeto.get_node("Tween");
 		var actualPos = f.objeto.rect_position;
 		tween.interpolate_property(f.objeto, "rect_position",
-			Vector2(actualPos.x, actualPos.y), Vector2(actualPos.x -110, actualPos.y), 0.2,
+			Vector2(actualPos.x, actualPos.y), Vector2(actualPos.x -150, actualPos.y), 0.2,
 			Tween.TRANS_LINEAR  , Tween.EASE_IN)
 		tween.start();
