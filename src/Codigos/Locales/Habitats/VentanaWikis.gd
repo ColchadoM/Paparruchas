@@ -6,12 +6,14 @@ onready var audioClick = $AudioClick
 onready var audioDesempaparrucha = $AudioDesempaparrucha
 onready var tween = $Tween
 var valorFigura: int = -1
+var clickeada: bool = false
 
 export var speed: float = 180;
 
 func _input(event):
 	if event is InputEventMouseButton && event.pressed && event.button_index == BUTTON_LEFT:
-		if sprite.get_rect().has_point(to_local(event.position)):
+		if sprite.get_rect().has_point(to_local(event.position)) && !clickeada:
+			clickeada=true
 			audioClick.play()
 			if(Helpers.existFigura(Manager.figurasVerdaderas, valorFigura)):
 				if(Manager.eliminandoNoticias):
@@ -40,9 +42,8 @@ func _ready():
 	valorFigura = rng.randi_range(0,Constants.FIGURA.size() -1)
 	image.texture = figures_data[valorFigura].image
 	#Escalar random
-	var nScale = rand_range(0.5,1.2)
-	colision.scale = Vector2(nScale,nScale)
-	sprite.scale = Vector2(nScale + 0.43, nScale + 0.43)
+	var nScale = rand_range(1.2,2)
+	sprite.scale = Vector2(nScale, nScale)
 
 
 func _physics_process(delta):
