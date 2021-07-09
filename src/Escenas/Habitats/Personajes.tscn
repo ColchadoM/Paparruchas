@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/Randal.png" type="Texture" id=1]
+[ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/Alex.png" type="Texture" id=2]
+[ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/Garza.png" type="Texture" id=3]
+
+[node name="Personajes" type="Node2D"]
+
+[node name="Garza" type="Sprite" parent="."]
+position = Vector2( 310.579, 85.2695 )
+texture = ExtResource( 3 )
+
+[node name="Randal" type="Sprite" parent="."]
+position = Vector2( 306.55, 555.228 )
+texture = ExtResource( 1 )
+
+[node name="Alex" type="Sprite" parent="."]
+position = Vector2( 288.688, 1180.22 )
+texture = ExtResource( 2 )

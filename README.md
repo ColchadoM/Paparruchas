@@ -9,7 +9,7 @@ Nuestras acciones y decisiones requieren de nuestra atención porque tienen un g
 
 ### Nuestro Equipo:
 
-- **Desarrollo:** Clutch
+- **Desarrollo:** Clutch, Antony999k
 - **Diseño:** Debrx, Clutch, Oyuski, Chamana y Papitas
 - **Arte:** Chamana y Debrx
 - **Marketing:** Oyuski

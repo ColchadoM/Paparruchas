@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Recursos/Visuales/Interfaz/bg_figuras.png" type="Texture" id=2]
+[ext_resource path="res://Codigos/Locales/Habitats/Figuras.gd" type="Script" id=3]
+
+[node name="Figuras" type="NinePatchRect"]
+anchor_right = 1.0
+margin_left = 175.0
+margin_top = 25.0
+margin_right = -175.0
+margin_bottom = 200.0
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
