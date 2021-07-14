@@ -76,12 +76,69 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -575.5
-margin_top = -152.5
-margin_right = 575.5
-margin_bottom = 152.5
+margin_left = -525.0
+margin_top = -137.0
+margin_right = 525.0
+margin_bottom = 137.0
 custom_fonts/font = ExtResource( 5 )
 text = "Fin del Juego"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Button" type="Button" parent="GameOver/ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -661.52
+margin_top = -443.111
+margin_right = 656.48
+margin_bottom = -141.111
+custom_fonts/font = ExtResource( 5 )
+text = "Siguiente nivel"
+
+[node name="Pausa" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Pausa"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.85098 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Pausa/ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -525.0
+margin_top = -137.0
+margin_right = 525.0
+margin_bottom = 137.0
+custom_fonts/font = ExtResource( 5 )
+text = "Pausa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Pausa/ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -661.52
+margin_top = -443.111
+margin_right = 656.48
+margin_bottom = -141.111
+custom_fonts/font = ExtResource( 5 )
+text = "Reiniciar"

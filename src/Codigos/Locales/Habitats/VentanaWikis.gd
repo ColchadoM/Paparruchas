@@ -31,6 +31,9 @@ func _input(event):
 
 
 func _ready():
+	#Conectar las signals
+	Manager.connect("s_terminarNivel",self, "closeAnimation")
+	
 	var figures_data = {
 	Constants.FIGURA.Triangulo: load("res://Codigos/Locales/Objetos/Triangulo.tres"),
 	Constants.FIGURA.Cuadro: load("res://Codigos/Locales/Objetos/Cuadro.tres"),

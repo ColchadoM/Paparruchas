@@ -7,7 +7,6 @@ onready var compartir = $Compartir
 
 func _input(event):
 	if event.is_action_pressed("Change"):
-		print("holaaaa")
 		Manager.eliminandoNoticias = !Manager.eliminandoNoticias
 		
 		if(Manager.eliminandoNoticias):
