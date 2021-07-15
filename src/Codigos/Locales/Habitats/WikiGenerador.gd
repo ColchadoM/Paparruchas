@@ -2,11 +2,12 @@ extends Node2D
 
 #Imports
 onready var wikiPaquete = preload("res://Escenas/Objetos/VentanaWiki.tscn")
+onready var wikiX = preload("res://Escenas/Objetos/WikiX.tscn")
 
 var generating:bool = false;
 
 func _ready():
-	pass
+	Manager.connect("s_afueraPantalla",self, "mmostarX")
 	
 func _process(delta):
 	pass
@@ -26,3 +27,8 @@ func _on_Timer_timeout():
 	
 func _on_TimerInicio_timeout():
 	Manager.estadoJuegoActual = Manager.EstadoJuego.EN_JUEGO
+	
+func mmostarX(x):
+	var newWikiX = wikiX.instance()
+	newWikiX.position = Vector2(x, get_viewport().size.y - 50)
+	add_child(newWikiX);

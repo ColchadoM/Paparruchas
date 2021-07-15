@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Recursos/Visuales/Interfaz/Wiki.png" type="Texture" id=1]
-[ext_resource path="res://Codigos/Locales/Habitats/VentanaWikis.gd" type="Script" id=2]
+[ext_resource path="res://Codigos/Locales/Objetos/VentanaWikis.gd" type="Script" id=2]
 [ext_resource path="res://Recursos/Visuales/Sprites/Figuras/Cuadro.png" type="Texture" id=3]
-[ext_resource path="res://Recursos/Sonoros/Incidentales/Click.mp3" type="AudioStream" id=4]
-[ext_resource path="res://Recursos/Sonoros/Incidentales/desempaparruchado.mp3" type="AudioStream" id=5]
+[ext_resource path="res://Recursos/Sonoros/Incidentales/clicBien.wav" type="AudioStream" id=4]
+[ext_resource path="res://Recursos/Sonoros/Incidentales/clic.wav" type="AudioStream" id=5]
+[ext_resource path="res://Recursos/Sonoros/Incidentales/clicMal.wav" type="AudioStream" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 97.1728, 110.036 )
@@ -32,13 +33,17 @@ position = Vector2( -3, 0 )
 shape = SubResource( 1 )
 
 [node name="AudioClick" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource( 5 )
 volume_db = -35.0
 
 [node name="Tween" type="Tween" parent="."]
 
-[node name="AudioDesempaparrucha" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
+[node name="ClicBien" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -30.0
+
+[node name="ClicMal" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
 volume_db = -30.0
 
 [connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]

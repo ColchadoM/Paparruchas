@@ -3,7 +3,8 @@ extends RigidBody2D
 onready var colision = $CollisionShape2D
 onready var sprite = $Sprite
 onready var audioClick = $AudioClick
-onready var audioDesempaparrucha = $AudioDesempaparrucha
+onready var clicBien = $ClicBien
+onready var clicMal = $ClicMal
 onready var tween = $Tween
 var valorFigura: int = -1
 var clickeada: bool = false
@@ -18,15 +19,17 @@ func _input(event):
 			if(Helpers.existFigura(Manager.figurasVerdaderas, valorFigura)):
 				if(Manager.eliminandoNoticias):
 					Manager.empaparruchar()
+					clicMal.play()
 				else:
 					Manager.desempaparruchar()
-					audioDesempaparrucha.play()
+					clicBien.play()
 			else:
 				if(Manager.eliminandoNoticias):
 					Manager.desempaparruchar()
-					audioDesempaparrucha.play()
+					clicBien.play()
 				else:
 					Manager.empaparruchar()
+					clicMal.play()
 			closeAnimation()
 
 
@@ -52,7 +55,9 @@ func _ready():
 func _physics_process(delta):
 	position.y += speed * delta
 	if(position.y > get_viewport().size.y + get_node("Sprite").texture.get_height()):
+		Manager.emit_signal("s_afueraPantalla", position.x)
 		Manager.empaparruchar()
+		clicMal.play()
 		queue_free()
 		
 

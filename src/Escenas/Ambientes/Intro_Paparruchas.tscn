@@ -54,7 +54,7 @@ __meta__ = {
 
 [node name="definicion" type="RichTextLabel" parent="HSeparator"]
 margin_right = 2560.0
-margin_bottom = 95.0
+margin_bottom = 126.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/normal_font = ExtResource( 2 )
@@ -67,14 +67,14 @@ __meta__ = {
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="HSeparator"]
-margin_top = 99.0
+margin_top = 130.0
 margin_right = 2560.0
 margin_bottom = 410.0
 
 [node name="Jugar" type="Button" parent="HSeparator/CenterContainer"]
 margin_left = 1024.0
 margin_right = 1536.0
-margin_bottom = 311.0
+margin_bottom = 280.0
 rect_min_size = Vector2( 512, 250 )
 size_flags_horizontal = 0
 size_flags_vertical = 0

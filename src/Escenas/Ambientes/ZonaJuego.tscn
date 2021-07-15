@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Escenas/Habitats/WikiGenerador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Habitats/GUI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Recursos/Visuales/Interfaz/unknown.png" type="Texture" id=3]
 [ext_resource path="res://Escenas/Habitats/Personajes.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Recursos/Textos/Fuentes/Bebas.tres" type="DynamicFont" id=5]
-[ext_resource path="res://Codigos/Locales/Interfaz/FondoIzqResponsivo.gd" type="Script" id=7]
 [ext_resource path="res://Escenas/Habitats/AccionesJuego.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Theme" id=1]
@@ -24,15 +23,6 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.976471, 0.894118, 0.745098, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Izquierda" type="ColorRect" parent="Fondo"]
-anchor_bottom = 1.0
-margin_right = 600.0
-color = Color( 0.847059, 0.568627, 0.568627, 1 )
-script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
