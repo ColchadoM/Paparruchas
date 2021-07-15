@@ -1,14 +1,87 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/Randal.png" type="Texture" id=1]
 [ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/Alex.png" type="Texture" id=2]
+[ext_resource path="res://Codigos/Locales/Personajes/Personaje.gd" type="Script" id=3]
+[ext_resource path="res://Codigos/Locales/Interfaz/FondoIzqResponsivo.gd" type="Script" id=4]
+[ext_resource path="res://Recursos/Visuales/Sprites/Empaparruchados/Randal02.png" type="Texture" id=5]
+[ext_resource path="res://Recursos/Visuales/Sprites/Pupilas/Alex.png" type="Texture" id=6]
+[ext_resource path="res://Recursos/Visuales/Sprites/Empaparruchados/Randal01.png" type="Texture" id=7]
+[ext_resource path="res://Recursos/Visuales/Sprites/Ojos/Alex.png" type="Texture" id=8]
+[ext_resource path="res://Codigos/Locales/Objetos/Slider.gd" type="Script" id=9]
+[ext_resource path="res://Recursos/Visuales/Sprites/Empaparruchados/Bruma.PNG" type="Texture" id=10]
+[ext_resource path="res://Recursos/Visuales/Sprites/Empaparruchados/Nob.PNG" type="Texture" id=11]
+[ext_resource path="res://Recursos/Visuales/Sprites/Empaparruchados/Slider.PNG" type="Texture" id=12]
+[ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/AtrasAlex.PNG" type="Texture" id=13]
+[ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/AtrasRandal.PNG" type="Texture" id=14]
 
-[node name="Personajes" type="Node2D"]
+[node name="Personajes" type="Control"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Randal" type="Sprite" parent="."]
-position = Vector2( 286.55, 351.228 )
+[node name="Izquierda" type="ColorRect" parent="."]
+margin_right = 600.0
+margin_bottom = 1440.0
+color = Color( 0.847059, 0.568627, 0.568627, 1 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Randal" type="Sprite" parent="Izquierda"]
+position = Vector2( 300, 420 )
+z_index = 1
 texture = ExtResource( 1 )
+script = ExtResource( 3 )
 
-[node name="Alex" type="Sprite" parent="."]
-position = Vector2( 296.688, 1132.22 )
+[node name="Bruma" type="Sprite" parent="Izquierda/Randal"]
+visible = false
+position = Vector2( 3.9277, -149.418 )
+texture = ExtResource( 10 )
+
+[node name="Empaparruchado" type="Node2D" parent="Izquierda/Randal"]
+
+[node name="Randal01" type="Sprite" parent="Izquierda/Randal/Empaparruchado"]
+position = Vector2( -136.341, -35.191 )
+texture = ExtResource( 7 )
+
+[node name="Randal02" type="Sprite" parent="Izquierda/Randal/Empaparruchado"]
+position = Vector2( 132.119, -28.2504 )
+texture = ExtResource( 5 )
+
+[node name="AtrasRandal" type="Sprite" parent="Izquierda/Randal"]
+position = Vector2( -0.72226, -3.64148 )
+z_as_relative = false
+texture = ExtResource( 14 )
+
+[node name="Tween" type="Tween" parent="Izquierda/Randal"]
+
+[node name="Alex" type="Sprite" parent="Izquierda"]
+position = Vector2( 300, 1068 )
+z_index = 1
 texture = ExtResource( 2 )
+
+[node name="Ojos" type="Sprite" parent="Izquierda/Alex"]
+position = Vector2( 3.36359, 12.6134 )
+texture = ExtResource( 8 )
+
+[node name="Pupilas" type="Sprite" parent="Izquierda/Alex/Ojos"]
+position = Vector2( -5.88626, 8.40894 )
+texture = ExtResource( 6 )
+
+[node name="AtrasAlex" type="Sprite" parent="Izquierda/Alex"]
+position = Vector2( 1, -14 )
+scale = Vector2( 1.05, 1.05 )
+z_as_relative = false
+texture = ExtResource( 13 )
+
+[node name="Slider" type="Sprite" parent="Izquierda"]
+position = Vector2( 302.21, 649.812 )
+texture = ExtResource( 12 )
+script = ExtResource( 9 )
+
+[node name="Nob" type="Sprite" parent="Izquierda/Slider"]
+texture = ExtResource( 11 )
+
+[node name="Tween" type="Tween" parent="Izquierda/Slider"]
