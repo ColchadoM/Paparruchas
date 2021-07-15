@@ -21,9 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Paparruchas"
-
 run/main_scene="res://Escenas/Ambientes/Intro_Paparruchas.tscn"
-
 config/icon="res://icon.png"
 
 [autoload]
@@ -38,13 +36,8 @@ window/size/width=2560
 window/size/height=1440
 window/size/test_width=1280
 window/size/test_height=720
-
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
-
-[locale]
-
-translations=PoolStringArray( "res://Recursos/Textos/Espanol/intro_texto.es.translation" )
 
 [input]
 
@@ -64,6 +57,9 @@ Change={
  ]
 }
 
+[locale]
+
+translations=PoolStringArray( "res://Recursos/Textos/Espanol/intro_texto.es.translation" )
 
 [physics]
 
