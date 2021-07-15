@@ -1,13 +1,19 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Recursos/Visuales/Interfaz/contenedor_texto.png" type="Texture" id=1]
 [ext_resource path="res://Recursos/Visuales/Interfaz/triangulo_texto.png" type="Texture" id=2]
 [ext_resource path="res://Recursos/Visuales/Sprites/randal_texto.png" type="Texture" id=3]
 [ext_resource path="res://Recursos/Visuales/Sprites/alex_texto.png" type="Texture" id=4]
+<<<<<<< HEAD
 [ext_resource path="res://Recursos/Visuales/Sprites/fondo_textos.png" type="Texture" id=5]
 [ext_resource path="res://Codigos/Locales/Ambientes/Escena_textos.gd" type="Script" id=6]
+=======
+[ext_resource path="res://Recursos/Visuales/Fondos/fondo_inicio.jpg" type="Texture" id=5]
+[ext_resource path="res://Escenas/Ambientes/Escena_textos.gd" type="Script" id=6]
+>>>>>>> origin/pulir_textos
 [ext_resource path="res://Recursos/Textos/Espanol/intro_texto.es.translation" type="Translation" id=7]
 [ext_resource path="res://Recursos/Textos/Fuentes/Bebas.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Escenas/Ambientes/ZonaJuego.tscn" type="PackedScene" id=9]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://Recursos/Textos/Fuentes/DaxlinePro-Bold.otf"
@@ -25,53 +31,75 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 texto = ExtResource( 7 )
+fondo = ExtResource( 5 )
+texto_key = "INTRO"
+siguiente_escena = ExtResource( 9 )
 
 [node name="Fondo" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 5 )
-expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Contenedor_personajes" type="HBoxContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="Contenedor_2" type="CenterContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -2304.0
+margin_top = -512.0
+margin_right = -1280.0
+margin_bottom = 512.0
+rect_pivot_offset = Vector2( 512, 512 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Contenedor_1" type="CenterContainer" parent="Contenedor_personajes"]
-margin_right = 1278.0
-margin_bottom = 1440.0
-size_flags_horizontal = 3
-
-[node name="Personaje_1" type="TextureRect" parent="Contenedor_personajes/Contenedor_1"]
-margin_left = 127.0
-margin_top = 208.0
-margin_right = 1151.0
-margin_bottom = 1232.0
+[node name="Personaje_2" type="TextureRect" parent="Contenedor_2"]
+margin_right = 1024.0
+margin_bottom = 1024.0
 rect_min_size = Vector2( 1024, 1024 )
 rect_pivot_offset = Vector2( 512, 512 )
 texture = ExtResource( 3 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Contenedor_2" type="CenterContainer" parent="Contenedor_personajes"]
-margin_left = 1282.0
-margin_right = 2560.0
-margin_bottom = 1440.0
-size_flags_horizontal = 3
+[node name="Tween" type="Tween" parent="Contenedor_2/Personaje_2"]
 
-[node name="Personaje_2" type="TextureRect" parent="Contenedor_personajes/Contenedor_2"]
-margin_left = 127.0
-margin_top = 208.0
-margin_right = 1151.0
-margin_bottom = 1232.0
+[node name="Tween" type="Tween" parent="Contenedor_2"]
+
+[node name="Contenedor_1" type="CenterContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -512.0
+margin_right = 512.0
+margin_bottom = 512.0
+rect_pivot_offset = Vector2( 512, 512 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Personaje_1" type="TextureRect" parent="Contenedor_1"]
+margin_right = 1024.0
+margin_bottom = 1024.0
 rect_min_size = Vector2( 1024, 1024 )
 rect_pivot_offset = Vector2( 512, 512 )
 texture = ExtResource( 4 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="Contenedor_1/Personaje_1"]
+
+[node name="Tween" type="Tween" parent="Contenedor_1"]
 
 [node name="Contenedor_fondo_texto" type="CenterContainer" parent="."]
 anchor_left = 0.5
