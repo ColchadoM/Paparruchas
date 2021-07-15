@@ -1,7 +1,7 @@
 extends Sprite
 
-var minX: int = -140
-var maxX: int = 140
+var minX: int = -130
+var maxX: int = 130
 var actualPaparruchas = 0
 
 func _ready():

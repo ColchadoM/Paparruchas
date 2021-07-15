@@ -16,72 +16,84 @@
 [ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/AtrasRandal.PNG" type="Texture" id=14]
 
 [node name="Personajes" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Izquierda" type="ColorRect" parent="."]
+[node name="Contenedor" type="Control" parent="."]
+anchor_bottom = 1.0
 margin_right = 600.0
-margin_bottom = 1440.0
-color = Color( 0.847059, 0.568627, 0.568627, 1 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Randal" type="Sprite" parent="Izquierda"]
+[node name="Izquierda" type="ColorRect" parent="Contenedor"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.847059, 0.568627, 0.568627, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Randal" type="Sprite" parent="Contenedor"]
 position = Vector2( 300, 420 )
 z_index = 1
 texture = ExtResource( 1 )
 script = ExtResource( 3 )
 
-[node name="Bruma" type="Sprite" parent="Izquierda/Randal"]
+[node name="Bruma" type="Sprite" parent="Contenedor/Randal"]
 visible = false
 position = Vector2( 3.9277, -149.418 )
 texture = ExtResource( 10 )
 
-[node name="Empaparruchado" type="Node2D" parent="Izquierda/Randal"]
+[node name="Empaparruchado" type="Node2D" parent="Contenedor/Randal"]
 
-[node name="Randal01" type="Sprite" parent="Izquierda/Randal/Empaparruchado"]
+[node name="Randal01" type="Sprite" parent="Contenedor/Randal/Empaparruchado"]
 position = Vector2( -136.341, -35.191 )
 texture = ExtResource( 7 )
 
-[node name="Randal02" type="Sprite" parent="Izquierda/Randal/Empaparruchado"]
+[node name="Randal02" type="Sprite" parent="Contenedor/Randal/Empaparruchado"]
 position = Vector2( 132.119, -28.2504 )
 texture = ExtResource( 5 )
 
-[node name="AtrasRandal" type="Sprite" parent="Izquierda/Randal"]
+[node name="AtrasRandal" type="Sprite" parent="Contenedor/Randal"]
 position = Vector2( -0.72226, -3.64148 )
 z_as_relative = false
 texture = ExtResource( 14 )
 
-[node name="Tween" type="Tween" parent="Izquierda/Randal"]
+[node name="Tween" type="Tween" parent="Contenedor/Randal"]
 
-[node name="Alex" type="Sprite" parent="Izquierda"]
+[node name="Slider" type="Sprite" parent="Contenedor"]
+position = Vector2( 302.21, 670 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 12 )
+script = ExtResource( 9 )
+
+[node name="Nob" type="Sprite" parent="Contenedor/Slider"]
+position = Vector2( 140, 0 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 11 )
+
+[node name="Tween" type="Tween" parent="Contenedor/Slider"]
+
+[node name="Alex" type="Sprite" parent="Contenedor"]
 position = Vector2( 300, 1068 )
 z_index = 1
 texture = ExtResource( 2 )
 
-[node name="Ojos" type="Sprite" parent="Izquierda/Alex"]
+[node name="Ojos" type="Sprite" parent="Contenedor/Alex"]
 position = Vector2( 3.36359, 12.6134 )
 texture = ExtResource( 8 )
 
-[node name="Pupilas" type="Sprite" parent="Izquierda/Alex/Ojos"]
+[node name="Pupilas" type="Sprite" parent="Contenedor/Alex/Ojos"]
 position = Vector2( -5.88626, 8.40894 )
 texture = ExtResource( 6 )
 
-[node name="AtrasAlex" type="Sprite" parent="Izquierda/Alex"]
+[node name="AtrasAlex" type="Sprite" parent="Contenedor/Alex"]
 position = Vector2( 1, -14 )
 scale = Vector2( 1.05, 1.05 )
 z_as_relative = false
 texture = ExtResource( 13 )
-
-[node name="Slider" type="Sprite" parent="Izquierda"]
-position = Vector2( 302.21, 649.812 )
-texture = ExtResource( 12 )
-script = ExtResource( 9 )
-
-[node name="Nob" type="Sprite" parent="Izquierda/Slider"]
-texture = ExtResource( 11 )
-
-[node name="Tween" type="Tween" parent="Izquierda/Slider"]
