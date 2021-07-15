@@ -1,6 +1,6 @@
 extends Control
 
-onready var inicio_esc = preload('res://Escenas/Ambientes/Intro_historia.tscn')
+onready var inicio_esc = preload("res://Escenas/Ambientes/Intro_historia.tscn")
 onready var jugar_btn = $HSeparator/CenterContainer/Jugar
 
 func _ready():

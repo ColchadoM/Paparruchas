@@ -30,5 +30,5 @@ func _on_TimerInicio_timeout():
 	
 func mmostarX(x):
 	var newWikiX = wikiX.instance()
-	newWikiX.position = Vector2(x, get_viewport().size.y - 50)
+	newWikiX.position = Vector2(x, get_viewport().size.y - 100)
 	add_child(newWikiX);

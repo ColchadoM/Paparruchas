@@ -33,6 +33,7 @@ margin_left = 602.997
 margin_right = 2.99658
 
 [node name="Acciones" parent="." instance=ExtResource( 8 )]
+script = null
 
 [node name="Personajes" parent="." instance=ExtResource( 4 )]
 
