@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/NivelPerdido.mp3-0568bb3c3742380dd6926f1d3599971c.mp3str"
+
+[deps]
+
+source_file="res://Recursos/Sonoros/Incidentales/NivelPerdido.mp3"
+dest_files=[ "res://.import/NivelPerdido.mp3-0568bb3c3742380dd6926f1d3599971c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

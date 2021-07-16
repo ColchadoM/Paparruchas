@@ -43,9 +43,9 @@ func _process(delta):
 			estadoJuegoActual = EstadoJuego.JUEGO_TERMINADO
 			get_tree().get_root().get_node("ZonaJuego/NivelExito").play()
 			emit_signal("s_terminarNivel",0)
-			#get_tree().get_root().get_node("Menus/ZonaJuego/GameOver").show()
 		elif(empaparruchometroActual >= maxEmpaparruchamiento):
 			estadoJuegoActual = EstadoJuego.JUEGO_PERDIDO
+			get_tree().get_root().get_node("ZonaJuego/NivelPerdido").play()
 			emit_signal("s_terminarNivel",1)
 
 func empaparruchar(cantidad=1):
