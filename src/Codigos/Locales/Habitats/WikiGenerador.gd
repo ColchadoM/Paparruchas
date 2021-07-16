@@ -8,7 +8,7 @@ var generating:bool = false;
 
 func _ready():
 	Manager.connect("s_afueraPantalla",self, "mmostarX")
-	
+
 func _process(delta):
 	pass
 
@@ -24,11 +24,15 @@ func spawnWiki():
 func _on_Timer_timeout():
 	if(Manager.estadoJuegoActual == Manager.EstadoJuego.EN_JUEGO):
 		spawnWiki()
-	
+
 func _on_TimerInicio_timeout():
+	pass
+
+func _on_TimerFinal_timeout():
 	Manager.estadoJuegoActual = Manager.EstadoJuego.EN_JUEGO
-	
+
 func mmostarX(x):
 	var newWikiX = wikiX.instance()
 	newWikiX.position = Vector2(x, get_viewport().size.y - 100)
 	add_child(newWikiX);
+
