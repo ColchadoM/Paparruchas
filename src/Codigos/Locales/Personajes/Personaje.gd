@@ -6,6 +6,7 @@ var velEmpaparruchado: float = 2
 func _ready():
 	Manager.connect("s_desempaparruchar",self, "actualizar")
 	Manager.connect("s_empaparruchar",self, "actualizar")
+	Manager.connect("s_empezarNivel",self, "actualizar")
 
 func _process(delta):
 	get_node("Empaparruchado/Randal01").rotate(delta * velEmpaparruchado)

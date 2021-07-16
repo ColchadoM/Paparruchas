@@ -38,9 +38,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="AtrasRandal" type="Sprite" parent="Contenedor"]
+position = Vector2( 299.278, 416.359 )
+z_as_relative = false
+texture = ExtResource( 14 )
+
+[node name="AtrasAlex" type="Sprite" parent="Contenedor"]
+position = Vector2( 301, 1054 )
+scale = Vector2( 1.05, 1.05 )
+z_as_relative = false
+texture = ExtResource( 13 )
+
 [node name="Randal" type="Sprite" parent="Contenedor"]
 position = Vector2( 300, 420 )
-z_index = 1
 texture = ExtResource( 1 )
 script = ExtResource( 3 )
 
@@ -59,11 +69,6 @@ texture = ExtResource( 7 )
 position = Vector2( 132.119, -28.2504 )
 texture = ExtResource( 5 )
 
-[node name="AtrasRandal" type="Sprite" parent="Contenedor/Randal"]
-position = Vector2( -0.72226, -3.64148 )
-z_as_relative = false
-texture = ExtResource( 14 )
-
 [node name="Tween" type="Tween" parent="Contenedor/Randal"]
 
 [node name="Slider" type="Sprite" parent="Contenedor"]
@@ -81,7 +86,6 @@ texture = ExtResource( 11 )
 
 [node name="Alex" type="Sprite" parent="Contenedor"]
 position = Vector2( 300, 1068 )
-z_index = 1
 texture = ExtResource( 2 )
 
 [node name="Ojos" type="Sprite" parent="Contenedor/Alex"]
@@ -91,9 +95,3 @@ texture = ExtResource( 8 )
 [node name="Pupilas" type="Sprite" parent="Contenedor/Alex/Ojos"]
 position = Vector2( -5.88626, 8.40894 )
 texture = ExtResource( 6 )
-
-[node name="AtrasAlex" type="Sprite" parent="Contenedor/Alex"]
-position = Vector2( 1, -14 )
-scale = Vector2( 1.05, 1.05 )
-z_as_relative = false
-texture = ExtResource( 13 )
