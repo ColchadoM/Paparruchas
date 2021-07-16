@@ -21,8 +21,9 @@ _global_script_class_icons={
 [application]
 
 config/name="Paparruchas"
-run/main_scene="res://Escenas/Ambientes/ZonaJuego.tscn"
+run/main_scene="res://Escenas/Ambientes/Intro_Paparruchas.tscn"
 boot_splash/image="res://Recursos/Visuales/Texturas/twitter_banner_mi.png"
+boot_splash/fullsize=false
 boot_splash/bg_color=Color( 1, 1, 0, 1 )
 config/icon="res://icon.png"
 
