@@ -20,7 +20,8 @@ signal s_afueraPantalla(x)
 
 func _ready():
 	pause_mode = PAUSE_MODE_PROCESS
-	resetearNivel()
+	if estadoJuegoActual == EstadoJuego.EN_JUEGO:
+		resetearNivel()
 
 func _input(event):
 	if event.is_action_pressed("Pausa"):
