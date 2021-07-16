@@ -9,6 +9,7 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("Change"):
+		get_node("Toggle").play()
 		Manager.eliminandoNoticias = !Manager.eliminandoNoticias
 		if(Manager.eliminandoNoticias):
 			seleccion.rect_position = Vector2(eliminar.rect_position.x-60,eliminar.rect_position.y-40)
@@ -16,9 +17,12 @@ func _input(event):
 			seleccion.rect_position = Vector2(compartir.rect_position.x-90,compartir.rect_position.y-90)
 			
 	if event is InputEventMouseButton && event.pressed && event.button_index == BUTTON_LEFT:
+		
 		if eliminar.get_rect().has_point(event.position):
+			get_node("Toggle").play()
 			Manager.eliminandoNoticias = true;
 			seleccion.rect_position = Vector2(eliminar.rect_position.x-60,eliminar.rect_position.y-40);
 		if compartir.get_rect().has_point(event.position):
+			get_node("Toggle").play()
 			Manager.eliminandoNoticias = false;
 			seleccion.rect_position = Vector2(compartir.rect_position.x-90,compartir.rect_position.y-90)
