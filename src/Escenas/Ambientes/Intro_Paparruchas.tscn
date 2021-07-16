@@ -103,8 +103,9 @@ expand_icon = true
 
 [node name="blanco" type="ColorRect" parent="."]
 visible = false
-margin_right = 2560.0
-margin_bottom = 1440.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
 color = Color( 1, 1, 1, 0.52549 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -114,9 +115,12 @@ __meta__ = {
 
 [node name="vidrio_arriba" type="TextureRect" parent="."]
 visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture = ExtResource( 6 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -125,9 +129,12 @@ __meta__ = {
 
 [node name="vidrio_izquierda" type="TextureRect" parent="."]
 visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture = ExtResource( 5 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -136,9 +143,12 @@ __meta__ = {
 
 [node name="vidrio_derecha" type="TextureRect" parent="."]
 visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture = ExtResource( 7 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -147,9 +157,12 @@ __meta__ = {
 
 [node name="vidrio_abajo" type="TextureRect" parent="."]
 visible = false
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture = ExtResource( 8 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

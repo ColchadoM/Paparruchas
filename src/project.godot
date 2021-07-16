@@ -22,9 +22,8 @@ _global_script_class_icons={
 
 config/name="Paparruchas"
 run/main_scene="res://Escenas/Ambientes/Intro_Paparruchas.tscn"
-boot_splash/image="res://Recursos/Visuales/Texturas/twitter_banner_mi.png"
-boot_splash/fullsize=false
-boot_splash/bg_color=Color( 1, 1, 0, 1 )
+boot_splash/image="res://Recursos/Visuales/Texturas/fondo_inicio.png"
+boot_splash/bg_color=Color( 0.0941176, 0.0862745, 0.0901961, 1 )
 config/icon="res://icon.png"
 
 [autoload]
