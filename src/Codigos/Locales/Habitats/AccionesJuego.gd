@@ -17,7 +17,6 @@ func _input(event):
 			seleccion.rect_position = Vector2(compartir.rect_position.x-90,compartir.rect_position.y-90)
 			
 	if event is InputEventMouseButton && event.pressed && event.button_index == BUTTON_LEFT:
-		
 		if eliminar.get_rect().has_point(event.position):
 			get_node("Toggle").play()
 			Manager.eliminandoNoticias = true;

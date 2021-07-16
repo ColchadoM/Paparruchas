@@ -15,8 +15,8 @@ __meta__ = {
 [node name="Escena_textos" parent="." instance=ExtResource( 1 )]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 2560.0
-margin_bottom = 1440.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
