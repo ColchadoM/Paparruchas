@@ -20,7 +20,7 @@ signal s_afueraPantalla(x)
 
 func _ready():
 	pause_mode = PAUSE_MODE_PROCESS
-	resetearNivel()
+	#resetearNivel()
 
 func _input(event):
 	if event.is_action_pressed("Pausa"):
