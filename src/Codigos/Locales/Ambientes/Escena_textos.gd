@@ -62,11 +62,10 @@ func _on_Boton_siguiente_pressed():
 		if texto_tamano != textos_array.size() && clic_num == 0:		
 			if entra_escena == 5:
 				texto_parte = texto_parte + 1
-				entra_escena += 1
 				avanza_escena(texto_parte, textos_array, texto_escena)
 				descubre_texto()
-				
-				
+				clicable = true
+				entra_escena += 1
 				
 				var distancia_left = 30
 	#			tween_p_2.interpolate_property(personaje_2, 'rect_scale', Vector2(1, 1), Vector2(1.2, 1.2), 1.5,Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
@@ -75,15 +74,13 @@ func _on_Boton_siguiente_pressed():
 				contenedor_2.rect_position.y), 1.5, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
 				
 				tween_p_2.start()
-				clicable = true
 				
 			else:
 				texto_parte = texto_parte + 1
 				avanza_escena(texto_parte, textos_array, texto_escena)
 				descubre_texto()
-				entra_escena += 1
 				clicable = true
-				
+				entra_escena += 1
 			
 			
 		elif clic_num == 1:
@@ -103,7 +100,6 @@ func avanza_escena(parte, textos, escena):
 			if texto[1] == parte:
 				alguno = alguno + 1
 
-	print(alguno)
 	if alguno == 0:
 		texto_parte = 1
 		texto_escena = texto_escena + 1

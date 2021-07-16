@@ -12,5 +12,5 @@ dest_files=[ "res://Recursos/Textos/Espanol/intro_texto.es.translation" ]
 
 [params]
 
-compress=true
+compress=false
 delimiter=0
