@@ -5,7 +5,7 @@ func _ready():
 	
 # 1 Pierde - 0 Gana
 func mostarMenu(tipo):
-	yield(get_tree().create_timer(1),"timeout")
+	yield(get_tree().create_timer(2),"timeout")
 	if(tipo == 0):
 		get_node("GameOver").show()
 		var tween = get_node("TweenInicio")

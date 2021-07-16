@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Escenas/Habitats/WikiGenerador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Habitats/GUI.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Recursos/Sonoros/Incidentales/NivelExito.mp3" type="AudioStream" id=7]
 [ext_resource path="res://Escenas/Habitats/AccionesJuego.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Codigos/Locales/Menus.gd" type="Script" id=9]
+[ext_resource path="res://Recursos/Sonoros/Incidentales/NivelPerdido.mp3" type="AudioStream" id=10]
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 5 )
@@ -221,6 +222,9 @@ autoplay = true
 
 [node name="NivelExito" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
+
+[node name="NivelPerdido" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 10 )
 
 [connection signal="timeout" from="TextoInicio/TimerInicio" to="TextoInicio" method="_on_TimerInicio_timeout"]
 [connection signal="timeout" from="TextoInicio/TimerAdelante" to="TextoInicio" method="_on_TimerAdelante_timeout"]
