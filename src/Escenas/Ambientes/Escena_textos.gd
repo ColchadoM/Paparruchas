@@ -30,11 +30,13 @@ onready var horizontal_t_2 = $Contenedor_2/Tween
 onready var horizontal_t_1 = $Contenedor_1/Tween
 
 func _ready():
+	
 	tamano_pantalla = get_viewport().size
 	print(tamano_pantalla)
 	#contenedor_2.rect_position.x = -(contenedor_2.rect_size.x)
 	$Fondo.texture = fondo
 	for key in texto.get_message_list():
+		print(key)
 		var orden_texto = key.split_floats('_')
 		orden_texto.remove(0)
 		textos_array.append(orden_texto)

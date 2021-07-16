@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Escenas/Habitats/WikiGenerador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Habitats/GUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Codigos/Locales/TextoInicio.gd" type="Script" id=3]
 [ext_resource path="res://Escenas/Habitats/Personajes.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Recursos/Textos/Fuentes/Bebas.tres" type="DynamicFont" id=5]
 [ext_resource path="res://Escenas/Habitats/AccionesJuego.tscn" type="PackedScene" id=8]
@@ -33,7 +34,6 @@ margin_left = 602.997
 margin_right = 2.99658
 
 [node name="Acciones" parent="." instance=ExtResource( 8 )]
-script = null
 
 [node name="Personajes" parent="." instance=ExtResource( 4 )]
 
@@ -125,3 +125,71 @@ margin_right = 656.48
 margin_bottom = -141.111
 custom_fonts/font = ExtResource( 5 )
 text = "Reiniciar"
+
+[node name="TextoInicio" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Listo" type="Label" parent="TextoInicio"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -191.5
+margin_top = -137.0
+margin_right = 191.5
+margin_bottom = 137.0
+rect_pivot_offset = Vector2( 191.5, 137 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.156863, 0.156863, 0.156863, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Listo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Adelante" type="Label" parent="TextoInicio"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -422.5
+margin_top = -137.0
+margin_right = 422.5
+margin_bottom = 137.0
+rect_pivot_offset = Vector2( 422.5, 137 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.156863, 0.156863, 0.156863, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "¡Adelante!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimerInicio" type="Timer" parent="TextoInicio"]
+wait_time = 0.3
+one_shot = true
+autostart = true
+
+[node name="TimerAdelante" type="Timer" parent="TextoInicio"]
+one_shot = true
+
+[node name="TimerFinal" type="Timer" parent="TextoInicio"]
+one_shot = true
+
+[node name="TweenListo" type="Tween" parent="TextoInicio"]
+
+[node name="TweenAdelante" type="Tween" parent="TextoInicio"]
+
+[connection signal="timeout" from="TextoInicio/TimerInicio" to="TextoInicio" method="_on_TimerInicio_timeout"]
+[connection signal="timeout" from="TextoInicio/TimerAdelante" to="TextoInicio" method="_on_TimerAdelante_timeout"]
+[connection signal="timeout" from="TextoInicio/TimerFinal" to="WikiGenerador" method="_on_TimerFinal_timeout"]
+[connection signal="timeout" from="TextoInicio/TimerFinal" to="TextoInicio" method="_on_TimerFinal_timeout"]
+[connection signal="tween_all_completed" from="TextoInicio/TweenListo" to="TextoInicio" method="_on_TweenListo_tween_all_completed"]
+[connection signal="tween_all_completed" from="TextoInicio/TweenAdelante" to="TextoInicio" method="_on_TweenAdelante_tween_all_completed"]

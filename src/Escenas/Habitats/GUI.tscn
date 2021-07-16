@@ -13,8 +13,8 @@ __meta__ = {
 }
 
 [node name="Figures" parent="." instance=ExtResource( 1 )]
-margin_left = 275.0
-margin_right = -250.0
+margin_left = 350.0
+margin_right = -350.0
 margin_bottom = 250.0
 
 [node name="Label" type="Label" parent="."]

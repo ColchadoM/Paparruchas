@@ -4,6 +4,9 @@ onready var seleccion = $Seleccion
 onready var eliminar = $Eliminar
 onready var compartir = $Compartir
 
+func _ready():
+	pass
+
 func _input(event):
 	if event.is_action_pressed("Change"):
 		Manager.eliminandoNoticias = !Manager.eliminandoNoticias
