@@ -8,6 +8,7 @@ func _ready():
 	get_node("Nob").position.x = -actualPaparruchas
 	Manager.connect("s_desempaparruchar",self, "setPaparruchometro")
 	Manager.connect("s_empaparruchar",self, "setPaparruchometro")
+	Manager.connect("s_empezarNivel",self, "setPaparruchometro")
 	
 func porcentajeEmpaparruchado():
 	return (Manager.empaparruchometroActual * 100)/(Manager.maxEmpaparruchamiento - Manager.minEmpaparruchamiento)

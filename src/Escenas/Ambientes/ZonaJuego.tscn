@@ -1,11 +1,14 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Escenas/Habitats/WikiGenerador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Habitats/GUI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Codigos/Locales/TextoInicio.gd" type="Script" id=3]
 [ext_resource path="res://Escenas/Habitats/Personajes.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Recursos/Textos/Fuentes/Bebas.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Recursos/Sonoros/Musica/CELEB.wav" type="AudioStream" id=6]
+[ext_resource path="res://Recursos/Sonoros/Incidentales/NivelExito.mp3" type="AudioStream" id=7]
 [ext_resource path="res://Escenas/Habitats/AccionesJuego.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Codigos/Locales/Menus.gd" type="Script" id=9]
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 5 )
@@ -36,95 +39,6 @@ margin_right = 2.99658
 [node name="Acciones" parent="." instance=ExtResource( 8 )]
 
 [node name="Personajes" parent="." instance=ExtResource( 4 )]
-
-[node name="GameOver" type="Control" parent="."]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-theme = SubResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect" type="ColorRect" parent="GameOver"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0, 0, 0, 0.85098 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="GameOver/ColorRect"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -525.0
-margin_top = -137.0
-margin_right = 525.0
-margin_bottom = 137.0
-custom_fonts/font = ExtResource( 5 )
-text = "Fin del Juego"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button" type="Button" parent="GameOver/ColorRect"]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -661.52
-margin_top = -443.111
-margin_right = 656.48
-margin_bottom = -141.111
-custom_fonts/font = ExtResource( 5 )
-text = "Siguiente nivel"
-
-[node name="Pausa" type="Control" parent="."]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-theme = SubResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect" type="ColorRect" parent="Pausa"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0, 0, 0, 0.85098 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Pausa/ColorRect"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -525.0
-margin_top = -137.0
-margin_right = 525.0
-margin_bottom = 137.0
-custom_fonts/font = ExtResource( 5 )
-text = "Pausa"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button" type="Button" parent="Pausa/ColorRect"]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -661.52
-margin_top = -443.111
-margin_right = 656.48
-margin_bottom = -141.111
-custom_fonts/font = ExtResource( 5 )
-text = "Reiniciar"
 
 [node name="TextoInicio" type="Control" parent="."]
 anchor_right = 1.0
@@ -175,7 +89,6 @@ __meta__ = {
 [node name="TimerInicio" type="Timer" parent="TextoInicio"]
 wait_time = 0.3
 one_shot = true
-autostart = true
 
 [node name="TimerAdelante" type="Timer" parent="TextoInicio"]
 one_shot = true
@@ -187,9 +100,133 @@ one_shot = true
 
 [node name="TweenAdelante" type="Tween" parent="TextoInicio"]
 
+[node name="Menus" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOver" type="Control" parent="Menus"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Menus/GameOver"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.85098 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Menus/GameOver/ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -525.0
+margin_top = -137.0
+margin_right = 525.0
+margin_bottom = 137.0
+custom_fonts/font = ExtResource( 5 )
+text = "Fin del Juego"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Menus/GameOver/ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -661.52
+margin_top = -443.111
+margin_right = 656.48
+margin_bottom = -141.111
+custom_fonts/font = ExtResource( 5 )
+text = "Siguiente"
+
+[node name="Reiniciar" type="Button" parent="Menus/GameOver/ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -671.175
+margin_top = -1262.07
+margin_right = 646.825
+margin_bottom = -960.07
+custom_fonts/font = ExtResource( 5 )
+text = "Reiniciar"
+
+[node name="Pausa" type="Control" parent="Menus"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Menus/Pausa"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.85098 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Menus/Pausa/ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -525.0
+margin_top = -137.0
+margin_right = 525.0
+margin_bottom = 137.0
+custom_fonts/font = ExtResource( 5 )
+text = "Pausa"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Menus/Pausa/ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -661.52
+margin_top = -443.111
+margin_right = 656.48
+margin_bottom = -141.111
+custom_fonts/font = ExtResource( 5 )
+text = "Reiniciar"
+
+[node name="TweenInicio" type="Tween" parent="Menus"]
+
+[node name="Timer" type="Timer" parent="Menus"]
+
+[node name="Bg" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
+
+[node name="NivelExito" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+
 [connection signal="timeout" from="TextoInicio/TimerInicio" to="TextoInicio" method="_on_TimerInicio_timeout"]
 [connection signal="timeout" from="TextoInicio/TimerAdelante" to="TextoInicio" method="_on_TimerAdelante_timeout"]
 [connection signal="timeout" from="TextoInicio/TimerFinal" to="WikiGenerador" method="_on_TimerFinal_timeout"]
 [connection signal="timeout" from="TextoInicio/TimerFinal" to="TextoInicio" method="_on_TimerFinal_timeout"]
 [connection signal="tween_all_completed" from="TextoInicio/TweenListo" to="TextoInicio" method="_on_TweenListo_tween_all_completed"]
 [connection signal="tween_all_completed" from="TextoInicio/TweenAdelante" to="TextoInicio" method="_on_TweenAdelante_tween_all_completed"]
+[connection signal="pressed" from="Menus/GameOver/ColorRect/Button" to="Menus" method="_on_Button_pressed"]
+[connection signal="pressed" from="Menus/GameOver/ColorRect/Reiniciar" to="Menus" method="_on_Reiniciar_pressed"]

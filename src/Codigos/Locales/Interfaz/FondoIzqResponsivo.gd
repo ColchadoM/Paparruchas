@@ -17,4 +17,6 @@ func changeWidth():
 	
 	get_node("Randal").position.x = sizeX/2
 	get_node("Slider").position.x = sizeX/2
+	get_node("AtrasRandal").position.x = sizeX/2
+	get_node("AtrasAlex").position.x = sizeX/2
 	get_node("Alex").position.x = sizeX/2

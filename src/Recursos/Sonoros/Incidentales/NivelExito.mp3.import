@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/NivelExito.mp3-cc2f715d5846c39e5342adb52345177f.mp3str"
+
+[deps]
+
+source_file="res://Recursos/Sonoros/Incidentales/NivelExito.mp3"
+dest_files=[ "res://.import/NivelExito.mp3-cc2f715d5846c39e5342adb52345177f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

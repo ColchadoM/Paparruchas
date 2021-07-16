@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/CELEB.wav-fe85b864b133d9f463e54f26f38f85e5.sample"
+
+[deps]
+
+source_file="res://Recursos/Sonoros/Musica/CELEB.wav"
+dest_files=[ "res://.import/CELEB.wav-fe85b864b133d9f463e54f26f38f85e5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
