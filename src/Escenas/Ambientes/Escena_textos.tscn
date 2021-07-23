@@ -127,15 +127,15 @@ __meta__ = {
 
 [node name="Contenedor_fondo" type="HBoxContainer" parent="Contenedor_fondo_texto"]
 margin_left = 220.0
-margin_top = 112.0
+margin_top = 150.0
 margin_right = 2340.0
-margin_bottom = 387.0
+margin_bottom = 350.0
 rect_min_size = Vector2( 2120, 100 )
 size_flags_vertical = 4
 
 [node name="Texto_cuadro" type="RichTextLabel" parent="Contenedor_fondo_texto/Contenedor_fondo"]
 margin_right = 1980.0
-margin_bottom = 275.0
+margin_bottom = 200.0
 rect_min_size = Vector2( 1980, 200 )
 rect_clip_content = false
 size_flags_vertical = 4
@@ -148,15 +148,15 @@ scroll_active = false
 [node name="Contenedor_boton" type="CenterContainer" parent="Contenedor_fondo_texto/Contenedor_fondo"]
 margin_left = 1984.0
 margin_right = 2120.0
-margin_bottom = 275.0
+margin_bottom = 200.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Boton_siguiente" type="Button" parent="Contenedor_fondo_texto/Contenedor_fondo/Contenedor_boton"]
 margin_left = 8.0
-margin_top = 77.0
+margin_top = 40.0
 margin_right = 128.0
-margin_bottom = 197.0
+margin_bottom = 160.0
 rect_min_size = Vector2( 120, 120 )
 size_flags_horizontal = 3
 size_flags_vertical = 3

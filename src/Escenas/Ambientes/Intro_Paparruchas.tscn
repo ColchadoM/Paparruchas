@@ -86,12 +86,12 @@ __meta__ = {
 [node name="CenterContainer" type="CenterContainer" parent="HSeparator"]
 margin_top = 204.0
 margin_right = 2560.0
-margin_bottom = 484.0
+margin_bottom = 454.0
 
 [node name="Jugar" type="Button" parent="HSeparator/CenterContainer"]
 margin_left = 1024.0
 margin_right = 1536.0
-margin_bottom = 280.0
+margin_bottom = 250.0
 rect_min_size = Vector2( 512, 250 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
