@@ -1,0 +1,231 @@
+{
+	"events": [
+		{
+			"background": "res://Recursos/Visuales/Fondos/fondo_inicio.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"action": "join",
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "INTRO_1_1"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "INTRO_1_2"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "INTRO_1_3"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "INTRO_1_4"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "INTRO_1_5"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "INTRO_1_6"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "INTRO_1_7"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "INTRO_1_8"
+		},
+		{
+			"action": "join",
+			"character": "character-1626911539.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626971653.cfg"
+		},
+		{
+			"character": "character-1626911539.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "INTRO_2_1"
+		},
+		{
+			"character": "character-1626911539.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "INTRO_2_2"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "INTRO_3_1"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "INTRO_3_2"
+		},
+		{
+			"action": "join",
+			"character": "character-1626974549.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626974761.cfg"
+		},
+		{
+			"character": "character-1626974549.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "INTRO_4_1"
+		},
+		{
+			"character": "character-1626974549.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "INTRO_4_2"
+		},
+		{
+			"character": "character-1626974549.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "¿Tu piensas que debería de asistir Alex?"
+		},
+		{
+			"choice": "Por supuesto Señora Axolotl",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1626974549.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Esta bien, lo consideraré"
+		},
+		{
+			"action": "leaveall",
+			"character": "character-1626974549.json",
+			"event_id": "dialogic_003"
+		},
+		{
+			"choice": "Creo que estaría mejor sin usted",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1626974549.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "¡Que grosero muchacho!"
+		},
+		{
+			"action": "leaveall",
+			"character": "character-1626974549.json",
+			"event_id": "dialogic_003"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "INTRO_5_1"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626971653.cfg"
+		},
+		{
+			"character": "character-1626911539.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "INTRO_6_1"
+		},
+		{
+			"emit_signal": "termina",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 2
+		},
+		{
+			"change_scene": "res://Escenas/Ambientes/ZonaJuego.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.2.4",
+		"file": "timeline-1626911613.json",
+		"name": "introduccion"
+	}
+}
