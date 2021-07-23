@@ -9,12 +9,42 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node",
+"class": "Dialogic",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicClass.gd"
+}, {
+"base": "Control",
+"class": "DialogicBackgroundMusic",
+"language": "GDScript",
+"path": "res://addons/dialogic/Nodes/BackgroundMusic.gd"
+}, {
+"base": "Node",
+"class": "DialogicDefinitionsUtil",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicDefinitionsUtil.gd"
+}, {
+"base": "Reference",
+"class": "DialogicResources",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicResources.gd"
+}, {
+"base": "Reference",
+"class": "DialogicUtil",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicUtil.gd"
+}, {
 "base": "Resource",
 "class": "ScriptableFigura",
 "language": "GDScript",
 "path": "res://Codigos/Locales/Scriptables/ScriptableFigura.gd"
 } ]
 _global_script_class_icons={
+"Dialogic": "",
+"DialogicBackgroundMusic": "",
+"DialogicDefinitionsUtil": "",
+"DialogicResources": "",
+"DialogicUtil": "",
 "ScriptableFigura": ""
 }
 
@@ -31,6 +61,7 @@ config/icon="res://icon.png"
 Constants="*res://Codigos/Globales/Constants.gd"
 Manager="*res://Codigos/Globales/Manager.gd"
 Helpers="*res://Codigos/Globales/Helpers.gd"
+DialogicSingleton="*res://addons/dialogic/Other/DialogicSingleton.gd"
 
 [display]
 
@@ -40,6 +71,10 @@ window/size/test_width=1280
 window/size/test_height=720
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg" )
 
 [input]
 
@@ -66,6 +101,7 @@ Pausa={
 
 [locale]
 
+fallback="es"
 translations=PoolStringArray( "res://Recursos/Textos/Espanol/intro_texto.es.translation" )
 
 [physics]

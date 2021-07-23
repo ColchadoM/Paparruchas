@@ -1,0 +1,20 @@
+{
+	"color": "#ffbb51e1",
+	"description": "Randy la rana",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1626911539.json",
+	"mirror_portraits": false,
+	"name": "Randy",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -140,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Recursos/Visuales/Sprites/randal_texto.png"
+		}
+	],
+	"scale": 250
+}
