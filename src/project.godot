@@ -61,7 +61,6 @@ config/icon="res://icon.png"
 Constants="*res://Codigos/Globales/Constants.gd"
 Manager="*res://Codigos/Globales/Manager.gd"
 Helpers="*res://Codigos/Globales/Helpers.gd"
-DialogicSingleton="*res://addons/dialogic/Other/DialogicSingleton.gd"
 
 [display]
 
@@ -71,10 +70,6 @@ window/size/test_width=1280
 window/size/test_height=720
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
-
-[editor_plugins]
-
-enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg" )
 
 [input]
 
@@ -101,7 +96,6 @@ Pausa={
 
 [locale]
 
-fallback="es"
 translations=PoolStringArray( "res://Recursos/Textos/Espanol/intro_texto.es.translation" )
 
 [physics]
