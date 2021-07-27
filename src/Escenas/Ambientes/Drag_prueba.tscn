@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Escenas/Objetos/Ventana_drag.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Recursos/Visuales/Interfaz/Bote.png" type="Texture" id=2]
+[ext_resource path="res://Codigos/Locales/Objetos/Basura.gd" type="Script" id=3]
+[ext_resource path="res://Codigos/Locales/Ambientes/Drag_prueba.gd" type="Script" id=4]
+[ext_resource path="res://Recursos/Visuales/Fondos/fondo_inicio.jpg" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 146.036, 154.441 )
+
+[node name="Drag_prueba" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 5 )
+offset = Vector2( 1280, 720 )
+
+[node name="Basura" type="Node2D" parent="."]
+position = Vector2( 2176, 752 )
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Basura"]
+texture = ExtResource( 2 )
+
+[node name="Tween" type="Tween" parent="Basura/Sprite"]
+
+[node name="Area2D" type="Area2D" parent="Basura"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Basura/Area2D"]
+shape = SubResource( 1 )
+
+[node name="Ventana_drag" parent="." instance=ExtResource( 1 )]
+position = Vector2( 894.684, -2107.96 )
+
+[node name="Ventana_drag2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1443.79, -2387.08 )
+
+[node name="Ventana_drag3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1052.02, -3559.63 )
+
+[node name="Ventana_drag4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1553.16, -3089.05 )
+
+[node name="Ventana_drag5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1120.44, -2528.12 )
+
+[node name="Ventana_drag6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1080.71, -3076.83 )
+
+[connection signal="area_entered" from="Basura/Area2D" to="Basura" method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Basura/Area2D" to="Basura" method="_on_Area2D_area_exited"]
