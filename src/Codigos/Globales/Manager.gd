@@ -17,6 +17,7 @@ signal s_desempaparruchar
 signal s_empaparruchar
 signal s_terminarNivel(tipo)
 signal s_afueraPantalla(x)
+signal s_virusTimer
 
 func _ready():
 	pause_mode = PAUSE_MODE_PROCESS
