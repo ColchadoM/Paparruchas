@@ -30,7 +30,7 @@ func spawnWikiVirus():
 	var wikiVi = wikiVirus.instance()
 	var wikiHV = wikiVi.get_node("WikiV").texture.get_height()
 	var wikiWV = wikiVi.get_node("WikiV").texture.get_width()
-	wikiVi.position = Vector2(rand_range(playzoneStart,screenWidth -(wikiWV/2)) , -(wikiHV/2) - 150)
+	wikiVi.position = Vector2(rand_range(playzoneStart,screenWidth -(wikiWV/2)) , -(wikiHV/2) - 100)
 	add_child(wikiVi)
 
 func _on_Timer_timeout():
