@@ -2,6 +2,7 @@ extends RigidBody2D
 
 onready var colision = $CollisionShape2D
 onready var wiki = $Wiki
+	
 onready var audioClick = $AudioClick
 onready var clicBien = $ClicBien
 onready var clicMal = $ClicMal
@@ -13,7 +14,7 @@ var deleteada: bool = false
 export var speed: float = 180;
 
 func _input(event):
-	if event is InputEventMouseButton && event.pressed && event.button_index == BUTTON_LEFT:
+	if event is InputEventMouseButton && event.is_pressed && event.button_index == BUTTON_LEFT:
 		if wiki.get_rect().has_point(to_local(event.position)) && !clickeada:
 			clickeada=true
 			audioClick.play()
@@ -24,12 +25,10 @@ func _input(event):
 				else:
 					Manager.desempaparruchar()
 					clicBien.play()
-					Input.vibrate_handheld(500)
 			else:
 				if(Manager.eliminandoNoticias):
 					Manager.desempaparruchar()
 					clicBien.play()
-					Input.vibrate_handheld(500)
 				else:
 					Manager.empaparruchar()
 					clicMal.play()
