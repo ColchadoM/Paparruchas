@@ -14,7 +14,7 @@ var deleteada: bool = false
 export var speed: float = 180;
 
 func _input(event):
-	if event is InputEventMouseButton && event.is_pressed && event.button_index == BUTTON_LEFT:
+	if event is InputEventMouseButton && event.is_pressed() && event.button_index == BUTTON_LEFT:
 		if wiki.get_rect().has_point(to_local(event.position)) && !clickeada:
 			clickeada=true
 			audioClick.play()
