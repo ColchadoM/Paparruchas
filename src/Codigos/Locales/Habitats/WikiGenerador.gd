@@ -2,7 +2,10 @@ extends Node2D
 
 #Imports
 onready var wikiPaquete = preload("res://Escenas/Objetos/VentanaWiki.tscn")
+onready var wikiDrag = preload("res://Escenas/Objetos/Ventana_drag.tscn")
 onready var wikiX = preload("res://Escenas/Objetos/WikiX.tscn")
+
+var dragableWindows:bool = true
 
 func _ready():
 	Manager.connect("s_afueraPantalla",self,"mmostarX")
@@ -10,9 +13,13 @@ func _ready():
 func spawnWiki():
 	var screenWidth = get_viewport().size.x
 	var playzoneStart = screenWidth * Constants.playableArea
-	var wiki = wikiPaquete.instance()
-	var wikiH = wiki.get_node("Wiki").texture.get_height()
-	var wikiW = wiki.get_node("Wiki").texture.get_width()
+	var wiki
+	if(dragableWindows):
+		wiki = wikiDrag.instance()
+	else:
+		wiki = wikiPaquete.instance()
+	var wikiH = wiki.texture.get_height()
+	var wikiW = wiki.texture.get_width()
 	wiki.position = Vector2(rand_range(playzoneStart + (wikiW/2),screenWidth -(wikiW/2)) , -(wikiH/2) - 50)
 	add_child(wiki)
 

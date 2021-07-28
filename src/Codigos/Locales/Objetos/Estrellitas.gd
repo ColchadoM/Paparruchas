@@ -10,15 +10,6 @@ func _ready():
 #	Senales.connect("cambia_paparruchometro", self, '_crea_particulas')
 	pass
 
-#func _crea_particulas(puntos):
-#	if puntos > 0:
-#
-
 func start():
-	print('dedejdie')
 	emitting = true
 
-#func _on_Timer_timeout():
-#	print('sacas')
-#	queue_free()
-#	pass # Replace with function body.

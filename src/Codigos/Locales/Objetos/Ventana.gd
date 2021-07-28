@@ -1,41 +1,40 @@
 extends Sprite
 
-var seleccionado = false
-var gravedad = 4
-var tipo_ventana = 'paparrucha'
 onready var area_ventana = $Area2D 
-export var puntaje = 5
+
+var tipo_ventana = 'paparrucha'
+var arrastrando = false
+var speed = 180
 var metido = false
 var posicion_rest
 
-func _ready():
-	Senales.connect("entro_basura",self,'_entra_basura')
-	$Tween.interpolate_property(self, 'scale', self.scale, Vector2(0,0), 0.8, Tween.TRANS_SINE, Tween.EASE_OUT)
-	pass # Replace with function body.
+export var puntaje = 5
 
-func _on_Area2D_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("Toca"):
-		seleccionado = true
+func _ready():
+	Senales.connect("entro_basura",self,'entra_basura')
+	#$Tween.interpolate_property(self, 'scale', self.scale, Vector2(0,0), 0.8, Tween.TRANS_SINE, Tween.EASE_OUT)
 
 func _physics_process(delta):
-	
-	if seleccionado:
+	if arrastrando:
 		global_position = lerp(global_position, get_global_mouse_position(), 25 * delta)
 		look_at(get_global_mouse_position())
-		
 	else:
-		position.y += gravedad
+		position.y += speed * delta
 		rotation = lerp_angle(rotation, 0, 10 * delta)
-	
 	if metido:
 		global_position = lerp(global_position, posicion_rest, 25 * delta)
 
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and not event.pressed:
-			seleccionado = false
+			arrastrando = false
 
-func _entra_basura(tipo, area, posicion):
+func _on_Area2D_input_event(viewport, event, shape_idx):
+	if Input.is_action_just_pressed("Toca"):
+		print("toca")
+		arrastrando = true
+
+func entra_basura(tipo, area, posicion):
 	posicion_rest = posicion
 	if area == area_ventana:
 		metido = true
