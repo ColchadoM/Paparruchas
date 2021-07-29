@@ -30,6 +30,7 @@ texture = ExtResource( 3 )
 
 [node name="AudioClick" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+volume_db = -30.588
 
 [node name="ClicBien" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )

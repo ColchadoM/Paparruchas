@@ -5,23 +5,25 @@ var particulas = preload("res://Escenas/Objetos/Estrellitas.tscn")
 export var nombre = ""
 
 func _ready():
-	Manager.connect("_droped",self, '_emite_particulas')
+	Manager.connect("s_droped",self, 'droped')
 
 
 func _on_Area2D_area_entered(area):
-	print(area)
 	Manager.emit_signal("entro_basura", 'paparrucha', area, position)
-	$Sprite/Tween.interpolate_property($Sprite, 'scale', Vector2(1,1), Vector2(1.5,1.5), 0.4, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
-	$Sprite/Tween.interpolate_property($Sprite, 'rotation', 0, 2, 0.4, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
-	$Sprite/Tween.start()
+	pass
+	#$Sprite/Tween.interpolate_property($Sprite, 'scale', Vector2(1,1), Vector2(1.5,1.5), 0.4, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
+	#$Sprite/Tween.interpolate_property($Sprite, 'rotation', 0, 2, 0.4, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
+	#$Sprite/Tween.start()
 
 
 func _on_Area2D_area_exited(area):
-	$Sprite/Tween.interpolate_property($Sprite, 'scale', Vector2(1.5,1.5), Vector2(1,1), 0.5, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
-	$Sprite/Tween.interpolate_property($Sprite, 'rotation', 2, 0, 0.4, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
-	$Sprite/Tween.start()
+	pass
+	#$Sprite/Tween.interpolate_property($Sprite, 'scale', Vector2(1.5,1.5), Vector2(1,1), 0.5, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
+	#$Sprite/Tween.interpolate_property($Sprite, 'rotation', 2, 0, 0.4, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
+	#$Sprite/Tween.start()
 
-func _emite_particulas(puntos):
+func droped():
+	print("real")
 	pass
 #	var particula_instance = particulas.instance()
 #	add_child(particula_instance)

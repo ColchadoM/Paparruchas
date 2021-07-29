@@ -19,7 +19,7 @@ signal s_terminarNivel(tipo)
 signal s_afueraPantalla(x)
 signal s_virusTimer
 signal entro_basura(tipo, ventana, posicion)
-signal _droped(puntos)
+signal s_droped
 
 func _ready():
 	pause_mode = PAUSE_MODE_PROCESS

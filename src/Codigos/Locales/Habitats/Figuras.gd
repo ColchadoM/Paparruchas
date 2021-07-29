@@ -33,7 +33,7 @@ func agregarFigura(animacion=true, newPosX=null):
 	var rng = RandomNumberGenerator.new()
 	rng.randomize();
 	var valorFigura = rng.randi_range(0,Constants.FIGURA.size() -1)
-	while(Helpers.existFigura(Manager.figurasVerdaderas,valorFigura)):
+	while(Helpers.esNoticiaVerdadera(Manager.figurasVerdaderas,valorFigura)):
 		valorFigura = rng.randi_range(0,Constants.FIGURA.size() -1)
 	figura.tipo = valorFigura; # cambiar imágen
 
