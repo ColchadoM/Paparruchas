@@ -9,7 +9,7 @@ var minEmpaparruchamiento:int = 0;
 var empaparruchometroInicial: int = 10;
 var empaparruchometroActual: int = 10;
 var figurasVerdaderas: Array = [] #{'tipo':valorFigura, 'objeto': figura}
-var eliminandoNoticias: bool = true # si es false esta compartiendo
+var figuraAgarrada:bool = false;
 
 #signals
 signal s_empezarNivel
@@ -18,6 +18,8 @@ signal s_empaparruchar
 signal s_terminarNivel(tipo)
 signal s_afueraPantalla(x)
 signal s_virusTimer
+signal entro_basura(tipo, ventana, posicion)
+signal _droped(puntos)
 
 func _ready():
 	pause_mode = PAUSE_MODE_PROCESS
@@ -26,10 +28,10 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed("Pausa"):
 		if(get_tree().paused):
-			get_tree().get_root().get_node("ZonaJuego/Pausa").hide()
+			get_tree().get_root().get_node("ZonaJuego/Menus/Pausa").hide()
 			get_tree().paused = false
 		else:
-			get_tree().get_root().get_node("ZonaJuego/Pausa").show()
+			get_tree().get_root().get_node("ZonaJuego/Menus/Pausa").show()
 			get_tree().paused = true
 
 func resetearNivel():

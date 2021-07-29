@@ -4,7 +4,7 @@ var estrellas = preload("res://Escenas/Objetos/Estrellitas.tscn")
 var material_estrella = preload("res://Recursos/Visuales/Materiales/estrellitas_material.tres")
 
 func _ready():
-	Senales.connect("cambia_paparruchometro", self, '_particulas')
+	Senales.connect("_droped", self, '_particulas')
 	#_carga_particulas()
 	pass
 
