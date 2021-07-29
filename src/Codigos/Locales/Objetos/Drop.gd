@@ -23,7 +23,6 @@ func _on_Area2D_area_exited(area):
 	#$Sprite/Tween.start()
 
 func droped():
-	print("real")
 	pass
 #	var particula_instance = particulas.instance()
 #	add_child(particula_instance)

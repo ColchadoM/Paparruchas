@@ -90,10 +90,10 @@ func soltoDrop(tipo, area, posicion):
 		
 		if !Helpers.esNoticiaVerdadera(Manager.figurasVerdaderas, valorFigura):
 			clicBien.play()
-			Manager.empaparruchar()
+			Manager.desempaparruchar()
 		else:
 			clicMal.play()
-			Manager.desempaparruchar()
+			Manager.empaparruchar()
 		desaparce()
 
 func desaparce():
