@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Escenas/Habitats/WikiGenerador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Habitats/GUI.tscn" type="PackedScene" id=2]
@@ -10,18 +10,18 @@
 [ext_resource path="res://Escenas/Habitats/AccionesJuego.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Codigos/Locales/Menus.gd" type="Script" id=9]
 [ext_resource path="res://Recursos/Sonoros/Incidentales/NivelPerdido.mp3" type="AudioStream" id=10]
-[ext_resource path="res://Codigos/Locales/Ambientes/ZonaJuego.gd" type="Script" id=11]
 [ext_resource path="res://Escenas/Objetos/Transicion_juego_sale.tscn" type="PackedScene" id=12]
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 5 )
 
 [node name="ZonaJuego" type="Node"]
-script = ExtResource( 11 )
 
 [node name="Fondo" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
+input_pass_on_modal_close_click = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -29,16 +29,17 @@ __meta__ = {
 [node name="Principal" type="ColorRect" parent="Fondo"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 color = Color( 0.976471, 0.894118, 0.745098, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="WikiGenerador" parent="." instance=ExtResource( 1 )]
+generando = true
 
 [node name="GUI" parent="." instance=ExtResource( 2 )]
 margin_left = 602.997
-margin_right = 2.99658
 
 [node name="Acciones" parent="." instance=ExtResource( 8 )]
 
@@ -47,6 +48,7 @@ margin_right = 2.99658
 [node name="TextoInicio" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -107,6 +109,7 @@ one_shot = true
 [node name="Menus" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -230,11 +233,12 @@ stream = ExtResource( 7 )
 stream = ExtResource( 10 )
 
 [node name="Transicion_juego_sale" parent="." instance=ExtResource( 12 )]
+visible = false
 
 [connection signal="timeout" from="TextoInicio/TimerInicio" to="TextoInicio" method="_on_TimerInicio_timeout"]
 [connection signal="timeout" from="TextoInicio/TimerAdelante" to="TextoInicio" method="_on_TimerAdelante_timeout"]
-[connection signal="timeout" from="TextoInicio/TimerFinal" to="TextoInicio" method="_on_TimerFinal_timeout"]
 [connection signal="timeout" from="TextoInicio/TimerFinal" to="WikiGenerador" method="_on_TimerFinal_timeout"]
+[connection signal="timeout" from="TextoInicio/TimerFinal" to="TextoInicio" method="_on_TimerFinal_timeout"]
 [connection signal="tween_all_completed" from="TextoInicio/TweenListo" to="TextoInicio" method="_on_TweenListo_tween_all_completed"]
 [connection signal="tween_all_completed" from="TextoInicio/TweenAdelante" to="TextoInicio" method="_on_TweenAdelante_tween_all_completed"]
 [connection signal="pressed" from="Menus/GameOver/ColorRect/Button" to="Menus" method="_on_Button_pressed"]

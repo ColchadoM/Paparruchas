@@ -1,7 +1,5 @@
 extends Sprite
 
-onready var colision = $CollisionShape2D
-	
 onready var audioClick = $AudioClick
 onready var clicBien = $ClicBien
 onready var clicMal = $ClicMal
