@@ -16,7 +16,7 @@ func _input(event):
 		if get_rect().has_point(to_local(event.position)) && !clickeada:
 			clickeada=true
 			audioClick.play()
-			if(Helpers.existFigura(Manager.figurasVerdaderas, valorFigura)):
+			if(Helpers.esNoticiaVerdadera(Manager.figurasVerdaderas, valorFigura)):
 				if(Manager.eliminandoNoticias):
 					Manager.empaparruchar()
 					clicMal.play()

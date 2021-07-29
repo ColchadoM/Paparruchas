@@ -1,6 +1,6 @@
 extends Sprite
 
-enum EstadoVentana {IDLE, ARRASTRANDO, REGRESANDO}
+enum EstadoVentana {IDLE, ARRASTRANDO, REGRESANDO, ECESTADA}
 
 onready var area_ventana = $Area2D 
 onready var audioClick = $AudioClick
@@ -9,7 +9,6 @@ onready var clicMal = $ClicMal
 onready var tweenClose = $TweenClose
 onready var figura = $Figura
 
-var tipo_ventana = 'paparrucha'
 var valorFigura: int = -1
 var estadoVentana = EstadoVentana.IDLE
 var deleteada:bool = false
@@ -48,14 +47,24 @@ func _physics_process(delta):
 			#look_at(get_global_mouse_position())
 		elif estadoVentana == EstadoVentana.REGRESANDO:
 			position = lerp(position, posicion_ultima, 5 * delta)
-			if(estanCerca(position, posicion_ultima,35)):
+			if(Helpers.estanCerca(position, posicion_ultima,35)):
 				estadoVentana = EstadoVentana.IDLE
 				Manager.figuraAgarrada = false
+		elif estadoVentana == EstadoVentana.ECESTADA:
+			position = lerp(position, posicion_drop, 25 * delta)
+			if(Helpers.estanCerca(position, posicion_ultima,5)):
+				deleteada = true
 		else:
 			position.y += speed * delta
 			rotation = lerp_angle(rotation, 0, 10 * delta)
-	else:
-		position = lerp(position, posicion_drop, 25 * delta)
+			# Revisa si se salio de la pantalla
+			if(position.y > get_viewport().size.y + texture.get_height()):
+				deleteada=true
+				#Revisa si es una paparrucha
+				if(!Helpers.esNoticiaVerdadera(Manager.figurasVerdaderas, valorFigura)):
+					Manager.emit_signal("s_afueraPantalla", position.x)
+					clicMal.play()
+				closeAnimation()
 
 func _input(event):
 	if event is InputEventMouseButton:
@@ -63,20 +72,28 @@ func _input(event):
 			estadoVentana = EstadoVentana.REGRESANDO
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("Toca") && estadoVentana == EstadoVentana.IDLE && !Manager.figuraAgarrada: 
+	if Input.is_action_just_pressed("Toca") && estadoVentana == EstadoVentana.IDLE && !Manager.figuraAgarrada:
+		audioClick.play() 
 		posicion_ultima = position
 		estadoVentana = EstadoVentana.ARRASTRANDO
 		Manager.figuraAgarrada = true
 
 func soltoDrop(tipo, area, posicion):
+	if(estadoVentana != EstadoVentana.ARRASTRANDO):
+		return
 	posicion_drop = posicion
 	if area == area_ventana:
-		deleteada=true
+		estadoVentana = EstadoVentana.ECESTADA
+		
 		area_ventana.queue_free()
-		if tipo_ventana == tipo:
-			Manager.emit_signal("_droped", puntaje)
+		Manager.emit_signal("s_droped")
+		
+		if !Helpers.esNoticiaVerdadera(Manager.figurasVerdaderas, valorFigura):
+			clicBien.play()
+			Manager.empaparruchar()
 		else:
-			Manager.emit_signal("_droped", -puntaje)
+			clicMal.play()
+			Manager.desempaparruchar()
 		desaparce()
 
 func desaparce():
@@ -91,21 +108,6 @@ func closeAnimation(tipo=0):
 		scale, Vector2(0, 0), 0.5,
 		Tween.TRANS_BACK , Tween.EASE_IN)
 	tweenClose.start()
-
-
-func estanCerca(vectorF, vectorS, desviacion):
-	var cercaX:bool = false;
-	var cercaY:bool = false;
-	
-	if abs(vectorF.x - vectorS.x) < desviacion:
-		cercaX=true
-	
-	if abs(vectorF.y - vectorS.y) < desviacion:
-		cercaY=true
-		
-	if cercaX && cercaY:
-		return true
-	return false
 
 
 func _on_TweenClose_tween_completed(object, key):
