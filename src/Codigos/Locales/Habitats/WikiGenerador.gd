@@ -27,7 +27,7 @@ func spawnWiki():
 	add_child(wiki)
 
 func spawnWikiVirus():
-
+	print('virus')
 	var wikiVi = wikiVirus.instance()
 	var wikiHV = wikiVi.get_node("WikiV").texture.get_height()
 	var wikiWV = wikiVi.get_node("WikiV").texture.get_width()
