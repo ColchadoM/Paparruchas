@@ -31,22 +31,22 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Ventana_drag" parent="." instance=ExtResource( 1 )]
-position = Vector2( 894.684, -2107.96 )
+position = Vector2( 937.447, 186.995 )
 
 [node name="Ventana_drag2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1443.79, -2387.08 )
+position = Vector2( 1486.55, -92.125 )
 
 [node name="Ventana_drag3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1052.02, -3559.63 )
+position = Vector2( 1094.78, -1264.67 )
 
 [node name="Ventana_drag4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1553.16, -3089.05 )
+position = Vector2( 1595.92, -794.095 )
 
 [node name="Ventana_drag5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1120.44, -2528.12 )
+position = Vector2( 1163.2, -233.165 )
 
 [node name="Ventana_drag6" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1080.71, -3076.83 )
+position = Vector2( 1123.47, -781.875 )
 
 [connection signal="area_entered" from="Basura/Area2D" to="Basura" method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Basura/Area2D" to="Basura" method="_on_Area2D_area_exited"]

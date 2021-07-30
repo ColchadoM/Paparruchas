@@ -4,7 +4,9 @@ onready var inicio_esc = preload("res://Escenas/Ambientes/Introduccion_chapulin.
 onready var jugar_btn = $HSeparator/CenterContainer/Jugar
 
 func _ready():
-	#Manager.resetearNivel()
+	$negro/Tween_negro.interpolate_property($negro, 'color', Color(0,0,0,1), Color(0,0,0,0), 1, Tween.TRANS_LINEAR, Tween.EASE_IN)
+	yield(get_tree().create_timer(0.1), "timeout")
+	$negro/Tween_negro.start()
 	pass
 	
 

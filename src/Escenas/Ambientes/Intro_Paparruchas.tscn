@@ -1,13 +1,15 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Recursos/Visuales/Intro/logo.PNG" type="Texture" id=1]
 [ext_resource path="res://Recursos/Textos/Fuentes/Bebas.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Recursos/Visuales/Interfaz/jugar_btn.png" type="Texture" id=3]
+[ext_resource path="res://Recursos/Visuales/Interfaz/jugar_boton.png" type="Texture" id=3]
 [ext_resource path="res://Codigos/Locales/Ambientes/Intro_Paparruchas.gd" type="Script" id=4]
 [ext_resource path="res://Recursos/Visuales/Fondos/vidrio_izquierda.png" type="Texture" id=5]
 [ext_resource path="res://Recursos/Visuales/Fondos/vidrio_arriba.png" type="Texture" id=6]
 [ext_resource path="res://Recursos/Visuales/Fondos/vidrio_derecha.png" type="Texture" id=7]
 [ext_resource path="res://Recursos/Visuales/Fondos/vidrio_abajo.png" type="Texture" id=8]
+[ext_resource path="res://Recursos/Visuales/Interfaz/copyleft_icono.png" type="Texture" id=9]
+[ext_resource path="res://Recursos/Visuales/Interfaz/triangulo_jugar.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://Recursos/Textos/Fuentes/DaxlinePro-Bold.otf"
@@ -15,6 +17,13 @@ font_path = "res://Recursos/Textos/Fuentes/DaxlinePro-Bold.otf"
 [sub_resource type="DynamicFont" id=2]
 size = 100
 font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://Recursos/Textos/Fuentes/DaxlinePro-Bold.otf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 100
+font_data = SubResource( 3 )
 
 [node name="Intro_Paparruchas" type="Control"]
 anchor_right = 1.0
@@ -86,20 +95,104 @@ __meta__ = {
 [node name="CenterContainer" type="CenterContainer" parent="HSeparator"]
 margin_top = 204.0
 margin_right = 2560.0
-margin_bottom = 454.0
+margin_bottom = 466.0
 
-[node name="Jugar" type="Button" parent="HSeparator/CenterContainer"]
-margin_left = 1024.0
-margin_right = 1536.0
-margin_bottom = 250.0
-rect_min_size = Vector2( 512, 250 )
+[node name="HBoxContainer" type="HBoxContainer" parent="HSeparator/CenterContainer"]
+margin_left = 877.0
+margin_right = 1683.0
+margin_bottom = 262.0
+
+[node name="gnu_licencia" type="Button" parent="HSeparator/CenterContainer/HBoxContainer"]
+margin_right = 268.0
+margin_bottom = 262.0
+rect_pivot_offset = Vector2( 134, 131 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
+icon = ExtResource( 9 )
+flat = true
+
+[node name="Jugar" type="Button" parent="HSeparator/CenterContainer/HBoxContainer"]
+margin_left = 272.0
+margin_right = 806.0
+margin_bottom = 262.0
+rect_min_size = Vector2( 512, 250 )
+rect_pivot_offset = Vector2( 267, 131 )
+size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0.835294, 0.454902, 0.4, 1 )
+custom_colors/font_color = Color( 1, 0.94902, 0.901961, 1 )
 icon = ExtResource( 3 )
 flat = true
-expand_icon = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HSeparator/CenterContainer/HBoxContainer/Jugar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -244.0
+margin_top = -103.0
+margin_right = 245.0
+margin_bottom = 89.0
+rect_pivot_offset = Vector2( 230, 75 )
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="HSeparator/CenterContainer/HBoxContainer/Jugar/HBoxContainer"]
+margin_right = 36.0
+margin_bottom = 192.0
+rect_min_size = Vector2( 36, 0 )
+mouse_filter = 2
+
+[node name="CenterContainer2" type="CenterContainer" parent="HSeparator/CenterContainer/HBoxContainer/Jugar/HBoxContainer"]
+margin_left = 40.0
+margin_right = 366.0
+margin_bottom = 192.0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSeparator/CenterContainer/HBoxContainer/Jugar/HBoxContainer/CenterContainer2"]
+margin_top = 14.0
+margin_right = 326.0
+margin_bottom = 178.0
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HSeparator/CenterContainer/HBoxContainer/Jugar/HBoxContainer/CenterContainer2/VBoxContainer"]
+margin_right = 326.0
+margin_bottom = 10.0
+rect_min_size = Vector2( 0, 10 )
+mouse_filter = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HSeparator/CenterContainer/HBoxContainer/Jugar/HBoxContainer/CenterContainer2/VBoxContainer"]
+margin_top = 14.0
+margin_right = 326.0
+margin_bottom = 164.0
+rect_min_size = Vector2( 326, 150 )
+rect_pivot_offset = Vector2( 178, 75 )
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 4 )
+text = "JUGAR"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="HSeparator/CenterContainer/HBoxContainer/Jugar/HBoxContainer"]
+margin_left = 370.0
+margin_right = 470.0
+margin_bottom = 192.0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="HSeparator/CenterContainer/HBoxContainer/Jugar/HBoxContainer/CenterContainer"]
+margin_top = 46.0
+margin_right = 100.0
+margin_bottom = 146.0
+rect_pivot_offset = Vector2( 50, 50 )
+mouse_filter = 2
+size_flags_vertical = 0
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="blanco" type="ColorRect" parent="."]
 visible = false
@@ -169,4 +262,17 @@ __meta__ = {
 
 [node name="Tween" type="Tween" parent="vidrio_abajo"]
 
-[connection signal="pressed" from="HSeparator/CenterContainer/Jugar" to="." method="_on_Jugar_pressed"]
+[node name="negro" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween_negro" type="Tween" parent="negro"]
+
+[connection signal="pressed" from="HSeparator/CenterContainer/HBoxContainer/Jugar" to="." method="_on_Jugar_pressed"]
