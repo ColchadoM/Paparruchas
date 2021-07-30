@@ -8,7 +8,8 @@ onready var wikiVirus = preload("res://Escenas/Objetos/VirusWiki.tscn")
 onready var screenWidth = get_viewport().size.x
 onready var playzoneStart = screenWidth * Constants.playableArea
 
-var dragableWindows:bool = true
+export var dragableWindows:bool = true
+export var generando:bool = false
 
 func _ready():
 	Manager.connect("s_afueraPantalla",self,"mmostarX")
@@ -30,11 +31,11 @@ func spawnWikiVirus():
 	var wikiVi = wikiVirus.instance()
 	var wikiHV = wikiVi.get_node("WikiV").texture.get_height()
 	var wikiWV = wikiVi.get_node("WikiV").texture.get_width()
-	wikiVi.position = Vector2(rand_range(playzoneStart,screenWidth -(wikiWV/2)) , -(wikiHV/2) - 150)
+	wikiVi.position = Vector2(rand_range(playzoneStart,screenWidth -(wikiWV/2)) , -(wikiHV/2) - 100)
 	add_child(wikiVi)
 
 func _on_Timer_timeout():
-	if(Manager.estadoJuegoActual == Manager.EstadoJuego.EN_JUEGO):
+	if(Manager.estadoJuegoActual == Manager.EstadoJuego.EN_JUEGO || generando):
 		spawnWiki()
 
 func _on_TimerVirus_timeout():
