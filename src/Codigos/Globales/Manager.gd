@@ -10,6 +10,8 @@ var empaparruchometroInicial: int = 10;
 var empaparruchometroActual;
 var figurasVerdaderas: Array = [] #{'tipo':valorFigura, 'objeto': figura}
 var figuraAgarrada:bool = false;
+var niveles = []
+var nivelesDesbloqueados = 1
 
 #signals
 signal s_empezarNivel
