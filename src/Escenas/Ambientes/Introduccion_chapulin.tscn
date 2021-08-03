@@ -41,5 +41,6 @@ __meta__ = {
 }
 
 [node name="Transicion_juego_crece" parent="." instance=ExtResource( 3 )]
+mouse_filter = 2
 
 [connection signal="pressed" from="Button" to="DialogNode" method="_on_Button_pressed"]

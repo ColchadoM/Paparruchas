@@ -10,13 +10,14 @@
 [ext_resource path="res://Escenas/Habitats/AccionesJuego.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Codigos/Locales/Menus.gd" type="Script" id=9]
 [ext_resource path="res://Recursos/Sonoros/Incidentales/NivelPerdido.mp3" type="AudioStream" id=10]
-[ext_resource path="res://Escenas/Ambientes/holaMUNDO.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Codigos/Locales/Ambientes/ZonaJuego.gd" type="Script" id=11]
 [ext_resource path="res://Escenas/Objetos/Transicion_juego_sale.tscn" type="PackedScene" id=12]
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 5 )
 
 [node name="ZonaJuego" type="Node"]
+script = ExtResource( 11 )
 
 [node name="Fondo" type="Control" parent="."]
 anchor_right = 1.0
@@ -234,14 +235,12 @@ stream = ExtResource( 7 )
 stream = ExtResource( 10 )
 
 [node name="Transicion_juego_sale" parent="." instance=ExtResource( 12 )]
-visible = false
-
-[node name="holaMUNDO" parent="." instance=ExtResource( 11 )]
+mouse_filter = 2
 
 [connection signal="timeout" from="TextoInicio/TimerInicio" to="TextoInicio" method="_on_TimerInicio_timeout"]
 [connection signal="timeout" from="TextoInicio/TimerAdelante" to="TextoInicio" method="_on_TimerAdelante_timeout"]
-[connection signal="timeout" from="TextoInicio/TimerFinal" to="WikiGenerador" method="_on_TimerFinal_timeout"]
 [connection signal="timeout" from="TextoInicio/TimerFinal" to="TextoInicio" method="_on_TimerFinal_timeout"]
+[connection signal="timeout" from="TextoInicio/TimerFinal" to="WikiGenerador" method="_on_TimerFinal_timeout"]
 [connection signal="tween_all_completed" from="TextoInicio/TweenListo" to="TextoInicio" method="_on_TweenListo_tween_all_completed"]
 [connection signal="tween_all_completed" from="TextoInicio/TweenAdelante" to="TextoInicio" method="_on_TweenAdelante_tween_all_completed"]
 [connection signal="pressed" from="Menus/GameOver/ColorRect/Button" to="Menus" method="_on_Button_pressed"]

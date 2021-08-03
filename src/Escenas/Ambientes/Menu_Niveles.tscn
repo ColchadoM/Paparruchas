@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Recursos/Visuales/Interfaz/Wiki.png" type="Texture" id=1]
 [ext_resource path="res://Recursos/Visuales/Intro/logo.PNG" type="Texture" id=2]
 [ext_resource path="res://Escenas/Ambientes/Menu_Niveles.gd" type="Script" id=3]
 [ext_resource path="res://Recursos/Visuales/Fondos/fondo_inicio.jpg" type="Texture" id=4]
+[ext_resource path="res://Escenas/Objetos/Transicion_juego_crece.tscn" type="PackedScene" id=5]
 
 [node name="Menu_Niveles" type="Control"]
 anchor_right = 1.0
@@ -29,47 +30,67 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Grid_Niveles" type="GridContainer" parent="."]
-margin_left = 14.0
-margin_top = 480.0
-margin_right = 2554.12
-margin_bottom = 1397.25
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -1280.0
+margin_top = -131.079
+margin_right = 1280.0
+margin_bottom = 368.921
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Grid_Niveles" type="GridContainer" parent="CenterContainer"]
+margin_left = 274.0
+margin_right = 2286.0
+margin_bottom = 500.0
 columns = 4
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="1" type="Button" parent="Grid_Niveles"]
-margin_left = 100.0
-margin_right = 655.0
-margin_bottom = 888.0
+[node name="1" type="Button" parent="CenterContainer/Grid_Niveles"]
+margin_right = 500.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 500, 500 )
 icon = ExtResource( 1 )
 flat = true
 expand_icon = true
 
-[node name="2" type="Button" parent="Grid_Niveles"]
-margin_left = 700.0
-margin_right = 1255.0
-margin_bottom = 888.0
+[node name="2" type="Button" parent="CenterContainer/Grid_Niveles"]
+margin_left = 504.0
+margin_right = 1004.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 500, 500 )
 disabled = true
 icon = ExtResource( 1 )
 flat = true
 expand_icon = true
 
-[node name="3" type="Button" parent="Grid_Niveles"]
-margin_left = 1300.0
-margin_right = 1855.0
-margin_bottom = 888.0
+[node name="3" type="Button" parent="CenterContainer/Grid_Niveles"]
+margin_left = 1008.0
+margin_right = 1508.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 500, 500 )
 disabled = true
 icon = ExtResource( 1 )
 flat = true
 expand_icon = true
 
-[node name="4" type="Button" parent="Grid_Niveles"]
-margin_left = 1900.0
-margin_right = 2455.0
-margin_bottom = 888.0
+[node name="4" type="Button" parent="CenterContainer/Grid_Niveles"]
+margin_left = 1512.0
+margin_right = 2012.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 500, 500 )
 disabled = true
 icon = ExtResource( 1 )
 flat = true
 expand_icon = true
+
+[node name="Transicion_juego_crece" parent="." instance=ExtResource( 5 )]
+mouse_filter = 2
+
+[connection signal="pressed" from="CenterContainer/Grid_Niveles/1" to="." method="_on_1_pressed"]
