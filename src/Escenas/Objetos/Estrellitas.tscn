@@ -5,6 +5,7 @@
 [ext_resource path="res://Recursos/Visuales/Materiales/estrellitas_material.tres" type="Material" id=3]
 
 [node name="Estrellitas" type="Particles2D"]
+emitting = false
 lifetime = 3.0
 one_shot = true
 preprocess = 0.01

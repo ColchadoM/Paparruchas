@@ -10,6 +10,7 @@ func _ready():
 
 func _on_Area2D_area_entered(area):
 	Manager.emit_signal("entro_basura", 'paparrucha', area, position)
+	#print('dsauidjasuihduasihduiashdui')
 	pass
 	#$Sprite/Tween.interpolate_property($Sprite, 'scale', Vector2(1,1), Vector2(1.5,1.5), 0.4, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	#$Sprite/Tween.interpolate_property($Sprite, 'rotation', 0, 2, 0.4, Tween.TRANS_ELASTIC, Tween.EASE_OUT)

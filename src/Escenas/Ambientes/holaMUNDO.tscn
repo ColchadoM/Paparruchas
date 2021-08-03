@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Escenas/Ambientes/holaMUNDO.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 334.831, 71.0396 )
+
+[node name="holaMUNDO" type="RichTextLabel"]
+margin_left = 822.142
+margin_top = 368.693
+margin_right = 1303.14
+margin_bottom = 489.693
+bbcode_text = "Hola MUNDO"
+text = "Hola MUNDO"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_Area2D_mouse_entered"]
