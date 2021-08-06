@@ -1,0 +1,28 @@
+{
+	"color": "#fffa2de8",
+	"description": "Es famosa por sus ricos tamales.",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1628140806.json",
+	"mirror_portraits": false,
+	"name": "Sra. Axolotl",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -140,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Recursos/Visuales/Sprites/sra_axolotl/sra_axolotl-normal.png"
+		},
+		{
+			"name": "sra_axolotl-empaparruchada",
+			"path": "res://Recursos/Visuales/Sprites/sra_axolotl/sra_axolotl-empaparruchada.png"
+		},
+		{
+			"name": "sra_axolotl-feliz",
+			"path": "res://Recursos/Visuales/Sprites/sra_axolotl/sra_axolotl-feliz.png"
+		}
+	],
+	"scale": 100
+}

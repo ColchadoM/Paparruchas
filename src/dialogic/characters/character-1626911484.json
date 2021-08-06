@@ -13,8 +13,28 @@
 	"portraits": [
 		{
 			"name": "Default",
-			"path": "res://Recursos/Visuales/Sprites/alex_texto.png"
+			"path": "res://Recursos/Visuales/Sprites/alex_completo/alex_normal.png"
+		},
+		{
+			"name": "alex-confundido",
+			"path": "res://Recursos/Visuales/Sprites/alex_completo/alex-confundido.png"
+		},
+		{
+			"name": "alex-empaparruchado",
+			"path": "res://Recursos/Visuales/Sprites/alex_completo/alex-empaparruchado.png"
+		},
+		{
+			"name": "alex-enojado",
+			"path": "res://Recursos/Visuales/Sprites/alex_completo/alex-enojado.png"
+		},
+		{
+			"name": "alex-feliz",
+			"path": "res://Recursos/Visuales/Sprites/alex_completo/alex-feliz.png"
+		},
+		{
+			"name": "alex-triste",
+			"path": "res://Recursos/Visuales/Sprites/alex_completo/alex-triste.png"
 		}
 	],
-	"scale": 250
+	"scale": 100
 }

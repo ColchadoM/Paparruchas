@@ -13,8 +13,32 @@
 	"portraits": [
 		{
 			"name": "Default",
-			"path": "res://Recursos/Visuales/Sprites/randal_texto.png"
+			"path": "res://Recursos/Visuales/Sprites/randal_completo/randal-normal.png"
+		},
+		{
+			"name": "randal-empaparruchado",
+			"path": "res://Recursos/Visuales/Sprites/randal_completo/randal-empaparruchado.png"
+		},
+		{
+			"name": "randal-enojado",
+			"path": "res://Recursos/Visuales/Sprites/randal_completo/randal-enojado.png"
+		},
+		{
+			"name": "randal-feliz",
+			"path": "res://Recursos/Visuales/Sprites/randal_completo/randal-feliz.png"
+		},
+		{
+			"name": "randal-normal",
+			"path": "res://Recursos/Visuales/Sprites/randal_completo/randal-normal.png"
+		},
+		{
+			"name": "randal-preocupado",
+			"path": "res://Recursos/Visuales/Sprites/randal_completo/randal-preocupado.png"
+		},
+		{
+			"name": "randal-triste",
+			"path": "res://Recursos/Visuales/Sprites/randal_completo/randal-triste.png"
 		}
 	],
-	"scale": 250
+	"scale": 100
 }
