@@ -23,6 +23,7 @@ func _ready():
 	#Conectar las signals
 	Manager.connect("s_terminarNivel",self, "closeAnimation")
 	Manager.connect("entro_basura",self,'soltoDrop')
+	Manager.connect("s_terminoscondiciones", self, "tiempo_lento")
 	
 	# Escala y figuras diferentes
 	var figures_data = {
@@ -112,3 +113,4 @@ func closeAnimation(tipo=0):
 
 func _on_TweenClose_tween_completed(object, key):
 	queue_free()
+

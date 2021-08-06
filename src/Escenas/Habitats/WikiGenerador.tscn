@@ -13,5 +13,10 @@ autostart = true
 [node name="TimerVirus" type="Timer" parent="."]
 autostart = true
 
+[node name="TimerTerminos" type="Timer" parent="."]
+wait_time = 8.0
+autostart = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="TimerVirus" to="." method="_on_TimerVirus_timeout"]
+[connection signal="timeout" from="TimerTerminos" to="." method="_on_TimerTerminos_timeout"]

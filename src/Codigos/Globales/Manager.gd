@@ -22,6 +22,8 @@ signal s_afueraPantalla(x)
 signal s_virusTimer
 signal entro_basura(tipo, ventana, posicion)
 signal s_droped
+signal s_terminoscondiciones
+signal s_termina_terminos
 
 func _ready():
 	pause_mode = PAUSE_MODE_PROCESS

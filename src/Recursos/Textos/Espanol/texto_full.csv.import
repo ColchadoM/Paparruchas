@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://Recursos/Textos/Espanol/texto_full.es.translation" ]
+
+source_file="res://Recursos/Textos/Espanol/texto_full.csv"
+dest_files=[ "res://Recursos/Textos/Espanol/texto_full.es.translation" ]
+
+[params]
+
+compress=true
+delimiter=0

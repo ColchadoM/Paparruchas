@@ -63,7 +63,7 @@
 		{
 			"character": "character-1626911484.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "Default",
 			"text": "INTRO_1_8"
 		},
 		{
@@ -87,7 +87,7 @@
 		{
 			"character": "character-1626911539.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "randal-empaparruchado",
 			"text": "INTRO_2_1"
 		},
 		{
@@ -103,92 +103,14 @@
 		{
 			"character": "character-1626911484.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "alex-confundido",
 			"text": "INTRO_3_1"
 		},
 		{
 			"character": "character-1626911484.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "alex-confundido",
 			"text": "INTRO_3_2"
-		},
-		{
-			"action": "join",
-			"character": "character-1626974549.json",
-			"event_id": "dialogic_002",
-			"mirror": false,
-			"portrait": "",
-			"position": {
-				"0": false,
-				"1": false,
-				"2": true,
-				"3": false,
-				"4": false
-			}
-		},
-		{
-			"event_id": "dialogic_024",
-			"set_theme": "theme-1626974761.cfg"
-		},
-		{
-			"character": "character-1626974549.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "INTRO_4_1"
-		},
-		{
-			"character": "character-1626974549.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "INTRO_4_2"
-		},
-		{
-			"character": "character-1626974549.json",
-			"event_id": "dialogic_010",
-			"options": [
-
-			],
-			"portrait": "",
-			"question": "¿Tu piensas que debería de asistir Alex?"
-		},
-		{
-			"choice": "Por supuesto Señora Axolotl",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"character": "character-1626974549.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Esta bien, lo consideraré"
-		},
-		{
-			"action": "leaveall",
-			"character": "character-1626974549.json",
-			"event_id": "dialogic_003"
-		},
-		{
-			"choice": "Creo que estaría mejor sin usted",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"character": "character-1626974549.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "¡Que grosero muchacho!"
-		},
-		{
-			"action": "leaveall",
-			"character": "character-1626974549.json",
-			"event_id": "dialogic_003"
-		},
-		{
-			"event_id": "dialogic_013"
 		},
 		{
 			"event_id": "dialogic_024",
@@ -207,7 +129,7 @@
 		{
 			"character": "character-1626911539.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "randal-enojado",
 			"text": "INTRO_6_1"
 		},
 		{
