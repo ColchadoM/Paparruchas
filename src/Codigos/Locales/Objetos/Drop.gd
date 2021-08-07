@@ -3,18 +3,29 @@ extends Node2D
 var particulas = preload("res://Escenas/Objetos/Estrellitas.tscn")
 
 export var nombre = ""
+export(NodePath) var posicion_estrellitas
+export(bool) var activado
 
 func _ready():
+	posicion_estrellitas = get_node(posicion_estrellitas) as Position2D
 	Manager.connect("s_droped",self, 'droped')
 
 
 func _on_Area2D_area_entered(area):
 	Manager.emit_signal("entro_basura", 'paparrucha', area, position)
-	pass
+	if activado:
+		particula_creada()
+	else:
+		pass
 	#$Sprite/Tween.interpolate_property($Sprite, 'scale', Vector2(1,1), Vector2(1.5,1.5), 0.4, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	#$Sprite/Tween.interpolate_property($Sprite, 'rotation', 0, 2, 0.4, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	#$Sprite/Tween.start()
 
+func particula_creada():
+	var particula_instance = particulas.instance()
+	particula_instance.position = posicion_estrellitas.position
+	particula_instance.emitting = true
+	add_child(particula_instance)
 
 func _on_Area2D_area_exited(area):
 	pass

@@ -10,6 +10,8 @@ var empaparruchometroInicial: int = 10;
 var empaparruchometroActual;
 var figurasVerdaderas: Array = [] #{'tipo':valorFigura, 'objeto': figura}
 var figuraAgarrada:bool = false;
+var niveles = []
+var nivelesDesbloqueados = 1
 
 #signals
 signal s_empezarNivel
@@ -20,6 +22,8 @@ signal s_afueraPantalla(x)
 signal s_virusTimer
 signal entro_basura(tipo, ventana, posicion)
 signal s_droped
+signal s_terminoscondiciones
+signal s_termina_terminos
 
 func _ready():
 	pause_mode = PAUSE_MODE_PROCESS
@@ -42,9 +46,9 @@ func resetearNivel():
 	emit_signal("s_empezarNivel")
 
 func _process(delta):
-	print(estadoJuegoActual)
+	#print(estadoJuegoActual)
 	if(estadoJuegoActual == EstadoJuego.EN_JUEGO):
-		print("ingame")
+		#print("ingame")
 		if(empaparruchometroActual <= minEmpaparruchamiento):
 			print("entra 1")
 			estadoJuegoActual = EstadoJuego.JUEGO_TERMINADO
@@ -57,13 +61,13 @@ func _process(delta):
 			emit_signal("s_terminarNivel",1)
 
 func empaparruchar(cantidad=1):
-	print(empaparruchometroActual)
+	#print(empaparruchometroActual)
 	Manager.empaparruchometroActual += cantidad
 	emit_signal("s_desempaparruchar")
 	#print(Manager.empaparruchometroActual)
 
 func desempaparruchar(cantidad=1):
-	print(empaparruchometroActual)
+	#print(empaparruchometroActual)
 	Manager.empaparruchometroActual -= cantidad
 	emit_signal("s_empaparruchar")
 	#print(Manager.empaparruchometroActual)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Escenas/Habitats/WikiGenerador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Habitats/GUI.tscn" type="PackedScene" id=2]
@@ -10,12 +10,15 @@
 [ext_resource path="res://Escenas/Habitats/AccionesJuego.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Codigos/Locales/Menus.gd" type="Script" id=9]
 [ext_resource path="res://Recursos/Sonoros/Incidentales/NivelPerdido.mp3" type="AudioStream" id=10]
+[ext_resource path="res://Codigos/Locales/Ambientes/ZonaJuego.gd" type="Script" id=11]
 [ext_resource path="res://Escenas/Objetos/Transicion_juego_sale.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Codigos/Locales/Objetos/Opaco.gd" type="Script" id=13]
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 5 )
 
 [node name="ZonaJuego" type="Node"]
+script = ExtResource( 11 )
 
 [node name="Fondo" type="Control" parent="."]
 anchor_right = 1.0
@@ -35,14 +38,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="WikiGenerador" parent="." instance=ExtResource( 1 )]
-
 [node name="GUI" parent="." instance=ExtResource( 2 )]
 margin_left = 602.997
 
-[node name="Acciones" parent="." instance=ExtResource( 8 )]
-
 [node name="Personajes" parent="." instance=ExtResource( 4 )]
+
+[node name="Acciones" parent="." instance=ExtResource( 8 )]
 
 [node name="TextoInicio" type="Control" parent="."]
 anchor_right = 1.0
@@ -222,7 +223,10 @@ text = "Reiniciar"
 
 [node name="Timer" type="Timer" parent="Menus"]
 
+[node name="WikiGenerador" parent="." instance=ExtResource( 1 )]
+
 [node name="Bg" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
 stream = ExtResource( 6 )
 autoplay = true
 
@@ -232,8 +236,20 @@ stream = ExtResource( 7 )
 [node name="NivelPerdido" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 10 )
 
+[node name="Opaco" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.160784, 0.0196078, 0.129412, 0 )
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="Opaco"]
+
 [node name="Transicion_juego_sale" parent="." instance=ExtResource( 12 )]
-visible = false
+mouse_filter = 2
 
 [connection signal="timeout" from="TextoInicio/TimerInicio" to="TextoInicio" method="_on_TimerInicio_timeout"]
 [connection signal="timeout" from="TextoInicio/TimerAdelante" to="TextoInicio" method="_on_TimerAdelante_timeout"]
