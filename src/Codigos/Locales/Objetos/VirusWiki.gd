@@ -17,8 +17,7 @@ func _ready():
 	Manager.connect("s_terminarNivel",self, "closeAnimation")
 	
 	var image = get_node("res://Recursos/Visuales/Sprites/ventana_virus.png")
-<<<<<<< HEAD
-=======
+
 	
 	#Escalar random
 #	var nScale = rand_range(1,3)
@@ -28,7 +27,6 @@ func _entraVirus():
 	#print('entra')
 	tween_inicio.interpolate_property(wikiV, 'scale', Vector2(0.01,0.01), Vector2(1.47,1.47),0.3, Tween.TRANS_BOUNCE, Tween.EASE_IN_OUT)
 	tween_inicio.start()
->>>>>>> 0f814b103d9eee5da2c384588371c8c48d48c732
 
 func _physics_process(delta):
 	if(!deleteadaV):

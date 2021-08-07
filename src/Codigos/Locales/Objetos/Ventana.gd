@@ -131,9 +131,3 @@ func closeAnimation(tipo=0):
 
 func _on_TweenClose_tween_completed(object, key):
 	queue_free()
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 0f814b103d9eee5da2c384588371c8c48d48c732
