@@ -249,12 +249,13 @@ __meta__ = {
 [node name="Tween" type="Tween" parent="Opaco"]
 
 [node name="Transicion_juego_sale" parent="." instance=ExtResource( 12 )]
+visible = false
 mouse_filter = 2
 
 [connection signal="timeout" from="TextoInicio/TimerInicio" to="TextoInicio" method="_on_TimerInicio_timeout"]
 [connection signal="timeout" from="TextoInicio/TimerAdelante" to="TextoInicio" method="_on_TimerAdelante_timeout"]
-[connection signal="timeout" from="TextoInicio/TimerFinal" to="WikiGenerador" method="_on_TimerFinal_timeout"]
 [connection signal="timeout" from="TextoInicio/TimerFinal" to="TextoInicio" method="_on_TimerFinal_timeout"]
+[connection signal="timeout" from="TextoInicio/TimerFinal" to="WikiGenerador" method="_on_TimerFinal_timeout"]
 [connection signal="tween_all_completed" from="TextoInicio/TweenListo" to="TextoInicio" method="_on_TweenListo_tween_all_completed"]
 [connection signal="tween_all_completed" from="TextoInicio/TweenAdelante" to="TextoInicio" method="_on_TweenAdelante_tween_all_completed"]
 [connection signal="pressed" from="Menus/GameOver/ColorRect/Button" to="Menus" method="_on_Button_pressed"]

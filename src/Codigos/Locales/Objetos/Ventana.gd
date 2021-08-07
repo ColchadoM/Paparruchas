@@ -22,7 +22,7 @@ export var puntaje = 5
 func _ready():
 	#Conectar las signals
 	Manager.connect("s_terminarNivel",self, "closeAnimation")
-	Manager.connect("entro_basura",self,'soltoDrop')
+	Manager.connect("s_edroped",self,'soltoDrop')
 	Manager.connect("s_terminoscondiciones", self, "tiempo_lento")
 	
 	# Escala y figuras diferentes
@@ -67,11 +67,13 @@ func _physics_process(delta):
 					clicMal.play()
 				closeAnimation()
 
+# Si se tiene una ventana agarrada y despues se suelta
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and not event.pressed and estadoVentana == EstadoVentana.ARRASTRANDO:
 			estadoVentana = EstadoVentana.REGRESANDO
 
+# Si el mouse esta dentro del area de la ventana y esta es agarrada
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("Toca") && estadoVentana == EstadoVentana.IDLE && !Manager.figuraAgarrada:
 		audioClick.play() 
@@ -79,22 +81,33 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 		estadoVentana = EstadoVentana.ARRASTRANDO
 		Manager.figuraAgarrada = true
 
+# Si un drop se come una ventana
 func soltoDrop(tipo, area, posicion):
 	if(estadoVentana != EstadoVentana.ARRASTRANDO):
 		return
 	posicion_drop = posicion
 	if area == area_ventana:
 		estadoVentana = EstadoVentana.ECESTADA
-		
 		area_ventana.queue_free()
-		Manager.emit_signal("s_droped")
+		#Manager.emit_signal("s_droped")
 		
-		if !Helpers.esNoticiaVerdadera(Manager.figurasVerdaderas, valorFigura):
-			clicBien.play()
-			Manager.desempaparruchar()
+		if(tipo == Manager.TipoDrop.BASURA):
+			if !Helpers.esNoticiaVerdadera(Manager.figurasVerdaderas, valorFigura):
+				clicBien.play()
+				Manager.desempaparruchar()
+			else:
+				clicMal.play()
+				Manager.empaparruchar()
+		elif(tipo == Manager.TipoDrop.COMPARTIR):
+			if Helpers.esNoticiaVerdadera(Manager.figurasVerdaderas, valorFigura):
+				clicBien.play()
+				Manager.desempaparruchar()
+			else:
+				clicMal.play()
+				Manager.empaparruchar()
 		else:
-			clicMal.play()
-			Manager.empaparruchar()
+			pass
+			
 		desaparce()
 
 func desaparce():
@@ -113,4 +126,3 @@ func closeAnimation(tipo=0):
 
 func _on_TweenClose_tween_completed(object, key):
 	queue_free()
-
