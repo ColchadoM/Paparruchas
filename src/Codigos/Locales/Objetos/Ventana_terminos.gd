@@ -88,13 +88,13 @@ func _crea_tipo():
 			v_juego_cancela = 1
 			$Timer_efecto.wait_time = 8 * v_juego_acepta
 			$Ventana_full/RichTextLabel.text = $Ventana_full/RichTextLabel.text+"I. La velocidad del juego disminuirá."
-			print('lento')
+			#print('lento')
 		tipos.RAPIDO:
 			v_juego_acepta = 1.8
 			v_juego_cancela = 1
 			$Timer_efecto.wait_time = 8 * v_juego_acepta
 			$Ventana_full/RichTextLabel.text = $Ventana_full/RichTextLabel.text+"I. La velocidad del juego se incrementará."
-			print('rapido')
+			#print('rapido')
 
 
 func _on_Timer_efecto_timeout():

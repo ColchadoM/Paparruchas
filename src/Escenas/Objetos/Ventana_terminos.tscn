@@ -16,14 +16,14 @@ font_path = "res://Recursos/Textos/Fuentes/DaxlinePro-Bold.otf"
 size = 48
 font_data = SubResource( 2 )
 
-[sub_resource type="DynamicFontData" id=5]
+[sub_resource type="DynamicFontData" id=4]
 font_path = "res://Recursos/Textos/Fuentes/DaxlinePro-Bold.otf"
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=5]
 size = 56
-font_data = SubResource( 5 )
+font_data = SubResource( 4 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 194.848, 65.1736 )
 
 [node name="Ventana_terminos" type="Node2D"]
@@ -91,7 +91,7 @@ margin_top = 290.221
 margin_right = 461.99
 margin_bottom = 397.221
 mouse_filter = 2
-custom_fonts/normal_font = SubResource( 6 )
+custom_fonts/normal_font = SubResource( 5 )
 custom_colors/default_color = Color( 1, 0.996078, 0.976471, 1 )
 text = "ACEPTAR"
 scroll_active = false
@@ -109,7 +109,7 @@ margin_top = 293.558
 margin_right = -81.9568
 margin_bottom = 400.558
 mouse_filter = 2
-custom_fonts/normal_font = SubResource( 6 )
+custom_fonts/normal_font = SubResource( 5 )
 custom_colors/default_color = Color( 1, 0.996078, 0.976471, 1 )
 text = "CANCELAR"
 scroll_active = false
@@ -124,7 +124,7 @@ z_index = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Aceptar"]
 z_index = 2
-shape = SubResource( 4 )
+shape = SubResource( 6 )
 
 [node name="Cancelar" type="Area2D" parent="."]
 pause_mode = 2
@@ -134,7 +134,7 @@ z_index = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cancelar"]
 position = Vector2( 0, -2.99658 )
 z_index = 2
-shape = SubResource( 4 )
+shape = SubResource( 6 )
 
 [node name="Timer_efecto" type="Timer" parent="."]
 wait_time = 8.0
