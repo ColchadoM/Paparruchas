@@ -22,7 +22,7 @@ export var puntaje = 5
 func _ready():
 	#Conectar las signals
 	Manager.connect("s_terminarNivel",self, "closeAnimation")
-	Manager.connect("s_edroped",self,'soltoDrop')
+	Manager.connect("s_edroped",self,'colisionDrop')
 	Manager.connect("s_terminoscondiciones", self, "tiempo_lento")
 	
 	# Escala y figuras diferentes
@@ -82,14 +82,14 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 		Manager.figuraAgarrada = true
 
 # Si un drop se come una ventana
-func soltoDrop(tipo, area, posicion):
+func colisionDrop(tipo, area, posicion):
 	if(estadoVentana != EstadoVentana.ARRASTRANDO):
 		return
 	posicion_drop = posicion
 	if area == area_ventana:
 		estadoVentana = EstadoVentana.ECESTADA
 		area_ventana.queue_free()
-		#Manager.emit_signal("s_droped")
+		Manager.emit_signal("s_droped") # si el proceso de comerse un ventana acaba
 		
 		if(tipo == Manager.TipoDrop.BASURA):
 			if !Helpers.esNoticiaVerdadera(Manager.figurasVerdaderas, valorFigura):
