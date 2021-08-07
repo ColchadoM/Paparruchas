@@ -23,7 +23,7 @@ export var puntaje = 5
 func _ready():
 	#Conectar las signals
 	Manager.connect("s_terminarNivel",self, "closeAnimation")
-	Manager.connect("entro_basura",self,'soltoDrop')
+	Manager.connect("s_edroped",self,'colisionDrop')
 	Manager.connect("s_terminoscondiciones", self, "tiempo_lento")
 	
 	# Escala y figuras diferentes
@@ -68,11 +68,13 @@ func _physics_process(delta):
 					clicMal.play()
 				closeAnimation()
 
+# Si se tiene una ventana agarrada y despues se suelta
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and not event.pressed and estadoVentana == EstadoVentana.ARRASTRANDO:
 			estadoVentana = EstadoVentana.REGRESANDO
 
+# Si el mouse esta dentro del area de la ventana y esta es agarrada
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("Toca") && estadoVentana == EstadoVentana.IDLE && !Manager.figuraAgarrada:
 		audioClick.play() 
@@ -82,7 +84,8 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 		print(area_virus.get_collision_layer_bit(2))
 		Manager.figuraAgarrada = true
 
-func soltoDrop(tipo, area, posicion):
+# Si un drop se come una ventana
+func colisionDrop(tipo, area, posicion):
 	if(estadoVentana != EstadoVentana.ARRASTRANDO):
 		area_virus.set_collision_layer_bit(1, false)
 		return
@@ -90,16 +93,26 @@ func soltoDrop(tipo, area, posicion):
 	if area == area_ventana:
 		area_virus.set_collision_layer_bit(1, false)
 		estadoVentana = EstadoVentana.ECESTADA
-		
 		area_ventana.queue_free()
-		Manager.emit_signal("s_droped")
+		Manager.emit_signal("s_droped") # si el proceso de comerse un ventana acaba
 		
-		if !Helpers.esNoticiaVerdadera(Manager.figurasVerdaderas, valorFigura):
-			clicBien.play()
-			Manager.desempaparruchar()
+		if(tipo == Manager.TipoDrop.BASURA):
+			if !Helpers.esNoticiaVerdadera(Manager.figurasVerdaderas, valorFigura):
+				clicBien.play()
+				Manager.desempaparruchar()
+			else:
+				clicMal.play()
+				Manager.empaparruchar()
+		elif(tipo == Manager.TipoDrop.COMPARTIR):
+			if Helpers.esNoticiaVerdadera(Manager.figurasVerdaderas, valorFigura):
+				clicBien.play()
+				Manager.desempaparruchar()
+			else:
+				clicMal.play()
+				Manager.empaparruchar()
 		else:
-			clicMal.play()
-			Manager.empaparruchar()
+			pass
+			
 		desaparce()
 
 func desaparce():
@@ -118,6 +131,3 @@ func closeAnimation(tipo=0):
 
 func _on_TweenClose_tween_completed(object, key):
 	queue_free()
-
-
-

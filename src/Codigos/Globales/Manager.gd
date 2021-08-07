@@ -1,6 +1,7 @@
 extends Node
 
 enum EstadoJuego {INACTIVO, EN_JUEGO, JUEGO_PERDIDO, JUEGO_TERMINADO}
+enum TipoDrop {NEUTRAL, BASURA, COMPARTIR} 
 # Varialbes del juego
 var estadoJuegoActual = EstadoJuego.INACTIVO
 var enPausa:bool = false
@@ -21,7 +22,8 @@ signal s_terminarNivel(tipo)
 signal s_afueraPantalla(x)
 signal s_virusTimer(posicion)
 signal entro_basura(tipo, ventana, posicion)
-signal s_droped
+signal s_edroped(tipoVentana,area, posicion) # cuando un script drop se come una ventana
+signal s_droped # cuando sueltas una ventana manualmente
 signal s_terminoscondiciones
 signal s_termina_terminos
 

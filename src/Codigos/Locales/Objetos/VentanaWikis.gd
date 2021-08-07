@@ -1,3 +1,4 @@
+# DEPRECATED
 extends Sprite
 
 onready var audioClick = $AudioClick

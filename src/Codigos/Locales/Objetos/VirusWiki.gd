@@ -11,15 +11,6 @@ var clickeadaV: bool = false
 var deleteadaV: bool = false
 var speedV: float = 300
 
-#func _input(event):
-#	if event is InputEventMouseButton && event.pressed && event.button_index == BUTTON_LEFT:
-#		if wikiV.get_rect().has_point(to_local(event.position)) && !clickeadaV:
-#			Manager.emit_signal("s_virusTimer")
-#			clickeadaV=true
-#			clicMal.play()
-#			closeAnimation()
-
-
 func _ready():
 	_entraVirus()
 	#Conectar las signals

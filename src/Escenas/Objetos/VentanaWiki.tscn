@@ -9,6 +9,7 @@
 
 [node name="Wiki" type="Sprite"]
 scale = Vector2( 1.31908, 1.31908 )
+z_index = -1
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
