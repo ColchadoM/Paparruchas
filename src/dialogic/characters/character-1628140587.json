@@ -1,0 +1,36 @@
+{
+	"color": "#ff661761",
+	"description": "Un gran hombre de nogocios que también le ha dado por intervenir en la política.",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1628140587.json",
+	"mirror_portraits": false,
+	"name": "Sr. Rata",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -140,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Recursos/Visuales/Sprites/sr_rata_completo/sr_rata_normal.png"
+		},
+		{
+			"name": "sr_rata-asustada",
+			"path": "res://Recursos/Visuales/Sprites/sr_rata_completo/sr_rata-asustada.png"
+		},
+		{
+			"name": "sr_rata-contenta",
+			"path": "res://Recursos/Visuales/Sprites/sr_rata_completo/sr_rata-contenta.png"
+		},
+		{
+			"name": "sr_rata-empaparruchada",
+			"path": "res://Recursos/Visuales/Sprites/sr_rata_completo/sr_rata-empaparruchada.png"
+		},
+		{
+			"name": "sr_rata-enojada",
+			"path": "res://Recursos/Visuales/Sprites/sr_rata_completo/sr_rata-enojada.png"
+		}
+	],
+	"scale": 100
+}

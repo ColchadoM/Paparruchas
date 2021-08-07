@@ -1,0 +1,40 @@
+{
+	"color": "#ffffd135",
+	"description": "Hermano de Alex",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1628137339.json",
+	"mirror_portraits": false,
+	"name": "Juni",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -140,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Recursos/Visuales/Sprites/juni_completo/juni-normal.png"
+		},
+		{
+			"name": "juni-empaparruchado",
+			"path": "res://Recursos/Visuales/Sprites/juni_completo/juni-empaparruchado.png"
+		},
+		{
+			"name": "juni-feliz",
+			"path": "res://Recursos/Visuales/Sprites/juni_completo/juni-feliz.png"
+		},
+		{
+			"name": "juni-malvado",
+			"path": "res://Recursos/Visuales/Sprites/juni_completo/juni-malvado.png"
+		},
+		{
+			"name": "juni-timido",
+			"path": "res://Recursos/Visuales/Sprites/juni_completo/juni-timido.png"
+		},
+		{
+			"name": "juni-triste",
+			"path": "res://Recursos/Visuales/Sprites/juni_completo/juni-triste.png"
+		}
+	],
+	"scale": 100
+}
