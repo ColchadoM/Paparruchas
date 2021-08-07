@@ -6,15 +6,29 @@ onready var audioClick = $AudioClick
 onready var clicBien = $ClicBien
 onready var clicMal = $ClicMal
 onready var tween = $Tween
+onready var tween_inicio = $Tween_inicio
 var clickeadaV: bool = false
 var deleteadaV: bool = false
 var speedV: float = 300
 
 func _ready():
+	_entraVirus()
 	#Conectar las signals
 	Manager.connect("s_terminarNivel",self, "closeAnimation")
 	
 	var image = get_node("res://Recursos/Visuales/Sprites/ventana_virus.png")
+<<<<<<< HEAD
+=======
+	
+	#Escalar random
+#	var nScale = rand_range(1,3)
+#	wikiV.scale = Vector2(nScale, nScale)
+
+func _entraVirus():
+	#print('entra')
+	tween_inicio.interpolate_property(wikiV, 'scale', Vector2(0.01,0.01), Vector2(1.47,1.47),0.3, Tween.TRANS_BOUNCE, Tween.EASE_IN_OUT)
+	tween_inicio.start()
+>>>>>>> 0f814b103d9eee5da2c384588371c8c48d48c732
 
 func _physics_process(delta):
 	if(!deleteadaV):
@@ -37,10 +51,20 @@ func _on_Tween_tween_completed(object, key):
 
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("Toca"):
-		$Area2D.queue_free()
+	pass
+#	if Input.is_action_just_pressed("Toca"):
+#		$Area2D.queue_free()
+##		if wikiV.get_rect().has_point(to_local(event.position)) && !clickeadaV:
+#		Manager.emit_signal("s_virusTimer", position)
+#		clickeadaV=true
+#		clicMal.play()
+		#closeAnimation()
+
+
+func _on_Area2D_area_entered(area):
+	$Area2D.queue_free()
 #		if wikiV.get_rect().has_point(to_local(event.position)) && !clickeadaV:
-		#Manager.emit_signal("s_virusTimer")
-		clickeadaV=true
-		clicMal.play()
-		closeAnimation()
+	Manager.emit_signal("s_virusTimer", position)
+	clickeadaV=true
+	clicMal.play()
+	print('virus')

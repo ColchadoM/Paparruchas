@@ -32,12 +32,22 @@ func spawnWiki():
 	add_child(wiki)
 
 func spawnWikiVirus():
-	
 	var wikiVi = wikiVirus.instance()
 	var wikiHV = wikiVi.get_node("WikiV").texture.get_height()
 	var wikiWV = wikiVi.get_node("WikiV").texture.get_width()
 	wikiVi.position = Vector2(rand_range(playzoneStart,screenWidth -(wikiWV/2)) , -(wikiHV/2) - 500)
 	add_child(wikiVi)
+
+func explotaVirus(posicion:Vector2):
+	for i in range(10):
+		var r_wiki_x = rand_range(-200,200)
+		var r_wiki_y = rand_range(-200,200)-100
+		var wikiVi = wikiVirus.instance()
+		var wikiHV = wikiVi.get_node("WikiV").texture.get_height()
+		var wikiWV = wikiVi.get_node("WikiV").texture.get_width()
+		wikiVi.position = Vector2(posicion.x+(i*r_wiki_x),posicion.y+(i*r_wiki_y))
+		add_child(wikiVi)
+		yield(get_tree().create_timer(0.02),"timeout")
 	
 func spawnWikiTerminos():
 	var wiki = wikiTerminos.instance()
@@ -58,12 +68,13 @@ func _on_TimerTerminos_timeout():
 	if(Manager.estadoJuegoActual == Manager.EstadoJuego.EN_JUEGO || generando):
 		spawnWikiTerminos()	
 
-func ClickVirus():
+func ClickVirus(posicion:Vector2):	
 	if castigo_virus == false:
-		$TimerVirus.wait_time = 0.3
+		explotaVirus(posicion)
+		#$TimerVirus.wait_time = 0.3
 		castigo_virus = true
-		yield(get_tree().create_timer(8),"timeout")
-		$TimerVirus.wait_time = 1
+		yield(get_tree().create_timer(0.5),"timeout")
+		#$TimerVirus.wait_time = 1
 		castigo_virus = false
 
 func _on_TimerFinal_timeout():

@@ -20,7 +20,7 @@ signal s_desempaparruchar
 signal s_empaparruchar
 signal s_terminarNivel(tipo)
 signal s_afueraPantalla(x)
-signal s_virusTimer
+signal s_virusTimer(posicion)
 signal s_edroped(tipoVentana,area, posicion) # cuando un script drop se come una ventana
 signal s_droped # cuando sueltas una ventana manualmente
 signal s_terminoscondiciones

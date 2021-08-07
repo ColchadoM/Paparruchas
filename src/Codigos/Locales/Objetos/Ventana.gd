@@ -3,6 +3,7 @@ extends Sprite
 enum EstadoVentana {IDLE, ARRASTRANDO, REGRESANDO, ECESTADA}
 
 onready var area_ventana = $Area2D 
+onready var area_virus = $Area_virus
 onready var audioClick = $AudioClick
 onready var clicBien = $ClicBien
 onready var clicMal = $ClicMal
@@ -79,14 +80,18 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 		audioClick.play() 
 		posicion_ultima = position
 		estadoVentana = EstadoVentana.ARRASTRANDO
+		area_virus.set_collision_layer_bit(1, true)
+		print(area_virus.get_collision_layer_bit(2))
 		Manager.figuraAgarrada = true
 
 # Si un drop se come una ventana
 func colisionDrop(tipo, area, posicion):
 	if(estadoVentana != EstadoVentana.ARRASTRANDO):
+		area_virus.set_collision_layer_bit(1, false)
 		return
 	posicion_drop = posicion
 	if area == area_ventana:
+		area_virus.set_collision_layer_bit(1, false)
 		estadoVentana = EstadoVentana.ECESTADA
 		area_ventana.queue_free()
 		Manager.emit_signal("s_droped") # si el proceso de comerse un ventana acaba
@@ -126,3 +131,9 @@ func closeAnimation(tipo=0):
 
 func _on_TweenClose_tween_completed(object, key):
 	queue_free()
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0f814b103d9eee5da2c384588371c8c48d48c732
