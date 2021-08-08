@@ -16,16 +16,17 @@ var nivelesDesbloqueados = 1
 
 #signals
 signal s_empezarNivel
-signal s_desempaparruchar
-signal s_empaparruchar
+signal s_desempaparruchar(cantidad, lugar)
+signal s_empaparruchar(cantidad, lugar)
 signal s_terminarNivel(tipo)
 signal s_afueraPantalla(x)
 signal s_virusTimer(posicion)
 signal entro_basura(tipo, ventana, posicion)
-signal s_edroped(tipoVentana,area, posicion) # cuando un script drop se come una ventana
+signal s_edroped(tipoVentana,area, posicion, lugar) #(lugar en donde entro la ventana) cuando un script drop se come una ventana
 signal s_droped # cuando sueltas una ventana manualmente
 signal s_terminoscondiciones
 signal s_termina_terminos
+signal s_paparruchometro_punto(punto, lugar)
 
 func _ready():
 	pause_mode = PAUSE_MODE_PROCESS
@@ -62,14 +63,16 @@ func _process(delta):
 			get_tree().get_root().get_node("ZonaJuego/NivelPerdido").play()
 			emit_signal("s_terminarNivel",1)
 
-func empaparruchar(cantidad=1):
+func empaparruchar(cantidad=1, lugar=''):
 	#print(empaparruchometroActual)
 	Manager.empaparruchometroActual += cantidad
 	emit_signal("s_desempaparruchar")
+	emit_signal("s_paparruchometro_punto", 'malo', lugar)
 	#print(Manager.empaparruchometroActual)
 
-func desempaparruchar(cantidad=1):
+func desempaparruchar(cantidad=1, lugar=''):
 	#print(empaparruchometroActual)
 	Manager.empaparruchometroActual -= cantidad
 	emit_signal("s_empaparruchar")
+	emit_signal("s_paparruchometro_punto", 'bueno', lugar)
 	#print(Manager.empaparruchometroActual)

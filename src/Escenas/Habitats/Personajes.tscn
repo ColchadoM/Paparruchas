@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/Randal.png" type="Texture" id=1]
 [ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/Alex.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Recursos/Visuales/Sprites/Empaparruchados/Slider.PNG" type="Texture" id=12]
 [ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/AtrasAlex.PNG" type="Texture" id=13]
 [ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/AtrasRandal.PNG" type="Texture" id=14]
+[ext_resource path="res://Recursos/Visuales/Interfaz/Side_caras.png" type="Texture" id=15]
 
 [node name="Personajes" type="Control"]
 anchor_right = 1.0
@@ -24,17 +25,19 @@ __meta__ = {
 }
 
 [node name="Contenedor" type="Control" parent="."]
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 600.0
+mouse_filter = 2
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Izquierda" type="ColorRect" parent="Contenedor"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0.847059, 0.568627, 0.568627, 1 )
+[node name="Izquierda" type="TextureRect" parent="Contenedor"]
+margin_right = 600.0
+margin_bottom = 1440.0
+texture = ExtResource( 15 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

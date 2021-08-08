@@ -10,14 +10,20 @@ onready var tween_inicio = $Tween_inicio
 var clickeadaV: bool = false
 var deleteadaV: bool = false
 var speedV: float = 300
+var apenas_creada = true
+
+var virus_p = preload("res://Escenas/Objetos/virus_particula.tscn")
+
 
 func _ready():
 	_entraVirus()
+	
 	#Conectar las signals
 	Manager.connect("s_terminarNivel",self, "closeAnimation")
 	
 	var image = get_node("res://Recursos/Visuales/Sprites/ventana_virus.png")
-	
+	yield(get_tree().create_timer(0.5), "timeout")
+	apenas_creada = false	
 	#Escalar random
 #	var nScale = rand_range(1,3)
 #	wikiV.scale = Vector2(nScale, nScale)
@@ -59,9 +65,18 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 
 
 func _on_Area2D_area_entered(area):
-	$Area2D.queue_free()
-#		if wikiV.get_rect().has_point(to_local(event.position)) && !clickeadaV:
-	Manager.emit_signal("s_virusTimer", position)
-	clickeadaV=true
-	clicMal.play()
-	print('virus')
+	if !apenas_creada:
+		$Area2D.queue_free()
+		particula_creada_v()
+	#		if wikiV.get_rect().has_point(to_local(event.position)) && !clickeadaV:
+		Manager.emit_signal("s_virusTimer", position)
+		clickeadaV=true
+		clicMal.play()
+		print('virus')
+	
+func particula_creada_v():
+	print("particles")
+	var particula_instance = virus_p.instance()
+#	particula_instance.position = posicion_estrellitas.position
+	particula_instance.emitting = true
+	add_child(particula_instance)

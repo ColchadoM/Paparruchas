@@ -26,8 +26,8 @@ func spawnWiki():
 		wiki = wikiDrag.instance()
 	else:
 		wiki = wikiPaquete.instance()
-	var wikiH = wiki.texture.get_height()
-	var wikiW = wiki.texture.get_width()
+	var wikiH = wiki.get_node('Ventana_sprite').texture.get_height()
+	var wikiW = wiki.get_node('Ventana_sprite').texture.get_width()
 	wiki.position = Vector2(rand_range(playzoneStart + (wikiW/2),screenWidth -(wikiW/2)) , -(wikiH/2) - 50)
 	add_child(wiki)
 

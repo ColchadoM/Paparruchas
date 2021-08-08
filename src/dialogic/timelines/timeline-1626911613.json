@@ -21,31 +21,31 @@
 		{
 			"character": "character-1626911484.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "alex-feliz",
 			"text": "INTRO_1_1"
 		},
 		{
 			"character": "character-1626911484.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "Default",
 			"text": "INTRO_1_2"
 		},
 		{
 			"character": "character-1626911484.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "alex-feliz",
 			"text": "INTRO_1_3"
 		},
 		{
 			"character": "character-1626911484.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "Default",
 			"text": "INTRO_1_4"
 		},
 		{
 			"character": "character-1626911484.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
+			"portrait": "alex-confundido",
 			"text": "INTRO_1_5"
 		},
 		{
@@ -59,12 +59,6 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "INTRO_1_7"
-		},
-		{
-			"character": "character-1626911484.json",
-			"event_id": "dialogic_001",
-			"portrait": "Default",
-			"text": "INTRO_1_8"
 		},
 		{
 			"action": "join",
@@ -107,30 +101,20 @@
 			"text": "INTRO_3_1"
 		},
 		{
-			"character": "character-1626911484.json",
-			"event_id": "dialogic_001",
-			"portrait": "alex-confundido",
-			"text": "INTRO_3_2"
-		},
-		{
-			"event_id": "dialogic_024",
-			"set_theme": "theme-1626911916.cfg"
-		},
-		{
-			"character": "character-1626911484.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "INTRO_5_1"
-		},
-		{
 			"event_id": "dialogic_024",
 			"set_theme": "theme-1626971653.cfg"
 		},
 		{
 			"character": "character-1626911539.json",
 			"event_id": "dialogic_001",
-			"portrait": "randal-enojado",
-			"text": "INTRO_6_1"
+			"portrait": "",
+			"text": "INTRO_4_1"
+		},
+		{
+			"character": "character-1626911539.json",
+			"event_id": "dialogic_001",
+			"portrait": "randal-triste",
+			"text": "INTRO_4_2"
 		},
 		{
 			"emit_signal": "termina",

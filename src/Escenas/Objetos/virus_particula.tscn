@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Recursos/Visuales/Materiales/virus_material.tres" type="Material" id=1]
+[ext_resource path="res://Recursos/Visuales/Texturas/empaparruchado_ojo.png" type="Texture" id=2]
+
+[node name="virus_particula" type="Particles2D"]
+z_index = 5
+emitting = false
+amount = 16
+one_shot = true
+speed_scale = 2.0
+explosiveness = 0.8
+process_material = ExtResource( 1 )
+texture = ExtResource( 2 )

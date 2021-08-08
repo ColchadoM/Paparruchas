@@ -15,6 +15,7 @@ func porcentajeEmpaparruchado():
 
 func setPaparruchometro():
 	var porcentaje:float = porcentajeEmpaparruchado() * 0.01
+	print(porcentajeEmpaparruchado())
 	var tamanioBarra = abs(minX) + abs(maxX)
 	actualPaparruchas = maxX - (tamanioBarra * porcentaje)
 	#get_node("Nob").position.x = -actualPaparruchas

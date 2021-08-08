@@ -1,4 +1,4 @@
-extends Sprite
+extends Node2D
 
 enum EstadoVentana {IDLE, ARRASTRANDO, REGRESANDO, ECESTADA}
 
@@ -9,6 +9,9 @@ onready var clicBien = $ClicBien
 onready var clicMal = $ClicMal
 onready var tweenClose = $TweenClose
 onready var figura = $Figura
+onready var caminito = $Caminito
+onready var sprite_ventana = $Ventana_sprite
+
 
 var valorFigura: int = -1
 var estadoVentana = EstadoVentana.IDLE
@@ -60,7 +63,7 @@ func _physics_process(delta):
 			position.y += speed * delta
 			rotation = lerp_angle(rotation, 0, 10 * delta)
 			# Revisa si se salio de la pantalla
-			if(position.y > get_viewport().size.y + texture.get_height()):
+			if(position.y > get_viewport().size.y + sprite_ventana.texture.get_height()):
 				deleteada=true
 				#Revisa si es una paparrucha
 				if(!Helpers.esNoticiaVerdadera(Manager.figurasVerdaderas, valorFigura)):
@@ -72,44 +75,52 @@ func _physics_process(delta):
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and not event.pressed and estadoVentana == EstadoVentana.ARRASTRANDO:
+			caminito.emitting = false
+			area_virus.set_collision_layer_bit(1, false)
+			sprite_ventana.scale = Vector2(1,1)
 			estadoVentana = EstadoVentana.REGRESANDO
 
 # Si el mouse esta dentro del area de la ventana y esta es agarrada
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("Toca") && estadoVentana == EstadoVentana.IDLE && !Manager.figuraAgarrada:
-		audioClick.play() 
+		audioClick.play()
+		caminito.emitting = true
 		posicion_ultima = position
 		estadoVentana = EstadoVentana.ARRASTRANDO
+		sprite_ventana.scale = Vector2(0.8,0.8)
 		area_virus.set_collision_layer_bit(1, true)
 		print(area_virus.get_collision_layer_bit(2))
 		Manager.figuraAgarrada = true
 
 # Si un drop se come una ventana
-func colisionDrop(tipo, area, posicion):
+func colisionDrop(tipo, area, posicion, lugar):
 	if(estadoVentana != EstadoVentana.ARRASTRANDO):
+		caminito.emitting = false
+		sprite_ventana.scale = Vector2(1,1)
 		area_virus.set_collision_layer_bit(1, false)
 		return
 	posicion_drop = posicion
 	if area == area_ventana:
+		caminito.emitting = false
 		area_virus.set_collision_layer_bit(1, false)
 		estadoVentana = EstadoVentana.ECESTADA
 		area_ventana.queue_free()
-		Manager.emit_signal("s_droped") # si el proceso de comerse un ventana acaba
+		Manager.emit_signal("s_droped", 1, lugar) # si el proceso de comerse un ventana acaba
 		
 		if(tipo == Manager.TipoDrop.BASURA):
 			if !Helpers.esNoticiaVerdadera(Manager.figurasVerdaderas, valorFigura):
 				clicBien.play()
-				Manager.desempaparruchar()
+				Manager.desempaparruchar( 1, lugar)
 			else:
 				clicMal.play()
-				Manager.empaparruchar()
+				Manager.empaparruchar( 1, lugar)
 		elif(tipo == Manager.TipoDrop.COMPARTIR):
 			if Helpers.esNoticiaVerdadera(Manager.figurasVerdaderas, valorFigura):
 				clicBien.play()
-				Manager.desempaparruchar()
+				Manager.desempaparruchar( 1, lugar)
 			else:
 				clicMal.play()
-				Manager.empaparruchar()
+				Manager.empaparruchar( 1, lugar)
 		else:
 			pass
 			
