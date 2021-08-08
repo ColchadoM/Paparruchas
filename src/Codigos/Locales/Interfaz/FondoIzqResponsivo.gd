@@ -20,3 +20,4 @@ func changeWidth():
 	get_node("AtrasRandal").position.x = sizeX/2
 	get_node("AtrasAlex").position.x = sizeX/2
 	get_node("Alex").position.x = sizeX/2
+	get_node("Izquierda").rect_size.x = sizeX

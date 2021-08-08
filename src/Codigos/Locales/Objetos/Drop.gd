@@ -1,7 +1,7 @@
 extends Node2D
 
 var particulas = preload("res://Escenas/Objetos/Estrellitas.tscn")
-var particulas_virus = preload("res://Escenas/Objetos/virus_particula.tscn")
+var particulas_virus = preload("res://Escenas/Objetos/error_particula.tscn")
 
 export(Manager.TipoDrop) var tipoDrop
 export(NodePath) var posicion_estrellitas

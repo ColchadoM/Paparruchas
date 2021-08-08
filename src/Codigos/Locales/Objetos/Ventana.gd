@@ -49,9 +49,12 @@ func _physics_process(delta):
 	if(!deleteada):
 		if estadoVentana == EstadoVentana.ARRASTRANDO:
 			position = lerp(position, get_global_mouse_position(), 25 * delta)
-			#look_at(get_global_mouse_position())
+			sprite_ventana.look_at(get_global_mouse_position())
+			figura.look_at(get_global_mouse_position())
 		elif estadoVentana == EstadoVentana.REGRESANDO:
 			position = lerp(position, posicion_ultima, 5 * delta)
+			sprite_ventana.rotation = lerp(sprite_ventana.rotation, 0, 5 * delta)
+			figura.rotation = lerp(figura.rotation, 0, 5 * delta)
 			if(Helpers.estanCerca(position, posicion_ultima,35)):
 				estadoVentana = EstadoVentana.IDLE
 				Manager.figuraAgarrada = false

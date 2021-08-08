@@ -35,13 +35,13 @@ func spawnWikiVirus():
 	var wikiVi = wikiVirus.instance()
 	var wikiHV = wikiVi.get_node("WikiV").texture.get_height()
 	var wikiWV = wikiVi.get_node("WikiV").texture.get_width()
-	wikiVi.position = Vector2(rand_range(playzoneStart,screenWidth -(wikiWV/2)) , -(wikiHV/2) - 500)
+	wikiVi.position = Vector2(rand_range(playzoneStart,screenWidth -(wikiWV/2)) + 100 , -(wikiHV/2) - 500)
 	add_child(wikiVi)
 
 func explotaVirus(posicion:Vector2):
 	for i in range(10):
-		var r_wiki_x = rand_range(-200,200)
-		var r_wiki_y = rand_range(-200,200)-100
+		var r_wiki_x = rand_range(-80,80)
+		var r_wiki_y = rand_range(-80,80)-30
 		var wikiVi = wikiVirus.instance()
 		var wikiHV = wikiVi.get_node("WikiV").texture.get_height()
 		var wikiWV = wikiVi.get_node("WikiV").texture.get_width()
