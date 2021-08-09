@@ -5,14 +5,16 @@ enum TipoDrop {NEUTRAL, BASURA, COMPARTIR}
 # Varialbes del juego
 var estadoJuegoActual = EstadoJuego.INACTIVO
 var enPausa:bool = false
-var maxEmpaparruchamiento:int = 20;
+var maxEmpaparruchamiento:Array = [20,35,30,40];
 var minEmpaparruchamiento:int = 0;
-var empaparruchometroInicial: int = 10;
+var empaparruchometroInicial: Array = [10,20,20,30];
 var empaparruchometroActual;
 var figurasVerdaderas: Array = [] #{'tipo':valorFigura, 'objeto': figura}
 var figuraAgarrada:bool = false;
-var niveles = []
-var nivelesDesbloqueados = 1
+# Niveles
+var niveles = [1,2,3,4]
+var nivelesDesbloqueados = [1]
+var nivelActual = 2
 
 #signals
 signal s_empezarNivel
@@ -27,10 +29,11 @@ signal s_droped # cuando sueltas una ventana manualmente
 signal s_terminoscondiciones
 signal s_termina_terminos
 signal s_paparruchometro_punto(punto, lugar)
+signal s_nextLevel #pasar alsigueinte nivel
 
 func _ready():
 	pause_mode = PAUSE_MODE_PROCESS
-	empaparruchometroActual = empaparruchometroInicial
+	empaparruchometroActual = empaparruchometroInicial[nivelActual-1]
 	#resetearNivel()
 
 func _input(event):
@@ -42,9 +45,14 @@ func _input(event):
 			get_tree().get_root().get_node("ZonaJuego/Menus/Pausa").show()
 			get_tree().paused = true
 
+func siguienteNivel():
+	#if(nivelActual <= niveles.le)
+	nivelActual += 1
+	resetearNivel()
+
 func resetearNivel():
 	estadoJuegoActual = EstadoJuego.INACTIVO
-	empaparruchometroActual = empaparruchometroInicial
+	empaparruchometroActual = empaparruchometroInicial[nivelActual-1]
 	get_tree().get_root().get_node("ZonaJuego/TextoInicio/TimerInicio").start()
 	emit_signal("s_empezarNivel")
 
@@ -57,7 +65,7 @@ func _process(delta):
 			estadoJuegoActual = EstadoJuego.JUEGO_TERMINADO
 			get_tree().get_root().get_node("ZonaJuego/NivelExito").play()
 			emit_signal("s_terminarNivel",0)
-		elif(empaparruchometroActual >= maxEmpaparruchamiento):
+		elif(empaparruchometroActual >= maxEmpaparruchamiento[nivelActual-1]):
 			print("entra 2")
 			estadoJuegoActual = EstadoJuego.JUEGO_PERDIDO
 			get_tree().get_root().get_node("ZonaJuego/NivelPerdido").play()

@@ -11,7 +11,7 @@ func _ready():
 	Manager.connect("s_empezarNivel",self, "setPaparruchometro")
 	
 func porcentajeEmpaparruchado():
-	return (Manager.empaparruchometroActual * 100)/(Manager.maxEmpaparruchamiento - Manager.minEmpaparruchamiento)
+	return (Manager.empaparruchometroActual * 100)/(Manager.maxEmpaparruchamiento[Manager.nivelActual-1] - Manager.minEmpaparruchamiento)
 
 func setPaparruchometro():
 	var porcentaje:float = porcentajeEmpaparruchado() * 0.01

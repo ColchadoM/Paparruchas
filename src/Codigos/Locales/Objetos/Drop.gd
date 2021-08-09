@@ -11,24 +11,12 @@ export(String, "Basura", "Compartir") var lugar
 export(NodePath) var arean
 
 func _ready():
-	print(lugar)
 	arean = get_node(arean) as Area2D
 	posicion_estrellitas = get_node(posicion_estrellitas) as Position2D
 	Manager.connect("s_droped",self,"droped")
 	Manager.connect("s_paparruchometro_punto",self,"droped_e")
 
-	
-## cuando el proceso de comerse ventana acaba y es exitoso
-#func droped():
-#	print("dropeada")
-#	if emiteParticulas:
-#		particula_creada(particulas)
-#	if shake:
-#		shake()
-		
 func droped_e(punto, _lugar):
-#	print(self.name)
-	
 	if _lugar == lugar:
 		print(_lugar)
 		if punto == 'malo':
@@ -62,9 +50,11 @@ func shake():
 	
 
 func _on_AreaCo_area_entered(area):
-	Manager.emit_signal("s_edroped", tipoDrop, area, position, self.name)
-#	print(self.name)
-#	print(lugar)
+	if(tipoDrop == Manager.TipoDrop.COMPARTIR):
+		if(get_node("../../WikiGenerador").puedeCompartir):
+			Manager.emit_signal("s_edroped", tipoDrop, area, position, self.name)
+	else:
+		Manager.emit_signal("s_edroped", tipoDrop, area, position, self.name)
 
 
 func _on_AreaBa_area_entered(area):

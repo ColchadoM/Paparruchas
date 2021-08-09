@@ -13,7 +13,7 @@ func _process(delta):
 	get_node("Empaparruchado/Randal02").rotate(delta * velEmpaparruchado)
 	
 func actualizar():
-	if(Manager.empaparruchometroActual >= Manager.maxEmpaparruchamiento-1):
+	if(Manager.empaparruchometroActual >= Manager.maxEmpaparruchamiento[Manager.nivelActual-1]-1):
 		get_node("Bruma").show()
 		var tween = get_node("Tween")
 		tween.interpolate_property(get_node("Bruma"), "scale",
