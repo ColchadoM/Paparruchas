@@ -43,3 +43,17 @@ func _on_Jugar_pressed():
 	
 	yield(get_tree().create_timer(1.5), "timeout")
 	get_tree().change_scene_to(inicio_esc)
+
+
+func _on_gnu_licencia_toggled(button_pressed):
+	print(button_pressed)
+	if button_pressed:
+		print('ddsads')
+		$ventana_terminos/Tween.interpolate_property($ventana_terminos, 'rect_scale', Vector2(0,0), Vector2(0.618,0.618), 1, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
+		$ventana_terminos/Tween.start()
+		pass # Replace with function body.
+	else:
+		print('ddsads')
+		$ventana_terminos/Tween.interpolate_property($ventana_terminos, 'rect_scale', Vector2(0.618,0.618), Vector2(0,0), 1, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
+		$ventana_terminos/Tween.start()
+		pass # Replace with function body.
