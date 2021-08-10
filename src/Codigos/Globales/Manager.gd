@@ -5,7 +5,7 @@ enum TipoDrop {NEUTRAL, BASURA, COMPARTIR}
 # Varialbes del juego
 var estadoJuegoActual = EstadoJuego.INACTIVO
 var enPausa:bool = false
-var maxEmpaparruchamiento:Array = [15,30,30,40];
+var maxEmpaparruchamiento:Array = [15,25,25,35];
 var minEmpaparruchamiento:int = 0;
 var empaparruchometroInicial: Array = [10,20,20,30];
 var empaparruchometroActual;
@@ -63,9 +63,7 @@ func resetearNivel():
 	emit_signal("s_empezarNivel")
 
 func _process(delta):
-	#print(estadoJuegoActual)
 	if(estadoJuegoActual == EstadoJuego.EN_JUEGO):
-		#print("ingame")
 		if(empaparruchometroActual <= minEmpaparruchamiento):
 			estadoJuegoActual = EstadoJuego.JUEGO_TERMINADO
 			get_tree().get_root().get_node("ZonaJuego/NivelExito").play()
@@ -76,15 +74,11 @@ func _process(delta):
 			emit_signal("s_terminarNivel",1)
 
 func empaparruchar(cantidad=1, lugar=''):
-	#print(empaparruchometroActual)
 	Manager.empaparruchometroActual += cantidad
 	emit_signal("s_desempaparruchar")
 	emit_signal("s_paparruchometro_punto", 'malo', lugar)
-	#print(Manager.empaparruchometroActual)
 
 func desempaparruchar(cantidad=1, lugar=''):
-	#print(empaparruchometroActual)
 	Manager.empaparruchometroActual -= cantidad
 	emit_signal("s_empaparruchar")
 	emit_signal("s_paparruchometro_punto", 'bueno', lugar)
-	#print(Manager.empaparruchometroActual)

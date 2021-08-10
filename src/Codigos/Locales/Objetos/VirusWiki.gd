@@ -29,14 +29,12 @@ func _ready():
 #	wikiV.scale = Vector2(nScale, nScale)
 
 func _entraVirus():
-	#print('entra')
 	tween_inicio.interpolate_property(wikiV, 'scale', Vector2(0.01,0.01), Vector2(1.47,1.47),0.3, Tween.TRANS_BOUNCE, Tween.EASE_IN_OUT)
 	tween_inicio.start()
 
 func _physics_process(delta):
 	if(!deleteadaV):
 		position.y += speedV * delta
-		#print(speedV * delta)
 		if(position.y > get_viewport().size.y + get_node("WikiV").texture.get_height()):
 			deleteadaV = true;
 			closeAnimation()
@@ -72,10 +70,8 @@ func _on_Area2D_area_entered(area):
 		Manager.emit_signal("s_virusTimer", position)
 		clickeadaV=true
 		clicMal.play()
-		print('virus')
 	
 func particula_creada_v():
-	print("particles")
 	var particula_instance = virus_p.instance()
 #	particula_instance.position = posicion_estrellitas.position
 	particula_instance.emitting = true

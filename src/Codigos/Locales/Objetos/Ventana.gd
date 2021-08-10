@@ -71,6 +71,7 @@ func _physics_process(delta):
 				#Revisa si es una paparrucha
 				if(!Helpers.esNoticiaVerdadera(Manager.figurasVerdaderas, valorFigura)):
 					Manager.emit_signal("s_afueraPantalla", position.x)
+					Manager.empaparruchar( 1, "fuera")
 					clicMal.play()
 				closeAnimation()
 
@@ -92,7 +93,6 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 		estadoVentana = EstadoVentana.ARRASTRANDO
 		sprite_ventana.scale = Vector2(0.2,0.2)
 		area_virus.set_collision_layer_bit(1, true)
-		print(area_virus.get_collision_layer_bit(2))
 		Manager.figuraAgarrada = true
 
 # Si un drop se come una ventana

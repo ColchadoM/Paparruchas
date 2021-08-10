@@ -32,9 +32,8 @@ func _on_Siguiente_pressed():
 	esconderMenu()
 
 func _on_Continuar_pressed():
-	print("pressed")
+	pass
 
 
 func _on_Salir_pressed():
-	print("salir")
 	pass # Replace with function body.
