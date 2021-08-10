@@ -112,7 +112,7 @@ pointing/emulate_touch_from_mouse=true
 
 [locale]
 
-translations=PoolStringArray( "res://Recursos/Textos/Espanol/intro_texto.es.translation" )
+translations=PoolStringArray( "res://Recursos/Textos/Espanol/texto_full.es.translation" )
 
 [physics]
 

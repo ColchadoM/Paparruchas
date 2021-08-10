@@ -16,7 +16,7 @@ var figuraAgarrada:bool = false;
 # Niveles
 var niveles = [1,2,3,4]
 var nivelesDesbloqueados = [1]
-var nivelActual = 2
+var nivelActual = 1
 
 #signals
 signal s_empezarNivel
