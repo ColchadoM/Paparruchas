@@ -67,6 +67,7 @@ func explotaVirus(posicion:Vector2):
 		wikiVi.position = Vector2(posicion.x+(i*r_wiki_x),posicion.y+(i*r_wiki_y))
 		add_child(wikiVi)
 		yield(get_tree().create_timer(0.02),"timeout")
+		
 	
 func spawnWikiTerminos():
 	if !generandoTerminos:
