@@ -15,7 +15,7 @@ var figurasVerdaderas: Array = [] #{'tipo':valorFigura, 'objeto': figura}
 var figuraAgarrada:bool = false;
 # Niveles
 var niveles = [1,2,3,4]
-var nivelesDesbloqueados = [1]
+var nivelesDesbloqueados = [1,2]
 var nivelActual = 1
 
 #signals
