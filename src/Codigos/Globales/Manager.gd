@@ -1,6 +1,7 @@
 extends Node
 
 var medioIntro = preload("res://Escenas/Ambientes/Medio_intro.tscn")
+var intro_jugar = preload("res://Escenas/Ambientes/Intro_Paparruchas.tscn")
 
 enum EstadoJuego {INACTIVO, EN_JUEGO, JUEGO_PERDIDO, JUEGO_TERMINADO}
 enum TipoDrop {NEUTRAL, BASURA, COMPARTIR} 
@@ -101,8 +102,8 @@ func _process(delta):
 			estadoJuegoActual = EstadoJuego.JUEGO_PERDIDO
 			get_tree().get_root().get_node("ZonaJuego/NivelPerdido").play()
 			emit_signal("s_terminarNivel",1)
-			yield(get_tree().create_timer(2.5),"timeout")
-			get_tree().change_scene_to(medioIntro)
+			yield(get_tree().create_timer(6.5),"timeout")
+			get_tree().change_scene_to(intro_jugar)
 
 func empaparruchar(cantidad=1, lugar=''):
 	Manager.empaparruchometroActual += cantidad

@@ -6,7 +6,6 @@ onready var historia_final = preload("res://Escenas/Ambientes/Final_paparruchas.
 func _ready():
 	Manager.connect("s_terminarNivel",self,"mostarMenu")
 	
-	
 # 1 Pierde - 0 Gana
 func mostarMenu(tipo):
 	yield(get_tree().create_timer(2),"timeout")
@@ -20,6 +19,9 @@ func mostarMenu(tipo):
 		var tween = get_node("TweenInicio")
 		tween.interpolate_property(get_node("GameEnd"), "modulate", Color(1, 1, 1, 0), Color(1, 1, 1, 1), 1, Tween.TRANS_LINEAR, Tween.EASE_IN)
 		tween.start()
+		yield(get_tree().create_timer(2.5),"timeout")
+		$GameEnd/FadeGameOver/Tween.interpolate_property($GameEnd/FadeGameOver, 'color', Color('00000000'), Color('000000'), 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+		$GameEnd/FadeGameOver/Tween.start()
 
 func esconderMenu():
 	get_node("GameOver").hide()
