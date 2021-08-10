@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/Randal.png" type="Texture" id=1]
 [ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/Alex.png" type="Texture" id=2]
@@ -15,11 +15,20 @@
 [ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/AtrasAlex.PNG" type="Texture" id=13]
 [ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/AtrasRandal.PNG" type="Texture" id=14]
 [ext_resource path="res://Recursos/Visuales/Interfaz/Side_caras.png" type="Texture" id=15]
+[ext_resource path="res://Codigos/Locales/Personajes/Personajes.gd" type="Script" id=16]
+[ext_resource path="res://Recursos/Visuales/Sprites/Empaparruchados/Axolotito02.png" type="Texture" id=17]
+[ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/Axolotito.png" type="Texture" id=18]
+[ext_resource path="res://Recursos/Visuales/Sprites/Empaparruchados/Juni01.png" type="Texture" id=19]
+[ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/Caiman.png" type="Texture" id=20]
+[ext_resource path="res://Recursos/Visuales/Sprites/Empaparruchados/Caiman(1).png" type="Texture" id=21]
+[ext_resource path="res://Recursos/Visuales/Sprites/Empaparruchados/Juni02.png" type="Texture" id=22]
+[ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/Juni.png" type="Texture" id=23]
 
 [node name="Personajes" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
+script = ExtResource( 16 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -46,17 +55,13 @@ __meta__ = {
 }
 
 [node name="AtrasRandal" type="Sprite" parent="Contenedor"]
+visible = false
 position = Vector2( 299.278, 416.359 )
 z_as_relative = false
 texture = ExtResource( 14 )
 
-[node name="AtrasAlex" type="Sprite" parent="Contenedor"]
-position = Vector2( 301, 1054 )
-scale = Vector2( 1.05, 1.05 )
-z_as_relative = false
-texture = ExtResource( 13 )
-
 [node name="Randal" type="Sprite" parent="Contenedor"]
+visible = false
 position = Vector2( 300, 420 )
 texture = ExtResource( 1 )
 script = ExtResource( 3 )
@@ -78,6 +83,75 @@ texture = ExtResource( 5 )
 
 [node name="Tween" type="Tween" parent="Contenedor/Randal"]
 
+[node name="Axolotl" type="Sprite" parent="Contenedor"]
+visible = false
+position = Vector2( 300, 420 )
+texture = ExtResource( 18 )
+script = ExtResource( 3 )
+
+[node name="Bruma" type="Sprite" parent="Contenedor/Axolotl"]
+visible = false
+position = Vector2( 3.9277, -149.418 )
+texture = ExtResource( 10 )
+
+[node name="Empaparruchado" type="Node2D" parent="Contenedor/Axolotl"]
+
+[node name="Randal01" type="Sprite" parent="Contenedor/Axolotl/Empaparruchado"]
+position = Vector2( -25.9227, 9.84806 )
+texture = ExtResource( 17 )
+
+[node name="Randal02" type="Sprite" parent="Contenedor/Axolotl/Empaparruchado"]
+position = Vector2( 204.763, 16.7887 )
+texture = ExtResource( 17 )
+
+[node name="Tween" type="Tween" parent="Contenedor/Axolotl"]
+
+[node name="Juni" type="Sprite" parent="Contenedor"]
+visible = false
+position = Vector2( 300, 420 )
+texture = ExtResource( 23 )
+script = ExtResource( 3 )
+
+[node name="Bruma" type="Sprite" parent="Contenedor/Juni"]
+visible = false
+position = Vector2( 3.9277, -149.418 )
+texture = ExtResource( 10 )
+
+[node name="Empaparruchado" type="Node2D" parent="Contenedor/Juni"]
+
+[node name="Randal01" type="Sprite" parent="Contenedor/Juni/Empaparruchado"]
+position = Vector2( -67.5736, 34.9798 )
+texture = ExtResource( 19 )
+
+[node name="Randal02" type="Sprite" parent="Contenedor/Juni/Empaparruchado"]
+position = Vector2( 67.5618, 33.5 )
+texture = ExtResource( 22 )
+
+[node name="Tween" type="Tween" parent="Contenedor/Juni"]
+
+[node name="Caiman" type="Sprite" parent="Contenedor"]
+position = Vector2( 300, 420 )
+texture = ExtResource( 20 )
+script = ExtResource( 3 )
+
+[node name="Bruma" type="Sprite" parent="Contenedor/Caiman"]
+visible = false
+position = Vector2( 3.9277, -149.418 )
+texture = ExtResource( 10 )
+
+[node name="Empaparruchado" type="Node2D" parent="Contenedor/Caiman"]
+
+[node name="Randal01" type="Sprite" parent="Contenedor/Caiman/Empaparruchado"]
+position = Vector2( -137.744, -30.9807 )
+texture = ExtResource( 21 )
+
+[node name="Randal02" type="Sprite" parent="Contenedor/Caiman/Empaparruchado"]
+visible = false
+position = Vector2( 67.5618, 33.5 )
+texture = ExtResource( 22 )
+
+[node name="Tween" type="Tween" parent="Contenedor/Caiman"]
+
 [node name="Slider" type="Sprite" parent="Contenedor"]
 position = Vector2( 302.21, 670 )
 scale = Vector2( 1.5, 1.5 )
@@ -90,6 +164,12 @@ scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 11 )
 
 [node name="Tween" type="Tween" parent="Contenedor/Slider"]
+
+[node name="AtrasAlex" type="Sprite" parent="Contenedor"]
+position = Vector2( 301, 1054 )
+scale = Vector2( 1.05, 1.05 )
+z_as_relative = false
+texture = ExtResource( 13 )
 
 [node name="Alex" type="Sprite" parent="Contenedor"]
 position = Vector2( 300, 1068 )

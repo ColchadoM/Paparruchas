@@ -71,6 +71,7 @@ func _physics_process(delta):
 				#Revisa si es una paparrucha
 				if(!Helpers.esNoticiaVerdadera(Manager.figurasVerdaderas, valorFigura)):
 					Manager.emit_signal("s_afueraPantalla", position.x)
+					Manager.empaparruchar( 1, "fuera")
 					clicMal.play()
 				closeAnimation()
 
@@ -80,7 +81,7 @@ func _input(event):
 		if event.button_index == BUTTON_LEFT and not event.pressed and estadoVentana == EstadoVentana.ARRASTRANDO:
 			caminito.emitting = false
 			area_virus.set_collision_layer_bit(1, false)
-			sprite_ventana.scale = Vector2(1,1)
+			sprite_ventana.scale = Vector2(0.25,0.25)
 			estadoVentana = EstadoVentana.REGRESANDO
 
 # Si el mouse esta dentro del area de la ventana y esta es agarrada
@@ -90,16 +91,15 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 		caminito.emitting = true
 		posicion_ultima = position
 		estadoVentana = EstadoVentana.ARRASTRANDO
-		sprite_ventana.scale = Vector2(0.8,0.8)
+		sprite_ventana.scale = Vector2(0.2,0.2)
 		area_virus.set_collision_layer_bit(1, true)
-		print(area_virus.get_collision_layer_bit(2))
 		Manager.figuraAgarrada = true
 
 # Si un drop se come una ventana
 func colisionDrop(tipo, area, posicion, lugar):
 	if(estadoVentana != EstadoVentana.ARRASTRANDO):
 		caminito.emitting = false
-		sprite_ventana.scale = Vector2(1,1)
+		sprite_ventana.scale = Vector2(0.25,0.25)
 		area_virus.set_collision_layer_bit(1, false)
 		return
 	posicion_drop = posicion

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Share.png-87575a454962a16603c0a7dcaaad2410.stex"
+path="res://.import/Juni.png-1367319630035433b9040c6cfcad2066.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Recursos/Visuales/Interfaz/Share.png"
-dest_files=[ "res://.import/Share.png-87575a454962a16603c0a7dcaaad2410.stex" ]
+source_file="res://Recursos/Visuales/Sprites/alex_completo/Juni.png"
+dest_files=[ "res://.import/Juni.png-1367319630035433b9040c6cfcad2066.stex" ]
 
 [params]
 

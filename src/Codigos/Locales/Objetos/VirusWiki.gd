@@ -36,7 +36,6 @@ func _entraVirus():
 func _physics_process(delta):
 	if(!deleteadaV):
 		position.y += speedV * delta
-		#print(speedV * delta)
 		if(position.y > get_viewport().size.y + get_node("WikiV").texture.get_height()):
 			deleteadaV = true;
 			closeAnimation()
@@ -72,10 +71,8 @@ func _on_Area2D_area_entered(area):
 		Manager.emit_signal("s_virusTimer", position)
 		clickeadaV=true
 		clicMal.play()
-		print('virus')
 	
 func particula_creada_v():
-	print("particles")
 	var particula_instance = virus_p.instance()
 #	particula_instance.position = posicion_estrellitas.position
 	particula_instance.emitting = true

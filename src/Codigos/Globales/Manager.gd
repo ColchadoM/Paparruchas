@@ -1,18 +1,22 @@
 extends Node
 
+var medioIntro = preload("res://Escenas/Ambientes/Medio_intro.tscn")
+
 enum EstadoJuego {INACTIVO, EN_JUEGO, JUEGO_PERDIDO, JUEGO_TERMINADO}
 enum TipoDrop {NEUTRAL, BASURA, COMPARTIR} 
 # Varialbes del juego
 var estadoJuegoActual = EstadoJuego.INACTIVO
 var enPausa:bool = false
-var maxEmpaparruchamiento:int = 20;
+var maxEmpaparruchamiento:Array = [15,25,25,35];
 var minEmpaparruchamiento:int = 0;
-var empaparruchometroInicial: int = 10;
+var empaparruchometroInicial: Array = [10,20,20,30];
 var empaparruchometroActual;
 var figurasVerdaderas: Array = [] #{'tipo':valorFigura, 'objeto': figura}
 var figuraAgarrada:bool = false;
-var niveles = []
-var nivelesDesbloqueados = 1
+# Niveles
+var niveles = [1,2,3,4]
+var nivelesDesbloqueados = [1]
+var nivelActual = 2
 
 #signals
 signal s_empezarNivel
@@ -27,52 +31,58 @@ signal s_droped # cuando sueltas una ventana manualmente
 signal s_terminoscondiciones
 signal s_termina_terminos
 signal s_paparruchometro_punto(punto, lugar)
+signal s_nextLevel #pasar alsigueinte nivel
 
 func _ready():
 	pause_mode = PAUSE_MODE_PROCESS
-	empaparruchometroActual = empaparruchometroInicial
+	empaparruchometroActual = empaparruchometroInicial[nivelActual-1]
 	#resetearNivel()
 
 func _input(event):
 	if event.is_action_pressed("Pausa"):
 		if(get_tree().paused):
-			get_tree().get_root().get_node("ZonaJuego/Menus/Pausa").hide()
-			get_tree().paused = false
+			pausar(true)
 		else:
-			get_tree().get_root().get_node("ZonaJuego/Menus/Pausa").show()
-			get_tree().paused = true
+			pausar(false)
+
+func pausar(vaAPausar:bool):
+	if(vaAPausar):
+		get_tree().get_root().get_node("ZonaJuego/Menus/Pausa").hide()
+		get_tree().paused = false
+	else:
+		get_tree().get_root().get_node("ZonaJuego/Menus/Pausa").show()
+		get_tree().paused = true
+
+func siguienteNivel():
+	#if(nivelActual <= niveles.le)
+	nivelActual += 1
+	resetearNivel()
 
 func resetearNivel():
 	estadoJuegoActual = EstadoJuego.INACTIVO
-	empaparruchometroActual = empaparruchometroInicial
+	empaparruchometroActual = empaparruchometroInicial[nivelActual-1]
 	get_tree().get_root().get_node("ZonaJuego/TextoInicio/TimerInicio").start()
 	emit_signal("s_empezarNivel")
 
 func _process(delta):
-	#print(estadoJuegoActual)
 	if(estadoJuegoActual == EstadoJuego.EN_JUEGO):
-		#print("ingame")
 		if(empaparruchometroActual <= minEmpaparruchamiento):
-			print("entra 1")
 			estadoJuegoActual = EstadoJuego.JUEGO_TERMINADO
 			get_tree().get_root().get_node("ZonaJuego/NivelExito").play()
 			emit_signal("s_terminarNivel",0)
-		elif(empaparruchometroActual >= maxEmpaparruchamiento):
-			print("entra 2")
+		elif(empaparruchometroActual >= maxEmpaparruchamiento[nivelActual-1]):
 			estadoJuegoActual = EstadoJuego.JUEGO_PERDIDO
 			get_tree().get_root().get_node("ZonaJuego/NivelPerdido").play()
 			emit_signal("s_terminarNivel",1)
+			yield(get_tree().create_timer(2.5),"timeout")
+			get_tree().change_scene_to(medioIntro)
 
 func empaparruchar(cantidad=1, lugar=''):
-	#print(empaparruchometroActual)
 	Manager.empaparruchometroActual += cantidad
 	emit_signal("s_desempaparruchar")
 	emit_signal("s_paparruchometro_punto", 'malo', lugar)
-	#print(Manager.empaparruchometroActual)
 
 func desempaparruchar(cantidad=1, lugar=''):
-	#print(empaparruchometroActual)
 	Manager.empaparruchometroActual -= cantidad
 	emit_signal("s_empaparruchar")
 	emit_signal("s_paparruchometro_punto", 'bueno', lugar)
-	#print(Manager.empaparruchometroActual)
