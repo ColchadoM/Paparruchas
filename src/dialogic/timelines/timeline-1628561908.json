@@ -337,6 +337,10 @@
 		{
 			"event_id": "dialogic_023",
 			"wait_seconds": 2
+		},
+		{
+			"change_scene": "res://Escenas/Ambientes/ZonaJuego.tscn",
+			"event_id": "dialogic_041"
 		}
 	],
 	"metadata": {

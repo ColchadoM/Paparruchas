@@ -10,6 +10,9 @@ func _ready():
 func dialogic_signal(argument):
 	match argument:		
 		"termina":
+			Manager.nivelActual = 4
+			Manager.figurasVerdaderas = []
+			Manager.empaparruchometroActual = Manager.empaparruchometroInicial[Manager.nivelActual-1]
 			$Transicion_juego_crece.inicia_transicion()
 		"terminos_aceptar":
 			$terminos_aceptar/Tween.interpolate_property($terminos_aceptar, 'rect_scale', Vector2(0,0), Vector2(1,1), 0.4, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)

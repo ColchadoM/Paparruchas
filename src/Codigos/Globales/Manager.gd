@@ -15,7 +15,7 @@ var figurasVerdaderas: Array = [] #{'tipo':valorFigura, 'objeto': figura}
 var figuraAgarrada:bool = false;
 # Niveles
 var niveles = [1,2,3,4]
-var nivelesDesbloqueados = [1,2]
+var nivelesDesbloqueados = [1]
 var nivelActual = 1
 
 #signals
@@ -54,12 +54,39 @@ func pausar(vaAPausar:bool):
 		get_tree().paused = true
 
 func siguienteNivel():
-	#if(nivelActual <= niveles.le)
-	nivelActual += 1
-	resetearNivel()
+#	estadoJuegoActual = EstadoJuego.INACTIVO
+	figurasVerdaderas = [] 
+	empaparruchometroActual = empaparruchometroInicial[nivelActual-1]
+#	get_tree().get_root().get_node("ZonaJuego/TextoInicio/TimerInicio").start()
+	emit_signal("s_empezarNivel")
+	if nivelesDesbloqueados.size() != 4:
+		match nivelActual:
+			1:
+				if nivelesDesbloqueados.size() == 1:
+					nivelesDesbloqueados = [1,2]
+				else:
+					pass
+			2:
+				if nivelesDesbloqueados.size() == 2:
+					nivelesDesbloqueados = [1,2,3]
+				else:
+					pass
+			3: 
+				if nivelesDesbloqueados.size() == 3:
+					nivelesDesbloqueados = [1,2,3,4]
+				else:
+					pass
+			4:
+				pass
+
+	#if(nivelActual <= niveles.le)	
+	#nivelActual += 1
+	#nivelesDesbloqueados = [1,2]
+	#resetearNivel()
 
 func resetearNivel():
 	estadoJuegoActual = EstadoJuego.INACTIVO
+	figurasVerdaderas = [] 
 	empaparruchometroActual = empaparruchometroInicial[nivelActual-1]
 	get_tree().get_root().get_node("ZonaJuego/TextoInicio/TimerInicio").start()
 	emit_signal("s_empezarNivel")

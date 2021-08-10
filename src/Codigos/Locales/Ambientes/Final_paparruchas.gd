@@ -10,6 +10,9 @@ func _ready():
 func dialogic_signal(argument):
 	match argument:		
 		"termina":
+			Manager.nivelActual = 1
+			Manager.figurasVerdaderas = []
+			Manager.empaparruchometroActual = Manager.empaparruchometroInicial[Manager.nivelActual-1]
 			$Transicion_juego_crece.inicia_transicion()
 		"fade_negro":
 			$ColorRectNegro/Tween.interpolate_property($ColorRectNegro, 'color', Color('00000000'), Color('000000'), 0.6, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)

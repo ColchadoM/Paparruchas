@@ -26,6 +26,9 @@ func dialogic_signal(argument):
 			$ventana_gris/Tween.interpolate_property($ventana_gris, 'rect_scale', Vector2(1,1), Vector2(0.6,0.6), 0.4, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
 			$ventana_gris/Tween.start()
 		"termina":
+			Manager.nivelActual = 1
+			Manager.figurasVerdaderas = []
+			Manager.empaparruchometroActual = Manager.empaparruchometroInicial[Manager.nivelActual-1]
 			$Transicion_juego_crece.inicia_transicion()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

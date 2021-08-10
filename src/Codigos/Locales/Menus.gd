@@ -1,5 +1,8 @@
 extends Control
 
+onready var menu_niveles = preload("res://Escenas/Ambientes/Menu_Niveles.tscn")
+onready var historia_final = preload("res://Escenas/Ambientes/Final_paparruchas.tscn")
+
 func _ready():
 	Manager.connect("s_terminarNivel",self,"mostarMenu")
 	
@@ -30,6 +33,10 @@ func _on_Siguiente_pressed():
 	Manager.siguienteNivel()
 	Manager.emit_signal("s_nextLevel")
 	esconderMenu()
+	if Manager.nivelActual == 4:
+		get_tree().change_scene_to(historia_final)
+	else:
+		get_tree().change_scene_to(menu_niveles)
 
 func _on_Continuar_pressed():
 	pass

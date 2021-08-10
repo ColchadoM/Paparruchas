@@ -1,6 +1,7 @@
 extends Control
 
 onready var inicio_esc = preload("res://Escenas/Ambientes/Introduccion_chapulin.tscn")
+onready var menu_niveles = preload("res://Escenas/Ambientes/Menu_Niveles.tscn")
 onready var jugar_btn = $HSeparator/CenterContainer/Jugar
 
 func _ready():
@@ -42,7 +43,12 @@ func _on_Jugar_pressed():
 	
 	
 	yield(get_tree().create_timer(1.5), "timeout")
-	get_tree().change_scene_to(inicio_esc)
+	Manager.nivelActual = 1
+	if Manager.nivelesDesbloqueados.size() > 1:		
+		get_tree().change_scene_to(menu_niveles)
+	else:	
+		get_tree().change_scene_to(inicio_esc)
+	
 
 
 func _on_gnu_licencia_toggled(button_pressed):

@@ -11,6 +11,9 @@ func _ready():
 func dialogic_signal(argument):
 	match argument:		
 		"termina":
+			Manager.nivelActual = 3
+			Manager.figurasVerdaderas = []
+			Manager.empaparruchometroActual = Manager.empaparruchometroInicial[Manager.nivelActual-1]
 			$Transicion_juego_crece.inicia_transicion()
 		"virus":
 			particula_creada(particulas_virus)

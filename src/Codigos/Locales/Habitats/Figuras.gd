@@ -4,9 +4,9 @@ extends NinePatchRect
 onready var figurasPaquete = preload("res://Escenas/Objetos/Figura.tscn")
 
 export var figurasIniciales = 2
-export var figurasMax = 3
+export var figurasMax = 5
 #var figuras: Array = []
-var cambiando = false;
+var cambiando = true;
 
 func _ready():
 	inicializarFiguras()

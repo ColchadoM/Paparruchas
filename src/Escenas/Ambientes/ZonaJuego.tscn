@@ -146,6 +146,7 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Menus/GameOver/ColorRect"]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -162,17 +163,18 @@ __meta__ = {
 
 [node name="Siguiente" type="Button" parent="Menus/GameOver/ColorRect"]
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -661.52
-margin_top = -443.111
-margin_right = 656.48
-margin_bottom = -141.111
+anchor_bottom = 0.5
+margin_left = -659.0
+margin_top = -151.0
+margin_right = 659.0
+margin_bottom = 151.0
 custom_fonts/font = ExtResource( 5 )
 text = "Siguiente"
 
 [node name="Reiniciar" type="Button" parent="Menus/GameOver/ColorRect"]
+visible = false
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -287,6 +289,7 @@ visible = false
 modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 theme = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false

@@ -3,19 +3,25 @@ extends Sprite
 var minX: int = -130
 var maxX: int = 130
 var actualPaparruchas = 0
+var porcentaje:float
 
 func _ready():
+	
+	porcentajeEmpaparruchado()
 	setPaparruchometro()
 	Manager.connect("s_desempaparruchar",self, "setPaparruchometro")
 	Manager.connect("s_empaparruchar",self, "setPaparruchometro")
-	Manager.connect("s_empezarNivel",self, "setPaparruchometro")
+	Manager.connect("s_empezarNivel",self, "setPaparruchometroInicia")
 	
 func porcentajeEmpaparruchado():
 	return (Manager.empaparruchometroActual * 100)/(Manager.maxEmpaparruchamiento[Manager.nivelActual-1] - Manager.minEmpaparruchamiento)
 
+func setPaparruchometroInicia():
+	porcentaje = Manager.empaparruchometroInicial[Manager.nivelActual-1]
+	
 func setPaparruchometro():
-	var porcentaje:float = porcentajeEmpaparruchado() * 0.01
-	print(porcentajeEmpaparruchado())
+	porcentaje = porcentajeEmpaparruchado() * 0.01
+	#print(porcentajeEmpaparruchado())
 	var tamanioBarra = abs(minX) + abs(maxX)
 	actualPaparruchas = maxX - (tamanioBarra * porcentaje)
 	get_node("Nob").position.x = -actualPaparruchas

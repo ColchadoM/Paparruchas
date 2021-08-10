@@ -1,7 +1,7 @@
 extends Control
 
 onready var niveles = $CenterContainer/Grid_Niveles
-onready var juego_1 = preload("res://Escenas/Ambientes/ZonaJuego.tscn")
+#onready var juego_1 = preload("res://Escenas/Ambientes/ZonaJuego.tscn")
 
 onready var texto_1 = preload("res://Escenas/Ambientes/Introduccion_chapulin.tscn")
 onready var texto_2 = preload("res://Escenas/Ambientes/Tamalitos_axolote.tscn")
@@ -32,7 +32,7 @@ func _ready():
 
 
 func level_button_pressed(escena):	
-	Manager.nivelActual = escena
+	Manager.nivelActual = escena	
 	$Transicion_juego_crece.inicia_transicion()
 	yield(get_tree().create_timer(2),"timeout")
 	get_tree().change_scene_to(textos_escenas[escena-1]) # Change scene to any selected level
