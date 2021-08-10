@@ -22,50 +22,26 @@
 			"character": "character-1626911484.json",
 			"event_id": "dialogic_001",
 			"portrait": "alex-feliz",
-			"text": "INTRO_1_1"
+			"text": "ALEX_1_1"
 		},
 		{
 			"character": "character-1626911484.json",
 			"event_id": "dialogic_001",
 			"portrait": "Default",
-			"text": "INTRO_1_2"
-		},
-		{
-			"character": "character-1626911484.json",
-			"event_id": "dialogic_001",
-			"portrait": "alex-feliz",
-			"text": "INTRO_1_3"
+			"text": "ALEX_1_2"
 		},
 		{
 			"character": "character-1626911484.json",
 			"event_id": "dialogic_001",
 			"portrait": "Default",
-			"text": "INTRO_1_4"
-		},
-		{
-			"character": "character-1626911484.json",
-			"event_id": "dialogic_001",
-			"portrait": "alex-confundido",
-			"text": "INTRO_1_5"
-		},
-		{
-			"character": "character-1626911484.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "INTRO_1_6"
-		},
-		{
-			"character": "character-1626911484.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "INTRO_1_7"
+			"text": "ALEX_1_3"
 		},
 		{
 			"action": "join",
 			"character": "character-1626911539.json",
 			"event_id": "dialogic_002",
 			"mirror": false,
-			"portrait": "",
+			"portrait": "randal-empaparruchado",
 			"position": {
 				"0": false,
 				"1": false,
@@ -75,20 +51,44 @@
 			}
 		},
 		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "ALEX_1_4"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "ALEX_1_5"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-enojado",
+			"text": "ALEX_1_6"
+		},
+		{
 			"event_id": "dialogic_024",
 			"set_theme": "theme-1626971653.cfg"
 		},
 		{
 			"character": "character-1626911539.json",
 			"event_id": "dialogic_001",
-			"portrait": "randal-empaparruchado",
-			"text": "INTRO_2_1"
+			"portrait": "Default",
+			"text": "RANDY_1_1"
 		},
 		{
 			"character": "character-1626911539.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "INTRO_2_2"
+			"portrait": "randal-preocupado",
+			"text": "RANDY_1_2"
+		},
+		{
+			"character": "character-1626911539.json",
+			"event_id": "dialogic_001",
+			"portrait": "randal-preocupado",
+			"text": "RANDY_1_3"
 		},
 		{
 			"event_id": "dialogic_024",
@@ -98,7 +98,53 @@
 			"character": "character-1626911484.json",
 			"event_id": "dialogic_001",
 			"portrait": "alex-confundido",
-			"text": "INTRO_3_1"
+			"text": "ALEX_1_7"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626971653.cfg"
+		},
+		{
+			"emit_signal": "falsa",
+			"event_id": "dialogic_040"
+		},
+		{
+			"character": "character-1626911539.json",
+			"event_id": "dialogic_001",
+			"portrait": "randal-normal",
+			"text": "RANDY_1_4"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-confundido",
+			"text": "ALEX_1_8"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-confundido",
+			"text": "ALEX_1_9"
+		},
+		{
+			"emit_signal": "real",
+			"event_id": "dialogic_040"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "ALEX_1_10"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "ALEX_1_11"
 		},
 		{
 			"event_id": "dialogic_024",
@@ -107,14 +153,28 @@
 		{
 			"character": "character-1626911539.json",
 			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "INTRO_4_1"
+			"portrait": "randal-normal",
+			"text": "RANDY_1_5"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-triste",
+			"text": "ALEX_1_12"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626971653.cfg"
 		},
 		{
 			"character": "character-1626911539.json",
 			"event_id": "dialogic_001",
-			"portrait": "randal-triste",
-			"text": "INTRO_4_2"
+			"portrait": "randal-normal",
+			"text": "RANDY_1_6"
 		},
 		{
 			"emit_signal": "termina",

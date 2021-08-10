@@ -1,0 +1,347 @@
+{
+	"events": [
+		{
+			"background": "res://Recursos/Visuales/Fondos/fondo_inicio.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"action": "join",
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"action": "join",
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "ALEX_4_1"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-confundido",
+			"text": "ALEX_4_2"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628137403.cfg"
+		},
+		{
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "JUNI_4_1"
+		},
+		{
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_001",
+			"portrait": "juni-timido",
+			"text": "JUNI_4_2"
+		},
+		{
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_001",
+			"portrait": "juni-malvado",
+			"text": "JUNI_4_3"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-confundido",
+			"text": "ALEX_4_3"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-enojado",
+			"text": "ALEX_4_4"
+		},
+		{
+			"emit_signal": "terminos_aceptar",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628137403.cfg"
+		},
+		{
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_001",
+			"portrait": "juni-empaparruchado",
+			"text": "JUNI_4_4"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-confundido",
+			"text": "ALEX_4_5"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-confundido",
+			"text": "ALEX_4_6"
+		},
+		{
+			"emit_signal": "terminos_aceptar_termina",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628137403.cfg"
+		},
+		{
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_001",
+			"portrait": "juni-timido",
+			"text": "JUNI_4_5"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "ALEX_4_7"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "ALEX_4_8"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628137403.cfg"
+		},
+		{
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_001",
+			"portrait": "juni-timido",
+			"text": "JUNI_4_6"
+		},
+		{
+			"emit_signal": "fade_negro",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 0.4
+		},
+		{
+			"action": "leaveall",
+			"character": "[All]",
+			"event_id": "dialogic_003"
+		},
+		{
+			"background": "res://Recursos/Visuales/Fondos/fondo_inicio.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"action": "join",
+			"character": "character-1628140587.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628140689.cfg"
+		},
+		{
+			"character": "character-1628140587.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "RATA_4_1"
+		},
+		{
+			"character": "character-1628140587.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "RATA_4_2"
+		},
+		{
+			"emit_signal": "fade_negro",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 0.4
+		},
+		{
+			"action": "leaveall",
+			"character": "[All]",
+			"event_id": "dialogic_003"
+		},
+		{
+			"background": "res://Recursos/Visuales/Fondos/fondo_inicio.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"action": "join",
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"action": "join",
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "ALEX_4_9"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-enojado",
+			"text": "ALEX_4_10"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-enojado",
+			"text": "ALEX_4_11"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-enojado",
+			"text": "ALEX_4_12"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-triste",
+			"text": "ALEX_4_13"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628137403.cfg"
+		},
+		{
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_001",
+			"portrait": "juni-timido",
+			"text": "JUNI_4_7"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-feliz",
+			"text": "ALEX_4_14"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-feliz",
+			"text": "ALEX_4_15"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-feliz",
+			"text": "ALEX_4_16"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-feliz",
+			"text": "ALEX_4_17"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628137403.cfg"
+		},
+		{
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_001",
+			"portrait": "juni-feliz",
+			"text": "JUNI_4_8"
+		},
+		{
+			"emit_signal": "termina",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 2
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.2.4",
+		"file": "timeline-1628561908.json",
+		"name": "terminos_historia"
+	}
+}

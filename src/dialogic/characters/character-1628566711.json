@@ -1,0 +1,32 @@
+{
+	"color": "#ff77ff32",
+	"description": "Multitud de ciudadanos de Ciudad Chapulín.",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1628566711.json",
+	"mirror_portraits": false,
+	"name": "Multitud",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -140,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Recursos/Visuales/Sprites/multitud_completo/multitud-normal.png"
+		},
+		{
+			"name": "multitud-enojada",
+			"path": "res://Recursos/Visuales/Sprites/multitud_completo/multitud-enojada.png"
+		},
+		{
+			"name": "multitud-feliz",
+			"path": "res://Recursos/Visuales/Sprites/multitud_completo/multitud-feliz.png"
+		},
+		{
+			"name": "multitud-normal",
+			"path": "res://Recursos/Visuales/Sprites/multitud_completo/multitud-normal.png"
+		}
+	],
+	"scale": 100
+}

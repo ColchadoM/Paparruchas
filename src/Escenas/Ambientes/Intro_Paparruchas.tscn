@@ -14,7 +14,7 @@
 [ext_resource path="res://Recursos/Visuales/Intro/Telefono.png" type="Texture" id=12]
 [ext_resource path="res://Recursos/Visuales/Interfaz/Ventana_sinx.png" type="Texture" id=13]
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=1]
 resource_name = "vibra"
 length = 2.0
 loop = true
@@ -31,21 +31,21 @@ tracks/0/keys = {
 "values": [ 0.0, 3.8, -0.8, 5.2, 0.0 ]
 }
 
-[sub_resource type="DynamicFontData" id=1]
+[sub_resource type="DynamicFontData" id=2]
 font_path = "res://Recursos/Textos/Fuentes/DaxlinePro-Bold.otf"
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 60
-font_data = SubResource( 1 )
+font_data = SubResource( 2 )
 
-[sub_resource type="DynamicFontData" id=3]
+[sub_resource type="DynamicFontData" id=4]
 font_path = "res://Recursos/Textos/Fuentes/DaxlinePro-Bold.otf"
-
-[sub_resource type="DynamicFont" id=4]
-size = 73
-font_data = SubResource( 3 )
 
 [sub_resource type="DynamicFont" id=5]
+size = 73
+font_data = SubResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
 size = 45
 font_data = ExtResource( 10 )
 
@@ -64,6 +64,9 @@ margin_left = 0.00012207
 margin_top = -6.10352e-05
 texture = ExtResource( 11 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="celular" type="TextureRect" parent="."]
 anchor_left = 0.5
@@ -81,7 +84,7 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="celular"]
 autoplay = "vibra"
-anims/vibra = SubResource( 6 )
+anims/vibra = SubResource( 1 )
 
 [node name="logo" type="TextureRect" parent="."]
 anchor_left = 1.0
@@ -120,7 +123,7 @@ margin_bottom = 860.359
 rect_min_size = Vector2( 0, 200 )
 rect_pivot_offset = Vector2( 638.5, 100 )
 size_flags_horizontal = 3
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0.992157, 0.992157, 0.819608, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]1. s. f. [wave amp=50 freq=2]Noticia falsa y desatinada."
@@ -166,6 +169,7 @@ margin_right = 512.0
 margin_bottom = 300.0
 rect_min_size = Vector2( 512, 300 )
 rect_pivot_offset = Vector2( 256, 200 )
+focus_mode = 0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 0.94902, 0.901961, 1 )
@@ -204,7 +208,7 @@ margin_bottom = 150.0
 rect_min_size = Vector2( 326, 150 )
 rect_pivot_offset = Vector2( 148, 75 )
 mouse_filter = 2
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 5 )
 custom_colors/default_color = Color( 0.992157, 0.992157, 0.819608, 1 )
 text = "JUGAR"
 scroll_active = false
@@ -252,7 +256,7 @@ margin_right = 879.256
 margin_bottom = 1466.35
 rect_min_size = Vector2( 500, 500 )
 mouse_filter = 2
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 6 )
 custom_colors/default_color = Color( 0.254902, 0.0588235, 0.152941, 1 )
 text = "Paparruchas es un videojuego libre sobre noticias falsas.
 Copyright (C) 2021 Medio Inestable

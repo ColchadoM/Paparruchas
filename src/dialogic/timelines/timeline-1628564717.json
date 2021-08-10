@@ -1,0 +1,439 @@
+{
+	"events": [
+		{
+			"background": "res://Recursos/Visuales/Fondos/fondo_inicio.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"action": "join",
+			"character": "character-1628140587.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"action": "join",
+			"character": "character-1628558627.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628140689.cfg"
+		},
+		{
+			"character": "character-1628140587.json",
+			"event_id": "dialogic_001",
+			"portrait": "sr_rata-asustada",
+			"text": "RATA_5_1"
+		},
+		{
+			"character": "character-1628140587.json",
+			"event_id": "dialogic_001",
+			"portrait": "sr_rata-enojada",
+			"text": "RATA_5_2"
+		},
+		{
+			"emit_signal": "fade_negro",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 0.4
+		},
+		{
+			"action": "leaveall",
+			"character": "[All]",
+			"event_id": "dialogic_003"
+		},
+		{
+			"background": "res://Recursos/Visuales/Fondos/fondo_inicio.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"action": "join",
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"action": "join",
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": true,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"action": "join",
+			"character": "character-1628566711.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628566775.cfg"
+		},
+		{
+			"character": "character-1628566711.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "MULTITUD_5_1"
+		},
+		{
+			"character": "character-1628566711.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "MULTITUD_5_2"
+		},
+		{
+			"action": "leaveall",
+			"character": "character-1628566711.json",
+			"event_id": "dialogic_003"
+		},
+		{
+			"action": "join",
+			"character": "character-1628558627.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628558689.cfg"
+		},
+		{
+			"character": "character-1628558627.json",
+			"event_id": "dialogic_001",
+			"portrait": "ratillas-mandonas",
+			"text": "RATILLAS_5_1"
+		},
+		{
+			"action": "leaveall",
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_003"
+		},
+		{
+			"action": "leaveall",
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_003"
+		},
+		{
+			"action": "join",
+			"character": "character-1628566711.json",
+			"event_id": "dialogic_002",
+			"mirror": true,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628566775.cfg"
+		},
+		{
+			"character": "character-1628566711.json",
+			"event_id": "dialogic_001",
+			"portrait": "multitud-enojada",
+			"text": "MULTITUD_5_3"
+		},
+		{
+			"character": "character-1628566711.json",
+			"event_id": "dialogic_001",
+			"portrait": "multitud-enojada",
+			"text": "MULTITUD_5_4"
+		},
+		{
+			"character": "character-1628566711.json",
+			"event_id": "dialogic_001",
+			"portrait": "multitud-enojada",
+			"text": "MULTITUD_5_5"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628558689.cfg"
+		},
+		{
+			"character": "character-1628558627.json",
+			"event_id": "dialogic_001",
+			"portrait": "ratillas-abrumadas",
+			"text": "RATILLAS_5_2"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628566775.cfg"
+		},
+		{
+			"character": "character-1628566711.json",
+			"event_id": "dialogic_001",
+			"portrait": "multitud-enojada",
+			"text": "MULTITUD_5_6"
+		},
+		{
+			"action": "leaveall",
+			"character": "character-1628558627.json",
+			"event_id": "dialogic_003"
+		},
+		{
+			"action": "join",
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"action": "join",
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": true,
+				"4": false
+			}
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628137403.cfg"
+		},
+		{
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_001",
+			"portrait": "juni-timido",
+			"text": "JUNI_5_1"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-feliz",
+			"text": "ALEX_5_1"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-feliz",
+			"text": "ALEX_5_2"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628566775.cfg"
+		},
+		{
+			"character": "character-1628566711.json",
+			"event_id": "dialogic_001",
+			"portrait": "multitud-feliz",
+			"text": "MULTITUD_5_7"
+		},
+		{
+			"character": "character-1628566711.json",
+			"event_id": "dialogic_001",
+			"portrait": "multitud-feliz",
+			"text": "MULTITUD_5_8"
+		},
+		{
+			"action": "leaveall",
+			"character": "character-1628566711.json",
+			"event_id": "dialogic_003"
+		},
+		{
+			"action": "leaveall",
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_003"
+		},
+		{
+			"action": "join",
+			"character": "character-1628140806.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628140860.cfg"
+		},
+		{
+			"character": "character-1628140806.json",
+			"event_id": "dialogic_001",
+			"portrait": "sra_axolotl-feliz",
+			"text": "AXOLOTE_5_1"
+		},
+		{
+			"character": "character-1628140806.json",
+			"event_id": "dialogic_001",
+			"portrait": "sra_axolotl-feliz",
+			"text": "AXOLOTE_5_2"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-feliz",
+			"text": "ALEX_5_3"
+		},
+		{
+			"action": "leaveall",
+			"character": "character-1628140806.json",
+			"event_id": "dialogic_003"
+		},
+		{
+			"action": "join",
+			"character": "character-1626911539.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-feliz",
+			"text": "ALEX_5_4"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626971653.cfg"
+		},
+		{
+			"character": "character-1626911539.json",
+			"event_id": "dialogic_001",
+			"portrait": "randal-preocupado",
+			"text": "RANDY_5_1"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-feliz",
+			"text": "ALEX_5_5"
+		},
+		{
+			"action": "join",
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628137403.cfg"
+		},
+		{
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_001",
+			"portrait": "juni-feliz",
+			"text": "JUNI_5_2"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-feliz",
+			"text": "ALEX_5_6"
+		},
+		{
+			"emit_signal": "termina",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 2
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.2.4",
+		"file": "timeline-1628564717.json",
+		"name": "final"
+	}
+}

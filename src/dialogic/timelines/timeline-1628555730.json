@@ -1,0 +1,301 @@
+{
+	"events": [
+		{
+			"background": "res://Recursos/Visuales/Fondos/fondo_inicio.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"action": "join",
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"action": "join",
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "ALEX_3_1"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628137403.cfg"
+		},
+		{
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_001",
+			"portrait": "juni-triste",
+			"text": "JUNI_3_1"
+		},
+		{
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_001",
+			"portrait": "juni-triste",
+			"text": "JUNI_3_2"
+		},
+		{
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_001",
+			"portrait": "juni-triste",
+			"text": "JUNI_3_3"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-confundido",
+			"text": "ALEX_3_2"
+		},
+		{
+			"emit_signal": "virus",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628137403.cfg"
+		},
+		{
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "JUNI_3_4"
+		},
+		{
+			"emit_signal": "fade_negro",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 0.4
+		},
+		{
+			"action": "leaveall",
+			"character": "[All]",
+			"event_id": "dialogic_003"
+		},
+		{
+			"background": "res://Recursos/Visuales/Fondos/fondo_inicio.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"action": "join",
+			"character": "character-1628140587.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628140689.cfg"
+		},
+		{
+			"character": "character-1628140587.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "RATA_3_1"
+		},
+		{
+			"action": "join",
+			"character": "character-1628558627.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"character": "character-1628140587.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "RATA_3_2"
+		},
+		{
+			"character": "character-1628140587.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "RATA_3_3"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628558689.cfg"
+		},
+		{
+			"character": "character-1628558627.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "RATILLAS_3_1"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628140689.cfg"
+		},
+		{
+			"character": "character-1628140587.json",
+			"event_id": "dialogic_001",
+			"portrait": "sr_rata-enojada",
+			"text": "RATA_3_4"
+		},
+		{
+			"character": "character-1628140587.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "RATA_3_5"
+		},
+		{
+			"character": "character-1628140587.json",
+			"event_id": "dialogic_001",
+			"portrait": "sr_rata-contenta",
+			"text": "RATA_3_6"
+		},
+		{
+			"character": "character-1628140587.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "RATA_3_7"
+		},
+		{
+			"emit_signal": "fade_negro",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 0.4
+		},
+		{
+			"action": "leaveall",
+			"character": "[All]",
+			"event_id": "dialogic_003"
+		},
+		{
+			"background": "res://Recursos/Visuales/Fondos/fondo_inicio.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"action": "join",
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"action": "join",
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "ALEX_3_3"
+		},
+		{
+			"emit_signal": "virus",
+			"event_id": "dialogic_040"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-confundido",
+			"text": "ALEX_3_4"
+		},
+		{
+			"emit_signal": "virus_grande",
+			"event_id": "dialogic_040"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-confundido",
+			"text": "ALEX_3_5"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1628137403.cfg"
+		},
+		{
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_001",
+			"portrait": "juni-timido",
+			"text": "JUNI_3_5"
+		},
+		{
+			"character": "character-1628137339.json",
+			"event_id": "dialogic_001",
+			"portrait": "juni-malvado",
+			"text": "JUNI_3_6"
+		},
+		{
+			"emit_signal": "termina",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 2
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.2.4",
+		"file": "timeline-1628555730.json",
+		"name": "virus_juni"
+	}
+}

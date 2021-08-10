@@ -1,0 +1,180 @@
+{
+	"events": [
+		{
+			"background": "res://Recursos/Visuales/Fondos/fondo_inicio.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"action": "join",
+			"character": "character-1628140806.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"action": "join",
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			}
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "ALEX_2_1"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-feliz",
+			"text": "ALEX_2_2"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626974761.cfg"
+		},
+		{
+			"character": "character-1628140806.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "AXOLOTE_2_1"
+		},
+		{
+			"character": "character-1628140806.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "AXOLOTE_2_2"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-confundido",
+			"text": "ALEX_2_3"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626974761.cfg"
+		},
+		{
+			"character": "character-1628140806.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "AXOLOTE_2_3"
+		},
+		{
+			"character": "character-1628140806.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "AXOLOTE_2_4"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-confundido",
+			"text": "ALEX_2_4"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626974761.cfg"
+		},
+		{
+			"character": "character-1628140806.json",
+			"event_id": "dialogic_001",
+			"portrait": "sra_axolotl-empaparruchada",
+			"text": "AXOLOTE_2_5"
+		},
+		{
+			"character": "character-1628140806.json",
+			"event_id": "dialogic_001",
+			"portrait": "sra_axolotl-empaparruchada",
+			"text": "AXOLOTE_2_6"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-triste",
+			"text": "ALEX_2_5"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626974761.cfg"
+		},
+		{
+			"character": "character-1628140806.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "AXOLOTE_2_7"
+		},
+		{
+			"character": "character-1628140806.json",
+			"event_id": "dialogic_001",
+			"portrait": "Default",
+			"text": "AXOLOTE_2_8"
+		},
+		{
+			"action": "leaveall",
+			"character": "character-1628140806.json",
+			"event_id": "dialogic_003"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1626911916.cfg"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-triste",
+			"text": "ALEX_2_6"
+		},
+		{
+			"character": "character-1626911484.json",
+			"event_id": "dialogic_001",
+			"portrait": "alex-confundido",
+			"text": "ALEX_2_7"
+		},
+		{
+			"emit_signal": "termina",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_023",
+			"wait_seconds": 2
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.2.4",
+		"file": "timeline-1628552344.json",
+		"name": "tamalitos"
+	}
+}

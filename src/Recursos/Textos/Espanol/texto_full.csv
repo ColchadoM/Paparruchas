@@ -1,45 +1,107 @@
 keys,es
-INTRO_1_1,¡Hoy es un gran día!
-INTRO_1_2,Es la Gran Feria de Ciudad Chapulín
-INTRO_1_3,Espero que la Sra. Axolotl venda esos tamalitos que tanto me gustan.
-INTRO_1_4,Burscaré a Randy y a Juni para que me acompañen.
-INTRO_1_5,Con suerte le podemos mostrar a todas y todos los juegos que inventamos
-INTRO_1_6,¿Qué es esto? Una flor con una forma chida. Se la mostraré a Randy
-INTRO_1_7,"Hola, Randy. Estoy emocionado por la feria de hoy ¿Vamos?"
-INTRO_2_1,. . . 
-INTRO_2_2,. . . 
-INTRO_3_1,¿Randy? ¿Me escuchas? ¿Qué ves en tu cel?
-INTRO_4_1,"Qué onda, Alex. La verdad no tengo ganas de ir."
-INTRO_4_2,En internet dijeron que va a estar bien aburrida.
-INTRO_4_3,Mejor me quedo en casa.
-INTRO_5_1,"Pero, Randy…"
-INTRO_5_2,Esta feria me emociona mucho.
-INTRO_5_3,"¡Ándale, vamos!"
-INTRO_6_1,"Lo siento, Alex. Adios."
-INTRO_7_1,"Bueno, pero espera. Encontré esta flor."
-INTRO_7_2,¿Qué forma le ves?
+ALEX_1_1,Hoy es un gran día. ¡Es la Gran Feria de Ciudad Chapulín!
+ALEX_1_2,Espero que doña Axolote venda sus tamalitos que están bien ricos.
+ALEX_1_3,Buscaré a Randy y Juni para que me acompañen.
+ALEX_1_4,"¡Qué onda, Randy! Estoy emocionado por la feria de hoy."
+ALEX_1_5,¿Vas conmigo?
+ALEX_1_6,¿Randy? ¡Pélame! ¿Qué ves en tu cel?
+RANDY_1_1,"Qué onda, Alex. La verdad no tengo ganas de ir."
+RANDY_1_2,Estoy viendo que todo mundo dice que está aburrida
+RANDY_1_3,y que probablemente se cancele.
+ALEX_1_7,"Achis, ¿dónde leíste eso?"
+RANDY_1_4,"Mira, aquí."
+ALEX_1_8,"Mmm… Eso se ve un poco falso, ¿no?"
+ALEX_1_9,"Mira, esa página no es oficial."
+ALEX_1_10,La verdadera página se ve así.
+ALEX_1_11,Como que alguien le hizo una copia chafa.
+RANDY_1_5,"Pues no sé, pero como que ya me dio flojera."
+ALEX_1_12,"Ándale, ve conmigo. Igual y sí está chida."
+RANDY_1_6,"Lo siento, Alex. Adiós. "
 ,
-AXTL_1_1,"Hola, Sra. Axolotl. ¿Usted irá a la gran feria?"
-AXTL_1_2,Quiero comprarle unos tamalios de dulce. Le quedan rebuenos
-AXTL_2_1,"Ay Alex. Mi vida, no sé, no creo ir."
-AXTL_2_2,Varias amigas mías me mandaron una cadena de whatsapp…
-AXTL_2_3,con rumores de que habría ladrones.
-AXTL_3_1,¿Ladrones? Suena inseguro. 
-AXTL_3_2,¿Le dijeron cómo eran o qué querían?
-AXTL_4_1,"Pues no dice, pero yo lo compartí por si las moscas."
-AXTL_5_1,"Pero, Sra. Axolotl. ¿No cree que sólo sean rumores falsos?"
-AXTL_5_2,¿No sabe quién mandó esa info?
-AXTL_6_1,"Ay quien sabe, mi amor, pero todas mis amigas me lo pasaron. "
-AXTL_6_2,Mejor no salgo de mi casa.
-AXTL_6_3,Los tamalitos serán para otro día.
+ALEX_2_1,"Hola, doña Axolote. ¿Usted irá a la Gran Feria?"
+ALEX_2_2,Le quiero comprar unos tamalitos de dulce jeje.
+AXOLOTE_2_1,"Hola, Alex. No sé, no creo ir. Me llegó un mensaje de que habría"
+AXOLOTE_2_2,unos ladrones por ahí.
+ALEX_2_3,¿Ladrones? Suena inseguro.
+AXOLOTE_2_3,"Sí, Alex, ladrones. A mí esas cosas me dan miedo, "
+AXOLOTE_2_4,mejor no me arriesgo. No vaya a ser…
+ALEX_2_4,"Pero, ¿quién se la envió? ¿no cree que sean sólo rumores?"
+AXOLOTE_2_5,"Pues no sé, Alex, no tenía fecha ni decía quién la escribió, "
+AXOLOTE_2_6,pero yo se la envié a mis amigas por si las moscas…
+ALEX_2_5,¿Y los tamalitos? 
+AXOLOTE_2_7,"Los tamalitos serán para otro día. Ya me voy, mijito. "
+AXOLOTE_2_8,Salúdame a tu mami.
+ALEX_2_6,"Sí, doña Axolote. Hasta luego. "
+ALEX_2_7,Siento que algo raro está pasando. Iré a buscar a Juni. 
 ,
-JUNI_1_1,Algo raro está pasando. Iré con Juni
-JUNI_1_2,Ey Juni. ¿Cómo andas?
-JUNI_2_1,Mmm… 
-JUNI_2_2,Un poco triste.
-JUNI_2_3,No sé que le pasó a mi compu. 
-JUNI_2_4,Le piqué a esta cosa que según te da puntos para este videojuego
-JUNI_2_5,y ahora mi compu está super lenta
-JUNI_3_1,"Juni, creo que fue un virus…"
-JUNI_3_2,¿Se veía así?
-JUNI_4_1,"Sí, justo así. Ay, no."
+ALEX_3_1,"Holi, Juni, ¿Cómo estás?"
+JUNI_3_1,Holaaa. Pues tristón. No sé qué le pasó a mi compu. 
+JUNI_3_2,Le piqué aquí donde decía que me iban a dar puntos para mi juego
+JUNI_3_3,y ahora está toda lenta.
+ALEX_3_2,"Ay, no… Creo que es un virus. A ver…"
+JUNI_3_4,Mira…
+RATA_3_1,"Han hecho un gran trabajo, ratillas. "
+RATA_3_2,Sigan compartiendo noticias falsas y lanzando virus
+RATA_3_3,para que nadie quiera ir a la Gran Feria. 
+RATILLAS_3_1,"¿Para qué quiere eso, jefe?"
+RATA_3_4,"Pues, miren, ratas tontas, en cuánto nadie vaya nos "
+RATA_3_5,apoderaremos de ese lugar y construiremos un edificio 
+RATA_3_6,"sólo para nosotros, las ratas."
+RATA_3_7,Sólo necesitamos que nadie vaya y creo que lo estamos logrando.
+ALEX_3_3,"Oye, Juni, ¿ya viste esto?"
+ALEX_3_4,Se parece a la corona del sr. Rata. 
+ALEX_3_5,¿Crees que él esté detrás de esto?
+JUNI_3_5,"Pues no me sorprendería, es bien grosero. "
+JUNI_3_6,Una vez me lo encontré y le dije buenos días y ni me respondió.
+,
+ALEX_4_1,"Mira, busqué al sr. Rata en internet"
+ALEX_4_2,y en su página aparecen fotos bien raras.
+JUNI_4_1,"Sí, mira, en esta foto según aparece doña Axolote con él"
+JUNI_4_2,"y ella nunca va a los eventos de ratas,"
+JUNI_4_3,se me hace que las editaron.
+ALEX_4_3,"¿Tú crees? Puede ser, "
+ALEX_4_4,no creo que el sr. Rata sea tan popular siendo tan grosero.
+JUNI_4_4,"Ah, dale que sí a eso para que se quite."
+ALEX_4_5,"Mmm… no, mira, aquí dice que si aceptas"
+ALEX_4_6,le das tus datos personales al sr. Rata.
+JUNI_4_5,"Ah, no manches, yo siempre le doy aceptar sin leer jeje."
+ALEX_4_7,"Ay, Juni, noooo. Siempre tienes que leer estas cosas "
+ALEX_4_8,para saber si aceptas o lo rechazas.
+JUNI_4_6,"Oops, tienes razón. Los leeré la próxima vez."
+RATA_4_1,Parece que mi plan está funcionando.
+RATA_4_2,Sólo queda una hora y no hay nadie cerca de la Gran Feria. 
+ALEX_4_9,"Juni, tenemos que avisarle a toda la ciudad que el sr. Rata"
+ALEX_4_10,está manipulando información e imágenes. 
+ALEX_4_11,Seguro fue él quién inventó el rumor que leyó Randy 
+ALEX_4_12,de que iba a estar aburrida
+ALEX_4_13,y sobre los ladrones que compartió doña Axolote.
+JUNI_4_7,¿Cómo le hacemos?
+ALEX_4_14,Vamos a compartir algo para que les llegue a todos. 
+ALEX_4_15,Agregamos las pruebas que encontramos 
+ALEX_4_16,y ponemos nuestro nombre en caso 
+ALEX_4_17,de que quieran más información.
+JUNI_4_8,"Va, lo voy a ir escribiendo."
+,
+RATA_5_1,"Maldita sea, nos descubrieron esos chamacos."
+RATA_5_2,"Tú, tú y tú, vayan rápido a buscarlos. Nadie se mete conmigo."
+MULTITUD_5_1,Gracias por avisarnos que el sr. Rata estaba detrás de todo esto. 
+MULTITUD_5_2,Es nuestro evento favorito del año y casi lo perdemos por mentiras.
+RATILLAS_5_1,"Ustedes, chamacos. Vengan para acá. El sr. Rata los quiere ver."
+MULTITUD_5_3,No se los pueden llevar. Mejor lárguense ustedes 
+MULTITUD_5_4,y díganle al sr. Rata que se vaya de aquí. 
+MULTITUD_5_5,No lo queremos cerca.
+RATILLAS_5_2,"Pero, pero… el sr. Rata nos ordenó que…"
+MULTITUD_5_6,"Nada, órale, váyanse."
+JUNI_5_1,Qué miedo.
+ALEX_5_1,"Sí, muchas gracias por eso. Creo que el malvado sr. Rata "
+ALEX_5_2,seguirá queriendo engañarnos por eso tenemos que estar atentxs.
+MULTITUD_5_7,"Sí, no se preocupen. Lo importante es que"
+MULTITUD_5_8,estamos todxs aquí y la pasaremos bien. 
+AXOLOTE_5_1,"¡Alex, vente! Te guardé unos tamales."
+AXOLOTE_5_2,Uno de rajas y otro de dulce. 
+ALEX_5_3,Me encantaaaaan. ¡Gracias!
+ALEX_5_4,"Ey, Randy, ¿quieres uno?"
+RANDY_5_1,"Sí, Alex. Gracias. Oye… perdón por no creerte hace rato."
+ALEX_5_5,No te preocupes. Lo importante es que estamos aquí juntos…
+JUNI_5_2,Y más importante es que con tamalitos jeje.
+ALEX_5_6,"Mira, nos van a tomar una foto."

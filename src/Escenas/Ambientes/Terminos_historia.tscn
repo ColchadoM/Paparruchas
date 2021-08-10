@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/dialogic/Dialog.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Escenas/Objetos/Transicion_juego_crece.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Codigos/Locales/Ambientes/Terminos_historia.gd" type="Script" id=3]
+[ext_resource path="res://Recursos/Visuales/Interfaz/terminos_historia_aceptar.png" type="Texture" id=4]
+
+[node name="Terminos_historia" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DialogNode" parent="." instance=ExtResource( 1 )]
+timeline = "timeline-1628561908.json"
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -1280.0
+margin_top = -511.0
+margin_right = 1280.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="ColorRect"]
+
+[node name="terminos_aceptar" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -610.0
+margin_top = -871.628
+margin_right = 610.0
+margin_bottom = 348.372
+rect_scale = Vector2( 1e-05, 1e-05 )
+rect_pivot_offset = Vector2( 610.021, 610.018 )
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="terminos_aceptar"]
+
+[node name="ColorRectNegro" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="ColorRectNegro"]
+
+[node name="Transicion_juego_crece" parent="." instance=ExtResource( 2 )]
+mouse_filter = 2
+
+[connection signal="pressed" from="Button" to="DialogNode" method="_on_Button_pressed"]

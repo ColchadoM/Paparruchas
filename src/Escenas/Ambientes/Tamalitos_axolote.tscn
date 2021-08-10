@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/dialogic/Dialog.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Codigos/Locales/Ambientes/Tamalitos_axolote.gd" type="Script" id=2]
+[ext_resource path="res://Escenas/Objetos/Transicion_juego_crece.tscn" type="PackedScene" id=3]
+
+[node name="Tamalitos_axolote" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DialogNode" parent="." instance=ExtResource( 1 )]
+timeline = "timeline-1628552344.json"
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -1280.0
+margin_top = -511.0
+margin_right = 1280.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="ColorRect"]
+
+[node name="Transicion_juego_crece" parent="." instance=ExtResource( 3 )]
+mouse_filter = 2
+
+[connection signal="pressed" from="Button" to="DialogNode" method="_on_Button_pressed"]

@@ -1,0 +1,20 @@
+{
+	"color": "#ff989898",
+	"description": "Es una noticia que no es real.",
+	"display_name": " ",
+	"display_name_bool": true,
+	"id": "character-1628548150.json",
+	"mirror_portraits": false,
+	"name": "noticia_falsa",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -400,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Recursos/Visuales/Interfaz/ventana_gris.png"
+		}
+	],
+	"scale": 60
+}

@@ -1,0 +1,32 @@
+{
+	"color": "#ff7d6fb8",
+	"description": "Secuaces del sr. Rata.",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1628558627.json",
+	"mirror_portraits": false,
+	"name": "Ratillas",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": -140,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Recursos/Visuales/Sprites/ratillas_completo/ratillas-normal.png"
+		},
+		{
+			"name": "ratillas-abrumadas",
+			"path": "res://Recursos/Visuales/Sprites/ratillas_completo/ratillas-abrumadas.png"
+		},
+		{
+			"name": "ratillas-mandonas",
+			"path": "res://Recursos/Visuales/Sprites/ratillas_completo/ratillas-mandonas.png"
+		},
+		{
+			"name": "ratillas-normal",
+			"path": "res://Recursos/Visuales/Sprites/ratillas_completo/ratillas-normal.png"
+		}
+	],
+	"scale": 65
+}

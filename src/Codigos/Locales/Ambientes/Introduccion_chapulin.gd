@@ -16,8 +16,18 @@ func _ready():
 	pass # Replace with function body.
 
 func dialogic_signal(argument):
-	if argument == "termina":
-		$Transicion_juego_crece.inicia_transicion()
+	match argument:
+		'falsa':	
+			$ventana_gris/Tween.interpolate_property($ventana_gris, 'rect_scale', Vector2(0,0), Vector2(1,1), 0.4, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
+			$ventana_gris/Tween.start()
+		'real':
+			$figuras_txt/Tween.interpolate_property($figuras_txt, 'rect_position', Vector2(766,-400), Vector2(766,40), 0.4, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
+			$figuras_txt/Tween.start()
+			$ventana_gris/Tween.interpolate_property($ventana_gris, 'rect_scale', Vector2(1,1), Vector2(0.6,0.6), 0.4, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
+			$ventana_gris/Tween.start()
+		"termina":
+			$Transicion_juego_crece.inicia_transicion()
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

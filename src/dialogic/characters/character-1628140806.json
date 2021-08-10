@@ -1,10 +1,10 @@
 {
 	"color": "#fffa2de8",
 	"description": "Es famosa por sus ricos tamales.",
-	"display_name": "",
-	"display_name_bool": false,
+	"display_name": "Doña Axolote",
+	"display_name_bool": true,
 	"id": "character-1628140806.json",
-	"mirror_portraits": false,
+	"mirror_portraits": true,
 	"name": "Sra. Axolotl",
 	"nickname": "",
 	"nickname_bool": false,

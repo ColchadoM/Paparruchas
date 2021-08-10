@@ -30,7 +30,7 @@ func _ready():
 
 func _entraVirus():
 	#print('entra')
-	tween_inicio.interpolate_property(wikiV, 'scale', Vector2(0.01,0.01), Vector2(1.47,1.47),0.3, Tween.TRANS_BOUNCE, Tween.EASE_IN_OUT)
+	tween_inicio.interpolate_property(wikiV, 'scale', Vector2(0,0), Vector2(0.18,0.18),0.3, Tween.TRANS_BOUNCE, Tween.EASE_IN_OUT)
 	tween_inicio.start()
 
 func _physics_process(delta):
