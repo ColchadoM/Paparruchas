@@ -42,11 +42,10 @@ func shake():
 	$Sprite/Tween.interpolate_property($Sprite, 'scale', Vector2(1,1), Vector2(1.5,1.5), 0.4, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	$Sprite/Tween.interpolate_property($Sprite, 'rotation', 0, -1, 0.4, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	$Sprite/Tween.start()
-	yield(get_tree().create_timer(0.41),"timeout")
+	yield(get_tree().create_timer(0.05),"timeout")
 	$Sprite/Tween.interpolate_property($Sprite, 'scale', Vector2(1.5,1.5), Vector2(1,1), 0.4, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	$Sprite/Tween.interpolate_property($Sprite, 'rotation', -1, 0, 0.4, Tween.TRANS_ELASTIC, Tween.EASE_OUT)
 	$Sprite/Tween.start()
-	
 	
 
 func _on_AreaCo_area_entered(area):

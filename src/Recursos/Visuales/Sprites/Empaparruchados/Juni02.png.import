@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bote.png-be7cbe49b9f79619a13940ca0582716a.stex"
+path="res://.import/Juni02.png-9f367fbc1655ef43b90fae2819fa04bc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Recursos/Visuales/Interfaz/Bote.png"
-dest_files=[ "res://.import/Bote.png-be7cbe49b9f79619a13940ca0582716a.stex" ]
+source_file="res://Recursos/Visuales/Sprites/Empaparruchados/Juni02.png"
+dest_files=[ "res://.import/Juni02.png-9f367fbc1655ef43b90fae2819fa04bc.stex" ]
 
 [params]
 

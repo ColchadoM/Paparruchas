@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Escenas/Habitats/WikiGenerador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Habitats/GUI.tscn" type="PackedScene" id=2]
@@ -13,6 +13,15 @@
 [ext_resource path="res://Codigos/Locales/Ambientes/ZonaJuego.gd" type="Script" id=11]
 [ext_resource path="res://Escenas/Objetos/Transicion_juego_sale.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Codigos/Locales/Objetos/Opaco.gd" type="Script" id=13]
+[ext_resource path="res://Recursos/Visuales/Interfaz/Titulo_pausa.png" type="Texture" id=14]
+[ext_resource path="res://Recursos/Visuales/Intro/BotonInicio.png" type="Texture" id=15]
+[ext_resource path="res://Recursos/Visuales/Interfaz/Wiki.png" type="Texture" id=16]
+[ext_resource path="res://Recursos/Visuales/GameEnd/AlexCompleto.png" type="Texture" id=17]
+[ext_resource path="res://Recursos/Visuales/GameEnd/Highlights.png" type="Texture" id=18]
+[ext_resource path="res://Recursos/Visuales/GameEnd/Ojos.png" type="Texture" id=19]
+[ext_resource path="res://Recursos/Visuales/GameEnd/GAMEOVER.png" type="Texture" id=20]
+[ext_resource path="res://Recursos/Visuales/GameEnd/FlashCel.png" type="Texture" id=21]
+[ext_resource path="res://Recursos/Visuales/GameEnd/ManitaCel.png" type="Texture" id=22]
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 5 )
@@ -38,10 +47,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Personajes" parent="." instance=ExtResource( 4 )]
+
+[node name="WikiGenerador" parent="." instance=ExtResource( 1 )]
+
 [node name="GUI" parent="." instance=ExtResource( 2 )]
 margin_left = 602.997
-
-[node name="Personajes" parent="." instance=ExtResource( 4 )]
 
 [node name="Acciones" parent="." instance=ExtResource( 8 )]
 
@@ -175,7 +186,6 @@ text = "Reiniciar"
 
 [node name="Pausa" type="Control" parent="Menus"]
 visible = false
-modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = SubResource( 1 )
@@ -186,44 +196,167 @@ __meta__ = {
 [node name="ColorRect" type="ColorRect" parent="Menus/Pausa"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0, 0, 0, 0.85098 )
+color = Color( 0, 0, 0, 0.6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Menus/Pausa/ColorRect"]
+[node name="TextureRect" type="TextureRect" parent="Menus/Pausa/ColorRect"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -525.0
-margin_top = -137.0
-margin_right = 525.0
-margin_bottom = 137.0
-custom_fonts/font = ExtResource( 5 )
-text = "Pausa"
-align = 1
+margin_left = -360.5
+margin_top = -402.0
+margin_right = 360.5
+margin_bottom = 402.0
+rect_scale = Vector2( 1.4, 1.4 )
+rect_pivot_offset = Vector2( 370.417, 407.5 )
+texture = ExtResource( 16 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="Menus/Pausa/ColorRect"]
+[node name="TextureRect" type="TextureRect" parent="Menus/Pausa/ColorRect/TextureRect"]
+anchor_left = 0.533
+anchor_top = 0.16
+anchor_right = 0.557
+anchor_bottom = 0.16
+margin_left = -210.5
+margin_right = 210.5
+margin_bottom = 258.864
+rect_pivot_offset = Vector2( 216.19, 124.031 )
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ContinuarC" type="TextureRect" parent="Menus/Pausa/ColorRect/TextureRect"]
+anchor_left = 0.5
+anchor_top = 0.622
+anchor_right = 0.5
+anchor_bottom = 0.663
+margin_left = -172.5
+margin_top = -69.8096
+margin_right = 172.5
+margin_bottom = 125.226
+rect_scale = Vector2( 1, 0.6 )
+rect_pivot_offset = Vector2( 189.619, 110.476 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Continuar" type="Button" parent="Menus/Pausa/ColorRect/TextureRect/ContinuarC"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -180.0
+margin_top = -127.657
+margin_right = 180.0
+margin_bottom = 127.657
+rect_scale = Vector2( 0.72, 1.002 )
+rect_pivot_offset = Vector2( 192.102, 127.302 )
+custom_fonts/font = ExtResource( 5 )
+text = "Continuar"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Salir" type="Button" parent="Menus/Pausa/ColorRect/TextureRect"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -661.52
-margin_top = -443.111
-margin_right = 656.48
-margin_bottom = -141.111
+margin_left = -84.0
+margin_top = -260.052
+margin_right = 84.0
+rect_scale = Vector2( 0.72, 0.72 )
+rect_pivot_offset = Vector2( 104.824, 131.122 )
 custom_fonts/font = ExtResource( 5 )
-text = "Reiniciar"
+text = "Salir"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameEnd" type="Control" parent="Menus"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg" type="ColorRect" parent="Menus/GameEnd"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -1280.0
+margin_right = 1280.0
+margin_bottom = 1440.0
+color = Color( 0.145098, 0.027451, 0.12549, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Alex" type="TextureRect" parent="Menus/GameEnd/bg"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -960.0
+margin_top = -1080.0
+margin_right = 960.0
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Highlights" type="TextureRect" parent="Menus/GameEnd/bg/Alex"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ojos" type="TextureRect" parent="Menus/GameEnd/bg/Alex"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Flash" type="TextureRect" parent="Menus/GameEnd/bg/Alex"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 21 )
+
+[node name="Manitacel" type="TextureRect" parent="Menus/GameEnd/bg/Alex"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 22 )
+
+[node name="GAMEOVER" type="TextureRect" parent="Menus/GameEnd/bg"]
+anchor_left = 0.5
+anchor_top = 0.1
+anchor_right = 0.5
+anchor_bottom = 0.206
+margin_left = -960.0
+margin_right = 960.0
+margin_bottom = 1080.0
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TweenInicio" type="Tween" parent="Menus"]
 
 [node name="Timer" type="Timer" parent="Menus"]
-
-[node name="WikiGenerador" parent="." instance=ExtResource( 1 )]
 
 [node name="Bg" type="AudioStreamPlayer2D" parent="."]
 pause_mode = 2
@@ -260,3 +393,5 @@ mouse_filter = 2
 [connection signal="tween_all_completed" from="TextoInicio/TweenAdelante" to="TextoInicio" method="_on_TweenAdelante_tween_all_completed"]
 [connection signal="pressed" from="Menus/GameOver/ColorRect/Siguiente" to="Menus" method="_on_Siguiente_pressed"]
 [connection signal="pressed" from="Menus/GameOver/ColorRect/Reiniciar" to="Menus" method="_on_Reiniciar_pressed"]
+[connection signal="pressed" from="Menus/Pausa/ColorRect/TextureRect/ContinuarC/Continuar" to="Menus" method="_on_Continuar_pressed"]
+[connection signal="pressed" from="Menus/Pausa/ColorRect/TextureRect/Salir" to="Menus" method="_on_Salir_pressed"]

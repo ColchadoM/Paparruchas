@@ -5,7 +5,7 @@ enum TipoDrop {NEUTRAL, BASURA, COMPARTIR}
 # Varialbes del juego
 var estadoJuegoActual = EstadoJuego.INACTIVO
 var enPausa:bool = false
-var maxEmpaparruchamiento:Array = [20,35,30,40];
+var maxEmpaparruchamiento:Array = [15,30,30,40];
 var minEmpaparruchamiento:int = 0;
 var empaparruchometroInicial: Array = [10,20,20,30];
 var empaparruchometroActual;
@@ -39,11 +39,17 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed("Pausa"):
 		if(get_tree().paused):
-			get_tree().get_root().get_node("ZonaJuego/Menus/Pausa").hide()
-			get_tree().paused = false
+			pausar(true)
 		else:
-			get_tree().get_root().get_node("ZonaJuego/Menus/Pausa").show()
-			get_tree().paused = true
+			pausar(false)
+
+func pausar(vaAPausar:bool):
+	if(vaAPausar):
+		get_tree().get_root().get_node("ZonaJuego/Menus/Pausa").hide()
+		get_tree().paused = false
+	else:
+		get_tree().get_root().get_node("ZonaJuego/Menus/Pausa").show()
+		get_tree().paused = true
 
 func siguienteNivel():
 	#if(nivelActual <= niveles.le)
@@ -61,12 +67,10 @@ func _process(delta):
 	if(estadoJuegoActual == EstadoJuego.EN_JUEGO):
 		#print("ingame")
 		if(empaparruchometroActual <= minEmpaparruchamiento):
-			print("entra 1")
 			estadoJuegoActual = EstadoJuego.JUEGO_TERMINADO
 			get_tree().get_root().get_node("ZonaJuego/NivelExito").play()
 			emit_signal("s_terminarNivel",0)
 		elif(empaparruchometroActual >= maxEmpaparruchamiento[nivelActual-1]):
-			print("entra 2")
 			estadoJuegoActual = EstadoJuego.JUEGO_PERDIDO
 			get_tree().get_root().get_node("ZonaJuego/NivelPerdido").play()
 			emit_signal("s_terminarNivel",1)

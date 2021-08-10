@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/unknown.png-c8842f18d1244ac8b87aa0f48a80d745.stex"
+path="res://.import/Ojos.png-ad4dd4756ffd6f7a50e1398923981543.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Recursos/Visuales/Interfaz/unknown.png"
-dest_files=[ "res://.import/unknown.png-c8842f18d1244ac8b87aa0f48a80d745.stex" ]
+source_file="res://Recursos/Visuales/GameEnd/Ojos.png"
+dest_files=[ "res://.import/Ojos.png-ad4dd4756ffd6f7a50e1398923981543.stex" ]
 
 [params]
 
