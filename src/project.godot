@@ -62,7 +62,7 @@ Constants="*res://Codigos/Globales/Constants.gd"
 Manager="*res://Codigos/Globales/Manager.gd"
 Helpers="*res://Codigos/Globales/Helpers.gd"
 DialogicSingleton="*res://addons/dialogic/Other/DialogicSingleton.gd"
-Senales="*res://Codigos/Globales/Senales.gd"
+SaveSystem="*res://Codigos/Globales/SaveSystem.gd"
 
 [display]
 

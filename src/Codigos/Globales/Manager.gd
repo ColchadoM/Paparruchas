@@ -38,7 +38,7 @@ signal s_acaba_tutorial
 func _ready():
 	pause_mode = PAUSE_MODE_PROCESS
 	empaparruchometroActual = empaparruchometroInicial[nivelActual-1]
-	#resetearNivel()
+	SaveSystem.load_game()
 
 func _input(event):
 	if event.is_action_pressed("Pausa"):
@@ -80,7 +80,7 @@ func siguienteNivel():
 					pass
 			4:
 				pass
-
+	SaveSystem.save_game(nivelesDesbloqueados)
 	#if(nivelActual <= niveles.le)	
 	#nivelActual += 1
 	#nivelesDesbloqueados = [1,2]
