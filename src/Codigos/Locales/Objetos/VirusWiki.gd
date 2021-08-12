@@ -12,6 +12,8 @@ var deleteadaV: bool = false
 var speedV: float = 300
 var apenas_creada = true
 
+export(bool) var tutorial = false
+
 var virus_p = preload("res://Escenas/Objetos/virus_particula.tscn")
 
 
@@ -34,11 +36,12 @@ func _entraVirus():
 	tween_inicio.start()
 
 func _physics_process(delta):
-	if(!deleteadaV):
-		position.y += speedV * delta
-		if(position.y > get_viewport().size.y + get_node("WikiV").texture.get_height()):
-			deleteadaV = true;
-			closeAnimation()
+	if !tutorial:
+		if(!deleteadaV):
+			position.y += speedV * delta
+			if(position.y > get_viewport().size.y + get_node("WikiV").texture.get_height()):
+				deleteadaV = true;
+				closeAnimation()
 		
 
 func closeAnimation(tipo=0):
@@ -65,7 +68,8 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 
 func _on_Area2D_area_entered(area):
 	if !apenas_creada:
-		$Area2D.queue_free()
+		if !tutorial:
+			$Area2D.queue_free()
 		particula_creada_v()
 	#		if wikiV.get_rect().has_point(to_local(event.position)) && !clickeadaV:
 		Manager.emit_signal("s_virusTimer", position)

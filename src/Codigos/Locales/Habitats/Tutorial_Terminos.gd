@@ -4,16 +4,17 @@ var estrellitas = preload("res://Escenas/Objetos/Estrellitas.tscn")
 var completado = false
 
 func _ready():	
-	if Manager.nivelActual == 1:
+	if Manager.nivelActual == 4:
 		visible = true
 	else:
 		z_index = -10
 		queue_free()
 	$Mano/AnimationPlayer.play("arrastra")
+	Manager.connect("s_termina_terminos", self, 'completa')
 	pass
 
 
-func _on_Area2D_area_entered(area):
+func completa():
 	if !completado:
 		completado = true
 		particula_creada(estrellitas)

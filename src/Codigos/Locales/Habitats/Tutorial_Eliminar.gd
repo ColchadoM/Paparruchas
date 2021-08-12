@@ -4,11 +4,12 @@ var estrellitas = preload("res://Escenas/Objetos/Estrellitas.tscn")
 var completado = false
 
 func _ready():	
-	if Manager.nivelActual == 1:
+	if Manager.nivelActual == 2:
 		visible = true
 	else:
 		z_index = -10
 		queue_free()
+#	visible = true
 	$Mano/AnimationPlayer.play("arrastra")
 	pass
 

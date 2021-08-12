@@ -1,8 +1,8 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Escenas/Personajes/Randal_cabeza.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Recursos/Visuales/Sprites/Figuras/Cuadro.png" type="Texture" id=2]
-[ext_resource path="res://Codigos/Locales/Habitats/Tutorial_Compartir.gd" type="Script" id=3]
+[ext_resource path="res://Codigos/Locales/Habitats/Tutorial_Virus.gd" type="Script" id=3]
 [ext_resource path="res://Recursos/Visuales/Interfaz/Flechita.png" type="Texture" id=4]
 [ext_resource path="res://Recursos/Visuales/Interfaz/compartir.png" type="Texture" id=5]
 [ext_resource path="res://Recursos/Visuales/Sprites/Figuras/Estrella.png" type="Texture" id=6]
@@ -10,11 +10,13 @@
 [ext_resource path="res://Recursos/Visuales/Interfaz/bg_figuras.png" type="Texture" id=8]
 [ext_resource path="res://Escenas/Objetos/Ventana_drag.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Recursos/Sonoros/Incidentales/clicBien.wav" type="AudioStream" id=10]
+[ext_resource path="res://Escenas/Objetos/VirusWiki.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Escenas/Habitats/WikiGenerador.tscn" type="PackedScene" id=12]
 
-[sub_resource type="CircleShape2D" id=5]
+[sub_resource type="CircleShape2D" id=1]
 radius = 204.306
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=2]
 resource_name = "arrastra"
 length = 3.0
 loop = true
@@ -38,7 +40,7 @@ font_path = "res://Recursos/Textos/Fuentes/DaxlinePro-Bold.otf"
 size = 63
 font_data = SubResource( 3 )
 
-[node name="Tutorial_Compartir" type="Node2D"]
+[node name="Tutorial_Virus" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -52,7 +54,7 @@ __meta__ = {
 }
 
 [node name="Randy" type="Node2D" parent="."]
-position = Vector2( 926.533, 680.646 )
+position = Vector2( 523.847, 684.21 )
 
 [node name="Randy_atras" type="Sprite" parent="Randy"]
 texture = ExtResource( 7 )
@@ -71,21 +73,53 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Randy/Area2D"]
-shape = SubResource( 5 )
+shape = SubResource( 1 )
+
+[node name="Wiki" parent="." instance=ExtResource( 11 )]
+position = Vector2( 1699.83, 709.154 )
+tutorial = true
+
+[node name="Wiki2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 1749.72, 441.885 )
+tutorial = true
+
+[node name="Wiki3" parent="." instance=ExtResource( 11 )]
+position = Vector2( 1899.39, 224.506 )
+tutorial = true
+
+[node name="Wiki4" parent="." instance=ExtResource( 11 )]
+position = Vector2( 1749.72, 976.423 )
+tutorial = true
+
+[node name="Wiki5" parent="." instance=ExtResource( 11 )]
+position = Vector2( 1881.58, 1200.93 )
+tutorial = true
+
+[node name="Wiki7" parent="." instance=ExtResource( 11 )]
+position = Vector2( 2109.64, 1286.46 )
+tutorial = true
+
+[node name="Wiki6" parent="." instance=ExtResource( 11 )]
+position = Vector2( 2127.46, 146.107 )
+tutorial = true
 
 [node name="Ventana_drag" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1721.21, 677.082 )
+position = Vector2( 2106.08, 687.773 )
 gravedad = false
 valorFigura = 1
 
+[node name="WikiGenerator" parent="." instance=ExtResource( 12 )]
+
 [node name="Mano" type="Sprite" parent="."]
+visible = false
 position = Vector2( 1033.88, 780.426 )
 texture = ExtResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Mano"]
-anims/arrastra = SubResource( 6 )
+anims/arrastra = SubResource( 2 )
 
 [node name="Contenedor_pp" type="Node2D" parent="."]
+visible = false
 position = Vector2( 1332.78, 317.159 )
 
 [node name="Contenedor" type="Sprite" parent="Contenedor_pp"]
@@ -117,16 +151,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -883.0
-margin_top = 258.636
-margin_right = 843.0
-margin_bottom = 356.636
+margin_left = -1164.52
+margin_top = 233.691
+margin_right = 561.477
+margin_bottom = 331.691
 mouse_filter = 2
 custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0.992157, 0.980392, 0.890196, 1 )
 bbcode_enabled = true
-bbcode_text = "[center]¡Comparte la noticia verdadera a Randy para [wave amp=50 freq=5]GANAR![/wave][center]"
-text = "¡Comparte la noticia verdadera a Randy para GANAR!"
+bbcode_text = "[center]¡Evita tocar los virus o se multiplicarán![center]"
+text = "¡Evita tocar los virus o se multiplicarán!"
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -141,6 +175,7 @@ __meta__ = {
 }
 
 [node name="Noticias" type="RichTextLabel" parent="Control/textos_ayuda"]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -165,22 +200,23 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 1542.0
-margin_top = 406.06
-margin_right = 1871.0
-margin_bottom = 504.06
+margin_left = 1420.84
+margin_top = 181.554
+margin_right = 1749.84
+margin_bottom = 279.554
 mouse_filter = 2
 custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0.992157, 0.980392, 0.890196, 1 )
 bbcode_enabled = true
-bbcode_text = "[center]Noticia[center]"
-text = "Noticia"
+bbcode_text = "[center]Virus[center]"
+text = "Virus"
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Randy" type="RichTextLabel" parent="Control/textos_ayuda"]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5

@@ -11,6 +11,8 @@ enum tipos {RAPIDO, LENTO}
 var v_juego_acepta: float
 var v_juego_cancela: float
 
+export var tutorial = false
+
 var clickeadaV: bool = false
 var deleteadaV: bool = false
 var abierta: bool = false
@@ -26,12 +28,13 @@ func _ready():
 		_crea_tipo()
 
 func _physics_process(delta):
-	if(!abierta):
-		position.y += speedV * delta
-		#print(speedV * delta)
-		if(position.y > get_viewport().size.y + sprite_textura.texture.get_height()):
-			deleteadaV = true;
-			#closeAnimation()
+	if !tutorial:
+		if(!abierta):
+			position.y += speedV * delta
+			#print(speedV * delta)
+			if(position.y > get_viewport().size.y + sprite_textura.texture.get_height()):
+				deleteadaV = true;
+				#closeAnimation()
 
 
 func _on_Area2D_input_event(viewport, event, shape_idx):

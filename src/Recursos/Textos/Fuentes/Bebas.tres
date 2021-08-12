@@ -4,5 +4,5 @@
 font_path = "res://Recursos/Textos/Fuentes/DaxlinePro-Bold.otf"
 
 [resource]
-size = 80
+size = 100
 font_data = SubResource( 1 )

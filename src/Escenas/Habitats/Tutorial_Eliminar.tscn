@@ -1,12 +1,10 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Escenas/Personajes/Randal_cabeza.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Recursos/Visuales/Sprites/Figuras/Cuadro.png" type="Texture" id=2]
-[ext_resource path="res://Codigos/Locales/Habitats/Tutorial_Compartir.gd" type="Script" id=3]
+[ext_resource path="res://Recursos/Visuales/Sprites/Figuras/Triangulo.png" type="Texture" id=1]
+[ext_resource path="res://Recursos/Visuales/Interfaz/Basura.png" type="Texture" id=2]
+[ext_resource path="res://Codigos/Locales/Habitats/Tutorial_Eliminar.gd" type="Script" id=3]
 [ext_resource path="res://Recursos/Visuales/Interfaz/Flechita.png" type="Texture" id=4]
-[ext_resource path="res://Recursos/Visuales/Interfaz/compartir.png" type="Texture" id=5]
-[ext_resource path="res://Recursos/Visuales/Sprites/Figuras/Estrella.png" type="Texture" id=6]
-[ext_resource path="res://Recursos/Visuales/Sprites/Cabezas/AtrasRandal.PNG" type="Texture" id=7]
+[ext_resource path="res://Recursos/Visuales/Sprites/Figuras/CircM.png" type="Texture" id=5]
 [ext_resource path="res://Recursos/Visuales/Interfaz/bg_figuras.png" type="Texture" id=8]
 [ext_resource path="res://Escenas/Objetos/Ventana_drag.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Recursos/Sonoros/Incidentales/clicBien.wav" type="AudioStream" id=10]
@@ -28,7 +26,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1.3, 2.3, 3 ),
 "transitions": PoolRealArray( 7.21, 0.637281, 0.225313, 1 ),
 "update": 0,
-"values": [ Vector2( 1853.07, 780.426 ), Vector2( 1037, 780.426 ), Vector2( 1037.01, 780.426 ), Vector2( 1853.07, 780.426 ) ]
+"values": [ Vector2( 1012.06, 780.426 ), Vector2( 1796.04, 780.426 ), Vector2( 1763.98, 780.426 ), Vector2( 1012.06, 780.426 ) ]
 }
 
 [sub_resource type="DynamicFontData" id=3]
@@ -38,7 +36,7 @@ font_path = "res://Recursos/Textos/Fuentes/DaxlinePro-Bold.otf"
 size = 63
 font_data = SubResource( 3 )
 
-[node name="Tutorial_Compartir" type="Node2D"]
+[node name="Tutorial_Eliminar" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -52,19 +50,11 @@ __meta__ = {
 }
 
 [node name="Randy" type="Node2D" parent="."]
-position = Vector2( 926.533, 680.646 )
+position = Vector2( 1639.25, 680.646 )
 
-[node name="Randy_atras" type="Sprite" parent="Randy"]
-texture = ExtResource( 7 )
-
-[node name="Randy" parent="Randy" instance=ExtResource( 1 )]
-visible = true
-position = Vector2( 0, 0 )
-
-[node name="Compartir" type="Sprite" parent="Randy"]
-position = Vector2( -110.471, 142.543 )
-scale = Vector2( 0.290065, 0.290065 )
-texture = ExtResource( 5 )
+[node name="Basura" type="Sprite" parent="Randy"]
+scale = Vector2( 1.92653, 1.92653 )
+texture = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="Randy"]
 collision_layer = 0
@@ -74,12 +64,12 @@ collision_mask = 4
 shape = SubResource( 5 )
 
 [node name="Ventana_drag" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1721.21, 677.082 )
+position = Vector2( 926.529, 677.082 )
 gravedad = false
 valorFigura = 1
 
 [node name="Mano" type="Sprite" parent="."]
-position = Vector2( 1033.88, 780.426 )
+position = Vector2( 1012.06, 780.426 )
 texture = ExtResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Mano"]
@@ -94,12 +84,12 @@ texture = ExtResource( 8 )
 [node name="Cuadro" type="Sprite" parent="Contenedor_pp"]
 position = Vector2( -209.999, -1.92658 )
 scale = Vector2( 0.189806, 0.189806 )
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 
 [node name="Estrella" type="Sprite" parent="Contenedor_pp"]
 position = Vector2( -63.8918, -1.92657 )
-scale = Vector2( 0.215124, 0.215124 )
-texture = ExtResource( 6 )
+scale = Vector2( 0.177146, 0.177146 )
+texture = ExtResource( 5 )
 
 [node name="Control" type="Control" parent="."]
 anchor_right = 1.0
@@ -125,8 +115,8 @@ mouse_filter = 2
 custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0.992157, 0.980392, 0.890196, 1 )
 bbcode_enabled = true
-bbcode_text = "[center]¡Comparte la noticia verdadera a Randy para [wave amp=50 freq=5]GANAR![/wave][center]"
-text = "¡Comparte la noticia verdadera a Randy para GANAR!"
+bbcode_text = "[center]¡Elimina las noticias falsas para [wave amp=50 freq=5]GANAR![/wave][center]"
+text = "¡Elimina las noticias falsas para GANAR!"
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
@@ -165,9 +155,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 1542.0
+margin_left = 718.811
 margin_top = 406.06
-margin_right = 1871.0
+margin_right = 1047.81
 margin_bottom = 504.06
 mouse_filter = 2
 custom_fonts/normal_font = SubResource( 4 )
@@ -185,16 +175,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 643.976
+margin_left = 1599.02
 margin_top = 413.187
-margin_right = 972.976
+margin_right = 1928.02
 margin_bottom = 511.187
 mouse_filter = 2
 custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0.992157, 0.980392, 0.890196, 1 )
 bbcode_enabled = true
-bbcode_text = "[center]Randy[center]"
-text = "Randy"
+bbcode_text = "[center]Basura[center]"
+text = "Basura"
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
