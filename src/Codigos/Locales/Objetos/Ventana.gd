@@ -12,8 +12,10 @@ onready var figura = $Figura
 onready var caminito = $Caminito
 onready var sprite_ventana = $Ventana_sprite
 
+export var gravedad = true
 
-var valorFigura: int = -1
+
+export var valorFigura: int = -1
 var estadoVentana = EstadoVentana.IDLE
 var deleteada:bool = false
 
@@ -36,9 +38,10 @@ func _ready():
 	Constants.FIGURA.Estrella: load("res://Codigos/Locales/Objetos/Estrella.tres"),
 	Constants.FIGURA.CircM: load("res://Codigos/Locales/Objetos/CircM.tres")
 	}
-	var rng = RandomNumberGenerator.new()
-	rng.randomize();
-	valorFigura = rng.randi_range(0,Constants.FIGURA.size() -1)
+	if valorFigura == -1:
+		var rng = RandomNumberGenerator.new()
+		rng.randomize();
+		valorFigura = rng.randi_range(0,Constants.FIGURA.size() -1)
 	figura.texture = figures_data[valorFigura].image
 	#Escalar random
 	var nScale = rand_range(1.2,2)
@@ -63,17 +66,18 @@ func _physics_process(delta):
 			if(Helpers.estanCerca(position, posicion_ultima,5)):
 				deleteada = true
 		else:
-			position.y += speed * delta
-			rotation = lerp_angle(rotation, 0, 10 * delta)
-			# Revisa si se salio de la pantalla
-			if(position.y > get_viewport().size.y + sprite_ventana.texture.get_height()):
-				deleteada=true
-				#Revisa si es una paparrucha
-				if(!Helpers.esNoticiaVerdadera(Manager.figurasVerdaderas, valorFigura)):
-					Manager.emit_signal("s_afueraPantalla", position.x)
-					Manager.empaparruchar( 1, "fuera")
-					clicMal.play()
-				closeAnimation()
+			if gravedad:
+				position.y += speed * delta
+				rotation = lerp_angle(rotation, 0, 10 * delta)
+				# Revisa si se salio de la pantalla
+				if(position.y > get_viewport().size.y + sprite_ventana.texture.get_height()):
+					deleteada=true
+					#Revisa si es una paparrucha
+					if(!Helpers.esNoticiaVerdadera(Manager.figurasVerdaderas, valorFigura)):
+						Manager.emit_signal("s_afueraPantalla", position.x)
+						Manager.empaparruchar( 1, "fuera")
+						clicMal.play()
+					closeAnimation()
 
 # Si se tiene una ventana agarrada y despues se suelta
 func _input(event):

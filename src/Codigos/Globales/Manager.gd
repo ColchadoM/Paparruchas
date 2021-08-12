@@ -33,6 +33,7 @@ signal s_terminoscondiciones
 signal s_termina_terminos
 signal s_paparruchometro_punto(punto, lugar)
 signal s_nextLevel #pasar alsigueinte nivel
+signal s_acaba_tutorial
 
 func _ready():
 	pause_mode = PAUSE_MODE_PROCESS

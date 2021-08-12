@@ -1,8 +1,13 @@
 extends Control
 
 func _ready():
+	Manager.connect("s_acaba_tutorial", self, "_inicia_timers")
+	#$TimerInicio.start()
 	get_node("Listo").rect_scale = Vector2(0,0)
 	get_node("Adelante").rect_scale = Vector2(0,0)
+
+func _inicia_timers():
+	$TimerInicio.start()
 
 func _on_TimerInicio_timeout():
 	var tweenListo = get_node("TweenListo")
