@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Recursos/Visuales/Intro/logo.PNG" type="Texture" id=1]
 [ext_resource path="res://Recursos/Textos/Fuentes/Bebas.tres" type="DynamicFont" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Recursos/Visuales/Intro/Fondo.png" type="Texture" id=11]
 [ext_resource path="res://Recursos/Visuales/Intro/Telefono.png" type="Texture" id=12]
 [ext_resource path="res://Recursos/Visuales/Interfaz/Ventana_sinx.png" type="Texture" id=13]
+[ext_resource path="res://Recursos/Sonoros/Musica/ANSIEDAD.wav" type="AudioStream" id=14]
 
 [sub_resource type="Animation" id=1]
 resource_name = "vibra"
@@ -356,6 +357,11 @@ __meta__ = {
 }
 
 [node name="Tween_negro" type="Tween" parent="negro"]
+
+[node name="Bg" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 14 )
+autoplay = true
 
 [connection signal="toggled" from="Botones/gnu_licencia" to="." method="_on_gnu_licencia_toggled"]
 [connection signal="pressed" from="Botones/CenterContainer/Jugar" to="." method="_on_Jugar_pressed"]
