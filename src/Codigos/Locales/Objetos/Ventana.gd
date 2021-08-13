@@ -74,9 +74,10 @@ func _physics_process(delta):
 					deleteada=true
 					#Revisa si es una paparrucha
 					if(!Helpers.esNoticiaVerdadera(Manager.figurasVerdaderas, valorFigura)):
-						Manager.emit_signal("s_afueraPantalla", position.x)
-						Manager.empaparruchar( 1, "fuera")
-						clicMal.play()
+						if Manager.nivelActual != 1:
+							Manager.emit_signal("s_afueraPantalla", position.x)						
+							Manager.empaparruchar( 1, "fuera")
+							clicMal.play()
 					closeAnimation()
 
 # Si se tiene una ventana agarrada y despues se suelta

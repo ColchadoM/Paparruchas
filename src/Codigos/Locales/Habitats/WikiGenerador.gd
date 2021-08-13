@@ -26,6 +26,7 @@ func updateGenerator():
 	# Esto es una proqueria se debe cambiar por algo mas modular
 	if(Manager.nivelActual == 1):
 		generandoNormal = true
+		puedeCompartir = true
 	if(Manager.nivelActual == 2):
 		generandoNormal = true
 		puedeCompartir = true
