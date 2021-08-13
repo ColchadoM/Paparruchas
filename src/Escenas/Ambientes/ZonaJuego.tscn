@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Escenas/Habitats/WikiGenerador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Habitats/GUI.tscn" type="PackedScene" id=2]
@@ -22,10 +22,6 @@
 [ext_resource path="res://Recursos/Visuales/GameEnd/GAMEOVER.png" type="Texture" id=20]
 [ext_resource path="res://Recursos/Visuales/GameEnd/FlashCel.png" type="Texture" id=21]
 [ext_resource path="res://Recursos/Visuales/GameEnd/ManitaCel.png" type="Texture" id=22]
-[ext_resource path="res://Escenas/Habitats/Tutorial_Compartir.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Escenas/Habitats/Tutorial_Eliminar.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Escenas/Habitats/Tutorial_Virus.tscn" type="PackedScene" id=25]
-[ext_resource path="res://Escenas/Habitats/Tutorial_Terminos.tscn" type="PackedScene" id=26]
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 5 )
@@ -398,19 +394,6 @@ __meta__ = {
 }
 
 [node name="Tween" type="Tween" parent="Opaco"]
-
-[node name="Tutorial_Compartir" parent="." instance=ExtResource( 23 )]
-visible = false
-z_as_relative = false
-
-[node name="Tutorial_Eliminar" parent="." instance=ExtResource( 24 )]
-visible = false
-
-[node name="Tutorial_Virus" parent="." instance=ExtResource( 25 )]
-visible = false
-
-[node name="Tutorial_Terminos" parent="." instance=ExtResource( 26 )]
-visible = false
 
 [node name="Transicion_juego_sale" parent="." instance=ExtResource( 12 )]
 mouse_filter = 2
