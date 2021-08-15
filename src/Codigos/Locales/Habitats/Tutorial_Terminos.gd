@@ -25,9 +25,9 @@ func completa():
 		yield(get_tree().create_timer(0.3), "timeout")
 		visible = false
 		z_index = -10
-		yield(get_tree().create_timer(0.1), "timeout")
+#		yield(get_tree().create_timer(0.2), "timeout")
 		Manager.emit_signal("s_acaba_tutorial")
-		queue_free()
+#		queue_free()
 	pass # Replace with function body.
 
 

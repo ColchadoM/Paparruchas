@@ -2,6 +2,7 @@ extends Node2D
 
 var estrellitas = preload("res://Escenas/Objetos/Estrellitas.tscn")
 var completado = false
+var entro = false
 
 func _ready():	
 	if Manager.nivelActual == 1:
@@ -13,22 +14,27 @@ func _ready():
 	pass
 
 
-func _on_Area2D_area_entered(area):
+func _on_Area2D_area_entered(area):	
 	if !completado:
+		entro = true
 		completado = true
 		particula_creada(estrellitas)
 		$ClicBien.play()
+#		$Ventana_drag.queue_free()
 		yield(get_tree().create_timer(0.5), "timeout")
 		$Tween.interpolate_property(self, 'modulate', Color(1,1,1,1), Color(1,1,1,0), 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		$Tween.start()
 		yield(get_tree().create_timer(0.3), "timeout")
 		visible = false
-		z_index = -10
+		z_index = -10		
 		yield(get_tree().create_timer(0.1), "timeout")
 		Manager.emit_signal("s_acaba_tutorial")
-		queue_free()
-	pass # Replace with function body.
+#		$Randy.queue_free()
+#		InputEventMouseButton.set_pressed(false)
+#		queue_free()
 
+	pass # Replace with function body.
+	
 
 func particula_creada(tipo_particula):
 	var particula_instance = tipo_particula.instance()	

@@ -24,10 +24,19 @@ func _on_Area2D_area_entered(area):
 		yield(get_tree().create_timer(0.3), "timeout")
 		visible = false
 		z_index = -10
-		yield(get_tree().create_timer(0.1), "timeout")
+		$Wiki.queue_free()
+		$Wiki2.queue_free()
+		$Wiki3.queue_free()
+		$Wiki4.queue_free()
+		$Wiki5.queue_free()
+		$Wiki6.queue_free()		
+		$Wiki7.queue_free()
+		$WikiGenerator.queue_free()
+#		yield(get_tree().create_timer(0.2), "timeout")
 		Manager.emit_signal("s_acaba_tutorial")
-		queue_free()
-	pass # Replace with function body.
+		#queue_free()
+		
+	#pass # Replace with function body.
 
 
 func particula_creada(tipo_particula):
