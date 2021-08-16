@@ -155,8 +155,8 @@ mouse_filter = 2
 custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0.992157, 0.980392, 0.890196, 1 )
 bbcode_enabled = true
-bbcode_text = "[center]Asegurate de leer antes de aceptarlas[center]"
-text = "Asegurate de leer antes de aceptarlas"
+bbcode_text = "[center]Asegúrate de leer antes de aceptarlas.[center]"
+text = "Asegúrate de leer antes de aceptarlas."
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false

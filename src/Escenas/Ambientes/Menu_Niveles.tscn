@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Recursos/Visuales/Interfaz/Niveles/Rata_seleccionado.png" type="Texture" id=1]
 [ext_resource path="res://Recursos/Visuales/Intro/logo.PNG" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Recursos/Visuales/Interfaz/Niveles/Juni_bloqueado.png" type="Texture" id=13]
 [ext_resource path="res://Recursos/Visuales/Interfaz/Niveles/Rata_desbloqueado.png" type="Texture" id=14]
 [ext_resource path="res://Recursos/Visuales/Interfaz/Niveles/Rata_bloqueado.png" type="Texture" id=15]
+[ext_resource path="res://Recursos/Sonoros/Musica/HistoriaAudio.wav" type="AudioStream" id=16]
 
 [node name="Menu_Niveles" type="Control"]
 anchor_right = 1.0
@@ -116,3 +117,10 @@ expand = true
 
 [node name="Transicion_juego_crece" parent="." instance=ExtResource( 5 )]
 mouse_filter = 2
+
+[node name="Bg" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 16 )
+autoplay = true
+
+[node name="Tween" type="Tween" parent="Bg"]

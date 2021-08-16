@@ -26,6 +26,8 @@ func dialogic_signal(argument):
 			$ventana_gris/Tween.interpolate_property($ventana_gris, 'rect_scale', Vector2(1,1), Vector2(0.6,0.6), 0.4, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
 			$ventana_gris/Tween.start()
 		"termina":
+			$Bg/Tween.interpolate_property($Bg, 'volume_db', 0, -50, 2, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+			$Bg/Tween.start()			
 			Manager.nivelActual = 1
 			Manager.figurasVerdaderas = []
 			Manager.empaparruchometroActual = Manager.empaparruchometroInicial[Manager.nivelActual-1]

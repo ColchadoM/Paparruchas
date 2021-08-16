@@ -15,6 +15,8 @@ func _ready():
 
 
 func _on_Jugar_pressed():
+	$Bg/Tween.interpolate_property($Bg, 'volume_db', 0, -50, 2, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	$Bg/Tween.start()
 	$vidrio_arriba.show()
 	$vidrio_izquierda.show()
 	$vidrio_abajo.show()
@@ -54,12 +56,12 @@ func _on_Jugar_pressed():
 func _on_gnu_licencia_toggled(button_pressed):
 	print(button_pressed)
 	if button_pressed:
-		print('ddsads')
+#		print('ddsads')
 		$ventana_terminos/Tween.interpolate_property($ventana_terminos, 'rect_scale', Vector2(0,0), Vector2(0.618,0.618), 1, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
 		$ventana_terminos/Tween.start()
 		pass # Replace with function body.
 	else:
-		print('ddsads')
+#		print('ddsads')
 		$ventana_terminos/Tween.interpolate_property($ventana_terminos, 'rect_scale', Vector2(0.618,0.618), Vector2(0,0), 1, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
 		$ventana_terminos/Tween.start()
 		pass # Replace with function body.

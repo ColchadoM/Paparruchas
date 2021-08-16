@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/376205__jdaniel1999__camera-shutter.wav-9f226ed89c8a1b70f162c50c60de6432.sample"
+
+[deps]
+
+source_file="res://Recursos/Sonoros/Incidentales/376205__jdaniel1999__camera-shutter.wav"
+dest_files=[ "res://.import/376205__jdaniel1999__camera-shutter.wav-9f226ed89c8a1b70f162c50c60de6432.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

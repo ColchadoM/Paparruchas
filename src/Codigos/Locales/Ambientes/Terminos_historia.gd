@@ -10,6 +10,8 @@ func _ready():
 func dialogic_signal(argument):
 	match argument:		
 		"termina":
+			$Bg/Tween.interpolate_property($Bg, 'volume_db', 0, -50, 2, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+			$Bg/Tween.start()			
 			Manager.nivelActual = 4
 			Manager.figurasVerdaderas = []
 			Manager.empaparruchometroActual = Manager.empaparruchometroInicial[Manager.nivelActual-1]

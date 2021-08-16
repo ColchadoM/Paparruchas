@@ -32,6 +32,8 @@ func _ready():
 
 
 func level_button_pressed(escena):	
+	$Bg/Tween.interpolate_property($Bg, 'volume_db', 0, -50, 2, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	$Bg/Tween.start()
 	Manager.nivelActual = escena	
 	$Transicion_juego_crece.inicia_transicion()
 	yield(get_tree().create_timer(2),"timeout")

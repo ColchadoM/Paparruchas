@@ -86,4 +86,6 @@ pause_mode = 2
 stream = ExtResource( 6 )
 autoplay = true
 
+[node name="Tween" type="Tween" parent="Bg"]
+
 [connection signal="pressed" from="Button" to="DialogNode" method="_on_Button_pressed"]

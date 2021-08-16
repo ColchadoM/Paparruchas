@@ -6,7 +6,7 @@ ALEX_1_4,"¡Qué onda, Randy! Estoy emocionado por la feria de hoy."
 ALEX_1_5,¿Vas conmigo?
 ALEX_1_6,¿Randy? ¡Pélame! ¿Qué ves en tu cel?
 RANDY_1_1,"Qué onda, Alex. La verdad no tengo ganas de ir."
-RANDY_1_2,Estoy viendo que todo mundo dice que está aburrida
+RANDY_1_2,Estoy viendo que todo mundo dice que está aburrida. . .
 RANDY_1_3,y que probablemente se cancele.
 ALEX_1_7,"Achis, ¿dónde leíste eso?"
 RANDY_1_4,"Mira, aquí."
@@ -20,14 +20,14 @@ RANDY_1_6,"Lo siento, Alex. Adiós. "
 ,
 ALEX_2_1,"Hola, doña Axolote. ¿Usted irá a la Gran Feria?"
 ALEX_2_2,Le quiero comprar unos tamalitos de dulce jeje.
-AXOLOTE_2_1,"Hola, Alex. No sé, no creo ir. Me llegó un mensaje de que habría"
+AXOLOTE_2_1,"Hola, Alex. No sé, no creo ir. Me llegó un mensaje de que habría. . ."
 AXOLOTE_2_2,unos ladrones por ahí.
 ALEX_2_3,¿Ladrones? Suena inseguro.
-AXOLOTE_2_3,"Sí, Alex, ladrones. A mí esas cosas me dan miedo, "
-AXOLOTE_2_4,mejor no me arriesgo. No vaya a ser…
+AXOLOTE_2_3,"Sí, Alex, ladrones. A mí esas cosas me dan miedo."
+AXOLOTE_2_4,Mejor no me arriesgo. No vaya a ser. . .
 ALEX_2_4,"Pero, ¿quién se la envió? ¿no cree que sean sólo rumores?"
-AXOLOTE_2_5,"Pues no sé, Alex, no tenía fecha ni decía quién la escribió, "
-AXOLOTE_2_6,pero yo se la envié a mis amigas por si las moscas…
+AXOLOTE_2_5,"Pues no sé, Alex, no tenía fecha ni decía quién la escribió. . ."
+AXOLOTE_2_6,pero yo se la envié a mis amigas por si las moscas.
 ALEX_2_5,¿Y los tamalitos? 
 AXOLOTE_2_7,"Los tamalitos serán para otro día. Ya me voy, mijito. "
 AXOLOTE_2_8,Salúdame a tu mami.
@@ -41,37 +41,37 @@ JUNI_3_3,y ahora está toda lenta.
 ALEX_3_2,"Ay, no… Creo que es un virus. A ver…"
 JUNI_3_4,Mira…
 RATA_3_1,"Han hecho un gran trabajo, ratillas. "
-RATA_3_2,Sigan compartiendo noticias falsas y lanzando virus
+RATA_3_2,Sigan compartiendo noticias falsas y lanzando virus. . .
 RATA_3_3,para que nadie quiera ir a la Gran Feria. 
 RATILLAS_3_1,"¿Para qué quiere eso, jefe?"
-RATA_3_4,"Pues, miren, ratas tontas, en cuánto nadie vaya nos "
-RATA_3_5,apoderaremos de ese lugar y construiremos un edificio 
-RATA_3_6,"sólo para nosotros, las ratas."
+RATA_3_4,"Pues, miren, ratas tontas, en cuánto nadie vaya"
+RATA_3_5,nos apoderaremos de ese lugar y construiremos un edificio 
+RATA_3_6,sólo para nosotras: las ratas.
 RATA_3_7,Sólo necesitamos que nadie vaya y creo que lo estamos logrando.
 ALEX_3_3,"Oye, Juni, ¿ya viste esto?"
 ALEX_3_4,Se parece a la corona del sr. Rata. 
 ALEX_3_5,¿Crees que él esté detrás de esto?
 JUNI_3_5,"Pues no me sorprendería, es bien grosero. "
-JUNI_3_6,Una vez me lo encontré y le dije buenos días y ni me respondió.
+JUNI_3_6,"Una vez me lo encontré y le dije buenos días, me vió y ni me respondió."
 ,
-ALEX_4_1,"Mira, busqué al sr. Rata en internet"
-ALEX_4_2,y en su página aparecen fotos bien raras.
-JUNI_4_1,"Sí, mira, en esta foto según aparece doña Axolote con él"
-JUNI_4_2,"y ella nunca va a los eventos de ratas,"
-JUNI_4_3,se me hace que las editaron.
-ALEX_4_3,"¿Tú crees? Puede ser, "
-ALEX_4_4,no creo que el sr. Rata sea tan popular siendo tan grosero.
+ALEX_4_1,"Mira, busqué al sr. Rata en internet."
+ALEX_4_2,Y en su página aparecen fotos bien raras.
+JUNI_4_1,"Sí, mira, en esta foto según aparece doña Axolote con él. . ."
+JUNI_4_2,y ella nunca va a los eventos de ratas.
+JUNI_4_3,Se me hace que las editaron.
+ALEX_4_3,¿Tú crees? Puede ser. . .
+ALEX_4_4,No creo que el sr. Rata sea tan popular siendo tan grosero.
 JUNI_4_4,"Ah, dale que sí a eso para que se quite."
-ALEX_4_5,"Mmm… no, mira, aquí dice que si aceptas"
+ALEX_4_5,"Mmm… no, mira, aquí dice que si aceptas. . ."
 ALEX_4_6,le das tus datos personales al sr. Rata.
 JUNI_4_5,"Ah, no manches, yo siempre le doy aceptar sin leer jeje."
-ALEX_4_7,"Ay, Juni, noooo. Siempre tienes que leer estas cosas "
+ALEX_4_7,"Ay, Juni, noooo. Siempre tienes que leer estas cosas. . ."
 ALEX_4_8,para saber si aceptas o lo rechazas.
 JUNI_4_6,"Oops, tienes razón. Los leeré la próxima vez."
 RATA_4_1,Parece que mi plan está funcionando.
 RATA_4_2,Sólo queda una hora y no hay nadie cerca de la Gran Feria. 
-ALEX_4_9,"Juni, tenemos que avisarle a toda la ciudad que el sr. Rata"
-ALEX_4_10,está manipulando información e imágenes. 
+ALEX_4_9,"Juni, tenemos que avisarle a toda la ciudad que "
+ALEX_4_10,el sr. Rata está manipulando información e imágenes. 
 ALEX_4_11,Seguro fue él quién inventó el rumor que leyó Randy 
 ALEX_4_12,de que iba a estar aburrida
 ALEX_4_13,y sobre los ladrones que compartió doña Axolote.
@@ -96,7 +96,7 @@ JUNI_5_1,Qué miedo.
 ALEX_5_1,"Sí, muchas gracias por eso. Creo que el malvado sr. Rata "
 ALEX_5_2,seguirá queriendo engañarnos por eso tenemos que estar atentxs.
 MULTITUD_5_7,"Sí, no se preocupen. Lo importante es que"
-MULTITUD_5_8,estamos todxs aquí y la pasaremos bien. 
+MULTITUD_5_8,estamos aquí y la pasaremos bien. 
 AXOLOTE_5_1,"¡Alex, vente! Te guardé unos tamales."
 AXOLOTE_5_2,Uno de rajas y otro de dulce. 
 ALEX_5_3,Me encantaaaaan. ¡Gracias!

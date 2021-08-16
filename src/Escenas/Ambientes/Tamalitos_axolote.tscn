@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://addons/dialogic/Dialog.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Codigos/Locales/Ambientes/Tamalitos_axolote.gd" type="Script" id=2]
 [ext_resource path="res://Escenas/Objetos/Transicion_juego_crece.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Recursos/Sonoros/Musica/HistoriaAudio.wav" type="AudioStream" id=4]
 
 [node name="Tamalitos_axolote" type="Control"]
 anchor_right = 1.0
@@ -42,5 +43,12 @@ __meta__ = {
 
 [node name="Transicion_juego_crece" parent="." instance=ExtResource( 3 )]
 mouse_filter = 2
+
+[node name="Bg" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 4 )
+autoplay = true
+
+[node name="Tween" type="Tween" parent="Bg"]
 
 [connection signal="pressed" from="Button" to="DialogNode" method="_on_Button_pressed"]

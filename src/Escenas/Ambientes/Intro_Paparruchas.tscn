@@ -363,5 +363,7 @@ pause_mode = 2
 stream = ExtResource( 14 )
 autoplay = true
 
+[node name="Tween" type="Tween" parent="Bg"]
+
 [connection signal="toggled" from="Botones/gnu_licencia" to="." method="_on_gnu_licencia_toggled"]
 [connection signal="pressed" from="Botones/CenterContainer/Jugar" to="." method="_on_Jugar_pressed"]

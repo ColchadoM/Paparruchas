@@ -1,8 +1,39 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://addons/dialogic/Dialog.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Objetos/Transicion_juego_crece.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Codigos/Locales/Ambientes/Final_paparruchas.gd" type="Script" id=3]
+[ext_resource path="res://Recursos/Sonoros/Musica/HistoriaAudio.wav" type="AudioStream" id=4]
+[ext_resource path="res://Recursos/Visuales/Fondos/Polaroid_Final.png" type="Texture" id=5]
+[ext_resource path="res://Recursos/Visuales/Intro/logo.PNG" type="Texture" id=6]
+[ext_resource path="res://Recursos/Sonoros/Incidentales/376205__jdaniel1999__camera-shutter.wav" type="AudioStream" id=7]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Recursos/Textos/Fuentes/DaxlinePro-Bold.otf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 71
+font_data = SubResource( 1 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "creditos"
+length = 80.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 80 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1143.31, 1439.58 ), Vector2( 1143.31, -4728.5 ) ]
+}
+
+[sub_resource type="DynamicFont" id=4]
+size = 70
+font_data = SubResource( 1 )
 
 [node name="Final_paparruchas" type="Control"]
 anchor_right = 1.0
@@ -26,6 +57,189 @@ margin_right = 1280.0
 focus_mode = 0
 enabled_focus_mode = 0
 flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Foto_bg" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 149.502
+margin_right = 149.502
+color = Color( 0.501961, 0.188235, 0.384314, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Foto" type="TextureRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -344.389
+margin_right = -344.389
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Creditos" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -136.69
+margin_top = 719.583
+margin_right = 1545.31
+margin_bottom = 6173.58
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 1, 1, 0.94902, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]
+
+
+
+
+
+
+
+[wave amp=50 freq=2]Medio Inestable[/wave]
+
+
+Concepto y guión:
+[wave amp=50 freq=2]Valeria Rico (Papitas)[/wave]
+
+Arte:
+[wave amp=50 freq=2]Alex Marz (Chamana)[/wave]
+
+Marketing:
+[wave amp=50 freq=2]Andrea Rico (Oyuski)[/wave]
+
+Diseño:
+[wave amp=50 freq=2]Debra Ramírez (Debrx)[/wave]
+
+Desarrollo:
+[wave amp=50 freq=2]Antony Morales (Antony999k)
+Andrés Azzolina (Azzolina)
+Fernando Colchado (Clutch)[/wave]
+
+Música:
+[wave amp=50 freq=2]Andrés Azzolina (Azzolina)[/wave]
+
+Agradecimientos:
+[wave amp=50 freq=2]Héctor Guerrero
+Gio Marz[/wave]
+
+Desarrollado para el 
+CENTRO DE CULTURA DIGITAL
+
+(c) 2021 Medio Inestable
+[/center]"
+text = "
+
+
+
+
+
+
+
+Medio Inestable
+
+
+Concepto y guión:
+Valeria Rico (Papitas)
+
+Arte:
+Alex Marz (Chamana)
+
+Marketing:
+Andrea Rico (Oyuski)
+
+Diseño:
+Debra Ramírez (Debrx)
+
+Desarrollo:
+Antony Morales (Antony999k)
+Andrés Azzolina (Azzolina)
+Fernando Colchado (Clutch)
+
+Música:
+Andrés Azzolina (Azzolina)
+
+Agradecimientos:
+Héctor Guerrero
+Gio Marz
+
+Desarrollado para el 
+CENTRO DE CULTURA DIGITAL
+
+(c) 2021 Medio Inestable
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Creditos"]
+anims/creditos = SubResource( 3 )
+
+[node name="logo2" type="TextureRect" parent="Creditos"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -518.5
+margin_right = 518.5
+margin_bottom = 533.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gracias2" type="RichTextLabel" parent="Creditos"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -508.5
+margin_top = 503.969
+margin_right = 508.5
+margin_bottom = 773.969
+custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 1, 1, 0.94902, 1 )
+bbcode_enabled = true
+bbcode_text = "[center][wave amp=50 freq=2]¡Gracias por jugar!"
+text = "¡Gracias por jugar!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="logo" type="TextureRect" parent="Creditos"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -507.79
+margin_top = -607.425
+margin_right = 529.21
+margin_bottom = -74.4248
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gracias" type="RichTextLabel" parent="Creditos"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -556.022
+margin_top = -133.602
+margin_right = 460.978
+margin_bottom = 136.398
+custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 1, 1, 0.94902, 1 )
+bbcode_enabled = true
+bbcode_text = "[center][wave amp=50 freq=2]¡Gracias por jugar!"
+text = "¡Gracias por jugar!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -54,4 +268,17 @@ __meta__ = {
 [node name="Transicion_juego_crece" parent="." instance=ExtResource( 2 )]
 mouse_filter = 2
 
+[node name="clic_foto" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 7 )
+volume_db = 10.166
+
+[node name="Bg" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 4 )
+autoplay = true
+
+[node name="Tween" type="Tween" parent="Bg"]
+
 [connection signal="pressed" from="Button" to="DialogNode" method="_on_Button_pressed"]
+[connection signal="animation_finished" from="Creditos/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
