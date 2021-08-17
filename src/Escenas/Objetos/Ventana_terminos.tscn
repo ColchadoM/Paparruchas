@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Recursos/Visuales/Interfaz/ventana_terminos.png" type="Texture" id=1]
 [ext_resource path="res://Codigos/Locales/Objetos/Ventana_terminos.gd" type="Script" id=2]
-[ext_resource path="res://Recursos/Visuales/Interfaz/contenedor_texto_3.png" type="Texture" id=3]
-[ext_resource path="res://Recursos/Visuales/Interfaz/contenedor_texto_juni.png" type="Texture" id=4]
+[ext_resource path="res://Recursos/Visuales/Intro/BotonInicio.png" type="Texture" id=3]
 [ext_resource path="res://Recursos/Visuales/Interfaz/Ventana.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -72,14 +71,17 @@ __meta__ = {
 }
 
 [node name="Aceptar_sprite" type="Sprite" parent="Ventana_full"]
-position = Vector2( 242.726, 329.627 )
-scale = Vector2( 0.369085, 0.72 )
-texture = ExtResource( 4 )
+position = Vector2( 219.366, 332.964 )
+scale = Vector2( 1.10421, 0.72 )
+texture = ExtResource( 3 )
 
 [node name="Cancelar_sprite" type="Sprite" parent="Ventana_full"]
-position = Vector2( -263.702, 335.621 )
-scale = Vector2( 0.369085, 0.72 )
+position = Vector2( -307.894, 336.301 )
+scale = Vector2( 1.10421, 0.72 )
 texture = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="Aceptar_t" type="RichTextLabel" parent="Ventana_full"]
 anchor_left = 0.5

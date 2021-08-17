@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://addons/dialogic/Dialog.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Objetos/Transicion_juego_crece.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Recursos/Visuales/Fondos/Polaroid_Final.png" type="Texture" id=5]
 [ext_resource path="res://Recursos/Visuales/Intro/logo.PNG" type="Texture" id=6]
 [ext_resource path="res://Recursos/Sonoros/Incidentales/376205__jdaniel1999__camera-shutter.wav" type="AudioStream" id=7]
+[ext_resource path="res://Recursos/Visuales/Interfaz/gracias.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://Recursos/Textos/Fuentes/DaxlinePro-Bold.otf"
@@ -67,17 +68,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 149.502
 margin_right = 149.502
-color = Color( 0.501961, 0.188235, 0.384314, 1 )
+color = Color( 0.501961, 0.188235, 0.384314, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Foto" type="TextureRect" parent="."]
 visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -344.389
-margin_right = -344.389
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -1280.0
+margin_top = -720.0
+margin_right = 1280.0
+margin_bottom = 720.0
 texture = ExtResource( 5 )
 expand = true
 __meta__ = {
@@ -129,7 +134,8 @@ Música:
 
 Agradecimientos:
 [wave amp=50 freq=2]Héctor Guerrero
-Gio Marz[/wave]
+Gio Marz
+Pepe Macba[/wave]
 
 Desarrollado para el 
 CENTRO DE CULTURA DIGITAL
@@ -170,6 +176,7 @@ Andrés Azzolina (Azzolina)
 Agradecimientos:
 Héctor Guerrero
 Gio Marz
+Pepe Macba
 
 Desarrollado para el 
 CENTRO DE CULTURA DIGITAL
@@ -196,6 +203,7 @@ __meta__ = {
 }
 
 [node name="Gracias2" type="RichTextLabel" parent="Creditos"]
+visible = false
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -508.5
@@ -217,9 +225,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -507.79
-margin_top = -607.425
+margin_top = -562.069
 margin_right = 529.21
-margin_bottom = -74.4248
+margin_bottom = -29.0688
 texture = ExtResource( 6 )
 expand = true
 __meta__ = {
@@ -227,6 +235,7 @@ __meta__ = {
 }
 
 [node name="Gracias" type="RichTextLabel" parent="Creditos"]
+visible = false
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -243,6 +252,37 @@ text = "¡Gracias por jugar!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="gracias_img" type="TextureRect" parent="Creditos"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -253.04
+margin_top = 423.484
+margin_right = 242.96
+margin_bottom = 609.484
+rect_rotation = 13.9054
+texture = ExtResource( 8 )
+expand = true
+
+[node name="gracias_img2" type="TextureRect" parent="Creditos"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 49.3414
+margin_top = -679.887
+margin_right = 545.341
+margin_bottom = -493.887
+rect_rotation = 13.9054
+texture = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="Creditos/gracias_img2"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0

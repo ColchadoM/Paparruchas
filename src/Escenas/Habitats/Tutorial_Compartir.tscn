@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Escenas/Personajes/Randal_cabeza.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Recursos/Visuales/Sprites/Figuras/Cuadro.png" type="Texture" id=2]
+[ext_resource path="res://Recursos/Visuales/Sprites/Figuras/Triangulo.png" type="Texture" id=2]
 [ext_resource path="res://Codigos/Locales/Habitats/Tutorial_Compartir.gd" type="Script" id=3]
 [ext_resource path="res://Recursos/Visuales/Interfaz/Flechita.png" type="Texture" id=4]
 [ext_resource path="res://Recursos/Visuales/Interfaz/compartir.png" type="Texture" id=5]
@@ -58,7 +58,6 @@ position = Vector2( 926.533, 680.646 )
 texture = ExtResource( 7 )
 
 [node name="Randy" parent="Randy" instance=ExtResource( 1 )]
-visible = true
 position = Vector2( 0, 0 )
 
 [node name="Compartir" type="Sprite" parent="Randy"]
@@ -68,7 +67,7 @@ texture = ExtResource( 5 )
 
 [node name="Area2D" type="Area2D" parent="Randy"]
 collision_layer = 0
-collision_mask = 4
+collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Randy/Area2D"]
 shape = SubResource( 1 )
@@ -76,7 +75,8 @@ shape = SubResource( 1 )
 [node name="Ventana_drag" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1721.21, 677.082 )
 gravedad = false
-valorFigura = 1
+area_tuto = true
+valorFigura = 2
 
 [node name="Mano" type="Sprite" parent="."]
 position = Vector2( 1033.88, 780.426 )
@@ -93,13 +93,13 @@ texture = ExtResource( 8 )
 
 [node name="Cuadro" type="Sprite" parent="Contenedor_pp"]
 position = Vector2( -209.999, -1.92658 )
-scale = Vector2( 0.189806, 0.189806 )
-texture = ExtResource( 2 )
+scale = Vector2( 0.229997, 0.229997 )
+texture = ExtResource( 6 )
 
 [node name="Estrella" type="Sprite" parent="Contenedor_pp"]
 position = Vector2( -63.8918, -1.92657 )
 scale = Vector2( 0.215124, 0.215124 )
-texture = ExtResource( 6 )
+texture = ExtResource( 2 )
 
 [node name="Control" type="Control" parent="."]
 anchor_right = 1.0

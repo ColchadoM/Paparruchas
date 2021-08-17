@@ -118,6 +118,16 @@ expand = true
 [node name="Transicion_juego_crece" parent="." instance=ExtResource( 5 )]
 mouse_filter = 2
 
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="ColorRect"]
+
 [node name="Bg" type="AudioStreamPlayer2D" parent="."]
 pause_mode = 2
 stream = ExtResource( 16 )

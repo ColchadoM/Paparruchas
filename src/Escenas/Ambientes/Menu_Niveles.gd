@@ -13,6 +13,8 @@ var niveles_array:Array
 var textos_escenas:Array
 
 func _ready():
+	$ColorRect/Tween.interpolate_property($ColorRect, 'color', Color('ffffff'), Color('00ffffff'), 0.5, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
+	$ColorRect/Tween.start()
 	textos_escenas = [texto_1, texto_2, texto_3, texto_4]
 	
 	for path in niveles_paths:
@@ -35,7 +37,9 @@ func level_button_pressed(escena):
 	$Bg/Tween.interpolate_property($Bg, 'volume_db', 0, -50, 2, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	$Bg/Tween.start()
 	Manager.nivelActual = escena	
-	$Transicion_juego_crece.inicia_transicion()
+	$ColorRect/Tween.interpolate_property($ColorRect, 'color', Color('00ffffff'), Color('ffffff'), 0.5, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
+	$ColorRect/Tween.start()
+	#$Transicion_juego_crece.inicia_transicion()
 	yield(get_tree().create_timer(2),"timeout")
 	get_tree().change_scene_to(textos_escenas[escena-1]) # Change scene to any selected level
 

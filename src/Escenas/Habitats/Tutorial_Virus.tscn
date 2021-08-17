@@ -60,7 +60,6 @@ position = Vector2( 523.847, 684.21 )
 texture = ExtResource( 7 )
 
 [node name="Randy" parent="Randy" instance=ExtResource( 1 )]
-visible = true
 position = Vector2( 0, 0 )
 
 [node name="Compartir" type="Sprite" parent="Randy"]
@@ -70,7 +69,7 @@ texture = ExtResource( 5 )
 
 [node name="Area2D" type="Area2D" parent="Randy"]
 collision_layer = 0
-collision_mask = 4
+collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Randy/Area2D"]
 shape = SubResource( 1 )
@@ -106,6 +105,7 @@ tutorial = true
 [node name="Ventana_drag" parent="." instance=ExtResource( 9 )]
 position = Vector2( 2106.08, 687.773 )
 gravedad = false
+area_tuto = true
 valorFigura = 1
 
 [node name="WikiGenerator" parent="." instance=ExtResource( 12 )]

@@ -3,6 +3,7 @@ extends Control
 onready var inicio = preload("res://Escenas/Ambientes/Medio_intro.tscn")
 
 func _ready():
+	Engine.time_scale = 1
 	TranslationServer.set_locale("es")
 	$DialogNode.connect("dialogic_signal", self, 'dialogic_signal')
 	$ColorRect/Tween.interpolate_property($ColorRect, 'color', Color('ffffff'), Color('00ffffff'), 2.5, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
@@ -35,6 +36,8 @@ func dialogic_signal(argument):
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
+	$Creditos/gracias_img2/Tween.interpolate_property($Creditos/gracias_img2, 'modulate', Color('00ffffff'), Color('ffffff'), 1, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+	$Creditos/gracias_img2/Tween.start()
 	yield(get_tree().create_timer(2), "timeout")
 	$ColorRect/Tween.interpolate_property($ColorRect, 'color', Color('00ffffff'), Color('ffffff'), 3, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
 	$ColorRect/Tween.start()

@@ -60,6 +60,7 @@ z_as_relative = false
 texture = ExtResource( 14 )
 
 [node name="Randal" parent="Contenedor" instance=ExtResource( 1 )]
+visible = false
 
 [node name="Axolotl" type="Sprite" parent="Contenedor"]
 visible = false

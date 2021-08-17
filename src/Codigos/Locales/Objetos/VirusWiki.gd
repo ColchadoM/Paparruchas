@@ -26,9 +26,13 @@ func _ready():
 	var image = get_node("res://Recursos/Visuales/Sprites/ventana_virus.png")
 	yield(get_tree().create_timer(0.5), "timeout")
 	apenas_creada = false	
-	#Escalar random
-#	var nScale = rand_range(1,3)
-#	wikiV.scale = Vector2(nScale, nScale)
+	#Cambiar layer mask
+	if tutorial:
+		$Area2D.set_collision_layer_bit(4, true)
+		$Area2D.set_collision_layer_bit(3, false)
+	else:
+		$Area2D.set_collision_layer_bit(3, true)
+		$Area2D.set_collision_layer_bit(4, false)
 
 func _entraVirus():
 	#print('entra')

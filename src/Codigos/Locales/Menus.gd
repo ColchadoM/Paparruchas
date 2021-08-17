@@ -2,6 +2,7 @@ extends Control
 
 onready var menu_niveles = preload("res://Escenas/Ambientes/Menu_Niveles.tscn")
 onready var historia_final = preload("res://Escenas/Ambientes/Final_paparruchas.tscn")
+#onready var 
 
 func _ready():
 	Manager.connect("s_terminarNivel",self,"mostarMenu")
@@ -32,6 +33,7 @@ func _on_Reiniciar_pressed():
 	Manager.resetearNivel()
 
 func _on_Siguiente_pressed():
+	
 	Manager.siguienteNivel()
 	Manager.emit_signal("s_nextLevel")
 	esconderMenu()

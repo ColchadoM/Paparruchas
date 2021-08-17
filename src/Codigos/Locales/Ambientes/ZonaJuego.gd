@@ -29,3 +29,8 @@ func add_tuto():
 #	particula_instance.emitting = true
 	add_child_below_node($Opaco, nivel)
 	
+
+
+func _on_Siguiente_pressed():
+	$ColorRect/Tween.interpolate_property($ColorRect, 'color', Color('ffffff'), Color('00ffffff'), 0.5, Tween.TRANS_CUBIC, Tween.EASE_IN_OUT)
+	$ColorRect/Tween.start()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Escenas/Habitats/WikiGenerador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Habitats/GUI.tscn" type="PackedScene" id=2]
@@ -25,6 +25,13 @@
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 5 )
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://Recursos/Textos/Fuentes/DaxlinePro-Bold.otf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 80
+font_data = SubResource( 2 )
 
 [node name="ZonaJuego" type="Node"]
 script = ExtResource( 11 )
@@ -139,7 +146,7 @@ __meta__ = {
 [node name="ColorRect" type="ColorRect" parent="Menus/GameOver"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0, 0, 0, 0.85098 )
+color = Color( 0.207843, 0.0392157, 0.168627, 0.862745 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -160,17 +167,36 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Siguiente" type="Button" parent="Menus/GameOver/ColorRect"]
+[node name="Siguiente" type="TextureButton" parent="Menus/GameOver/ColorRect"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -659.0
-margin_top = -151.0
-margin_right = 659.0
-margin_bottom = 151.0
-custom_fonts/font = ExtResource( 5 )
-text = "Siguiente"
+margin_left = -344.0
+margin_top = -163.0
+margin_right = 346.0
+margin_bottom = 164.0
+texture_normal = ExtResource( 15 )
+expand = true
+
+[node name="Siguiente_texto" type="RichTextLabel" parent="Menus/GameOver/ColorRect/Siguiente"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -324.619
+margin_top = -75.1908
+margin_right = 367.381
+margin_bottom = 54.8092
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 3 )
+custom_colors/default_color = Color( 1, 0.992157, 0.933333, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Continuar"
+text = "Continuar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Reiniciar" type="Button" parent="Menus/GameOver/ColorRect"]
 visible = false
@@ -398,12 +424,24 @@ __meta__ = {
 [node name="Transicion_juego_sale" parent="." instance=ExtResource( 12 )]
 mouse_filter = 2
 
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 1, 1, 1, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="ColorRect"]
+
 [connection signal="timeout" from="TextoInicio/TimerInicio" to="TextoInicio" method="_on_TimerInicio_timeout"]
 [connection signal="timeout" from="TextoInicio/TimerAdelante" to="TextoInicio" method="_on_TimerAdelante_timeout"]
 [connection signal="timeout" from="TextoInicio/TimerFinal" to="WikiGenerador" method="_on_TimerFinal_timeout"]
 [connection signal="timeout" from="TextoInicio/TimerFinal" to="TextoInicio" method="_on_TimerFinal_timeout"]
 [connection signal="tween_all_completed" from="TextoInicio/TweenListo" to="TextoInicio" method="_on_TweenListo_tween_all_completed"]
 [connection signal="tween_all_completed" from="TextoInicio/TweenAdelante" to="TextoInicio" method="_on_TweenAdelante_tween_all_completed"]
+[connection signal="pressed" from="Menus/GameOver/ColorRect/Siguiente" to="." method="_on_Siguiente_pressed"]
 [connection signal="pressed" from="Menus/GameOver/ColorRect/Siguiente" to="Menus" method="_on_Siguiente_pressed"]
 [connection signal="pressed" from="Menus/GameOver/ColorRect/Reiniciar" to="Menus" method="_on_Reiniciar_pressed"]
 [connection signal="pressed" from="Menus/Pausa/ColorRect/TextureRect/ContinuarC/Continuar" to="Menus" method="_on_Continuar_pressed"]

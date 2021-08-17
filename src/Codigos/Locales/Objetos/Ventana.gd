@@ -13,6 +13,7 @@ onready var caminito = $Caminito
 onready var sprite_ventana = $Ventana_sprite
 
 export var gravedad = true
+export var area_tuto = false
 
 
 export var valorFigura: int = -1
@@ -47,6 +48,14 @@ func _ready():
 	var nScale = rand_range(1.2,2)
 	scale = Vector2(nScale, nScale)
 	
+	#Cambia mask del area2d para no ser detectada mas que por el tutorial
+	if area_tuto:
+		$Area2D.set_collision_layer_bit(4, true)
+		$Area2D.set_collision_layer_bit(2, false)
+	else:
+		$Area2D.set_collision_layer_bit(2, true)
+		$Area2D.set_collision_layer_bit(4, false)
+#		pass
 
 func _physics_process(delta):
 	if(!deleteada):
