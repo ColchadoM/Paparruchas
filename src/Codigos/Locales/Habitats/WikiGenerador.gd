@@ -7,6 +7,8 @@ onready var wikiVirus = preload("res://Escenas/Objetos/VirusWiki.tscn")
 onready var wikiTerminos = preload("res://Escenas/Objetos/Ventana_terminos.tscn")
 onready var screenWidth = get_viewport().size.x
 onready var playzoneStart = screenWidth * Constants.playableArea
+onready var particula_x = preload("res://Escenas/Objetos/Error_caen_particulas.tscn")
+
 
 var generandoNormal:bool = true
 var puedeCompartir: bool = false
@@ -104,8 +106,9 @@ func _on_TimerFinal_timeout():
 	Manager.estadoJuegoActual = Manager.EstadoJuego.EN_JUEGO
 
 func mmostarX(x):
-	var newWikiX = wikiX.instance()
-	newWikiX.position = Vector2(x, get_viewport().size.y - 100)
+	var newWikiX = particula_x.instance()
+	newWikiX.position = Vector2(x, get_viewport().size.y)
+	newWikiX.emitting = true
 	add_child(newWikiX);
 
 func terminoscondiciones():

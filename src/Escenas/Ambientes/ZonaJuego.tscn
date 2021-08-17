@@ -422,6 +422,7 @@ __meta__ = {
 [node name="Tween" type="Tween" parent="Opaco"]
 
 [node name="Transicion_juego_sale" parent="." instance=ExtResource( 12 )]
+visible = false
 mouse_filter = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -441,8 +442,8 @@ __meta__ = {
 [connection signal="timeout" from="TextoInicio/TimerFinal" to="TextoInicio" method="_on_TimerFinal_timeout"]
 [connection signal="tween_all_completed" from="TextoInicio/TweenListo" to="TextoInicio" method="_on_TweenListo_tween_all_completed"]
 [connection signal="tween_all_completed" from="TextoInicio/TweenAdelante" to="TextoInicio" method="_on_TweenAdelante_tween_all_completed"]
-[connection signal="pressed" from="Menus/GameOver/ColorRect/Siguiente" to="." method="_on_Siguiente_pressed"]
 [connection signal="pressed" from="Menus/GameOver/ColorRect/Siguiente" to="Menus" method="_on_Siguiente_pressed"]
+[connection signal="pressed" from="Menus/GameOver/ColorRect/Siguiente" to="." method="_on_Siguiente_pressed"]
 [connection signal="pressed" from="Menus/GameOver/ColorRect/Reiniciar" to="Menus" method="_on_Reiniciar_pressed"]
 [connection signal="pressed" from="Menus/Pausa/ColorRect/TextureRect/ContinuarC/Continuar" to="Menus" method="_on_Continuar_pressed"]
 [connection signal="pressed" from="Menus/Pausa/ColorRect/TextureRect/Salir" to="Menus" method="_on_Salir_pressed"]

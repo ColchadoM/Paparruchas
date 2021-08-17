@@ -3,7 +3,7 @@
 [ext_resource path="res://Recursos/Visuales/Interfaz/ventana_terminos.png" type="Texture" id=1]
 [ext_resource path="res://Codigos/Locales/Objetos/Ventana_terminos.gd" type="Script" id=2]
 [ext_resource path="res://Recursos/Visuales/Intro/BotonInicio.png" type="Texture" id=3]
-[ext_resource path="res://Recursos/Visuales/Interfaz/Ventana.png" type="Texture" id=5]
+[ext_resource path="res://Recursos/Visuales/Interfaz/Ventana_sinx.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 107.947, 122.109 )
@@ -48,7 +48,7 @@ scale = Vector2( 0.2, 0.2 )
 [node name="Ventana_grande" type="Sprite" parent="Ventana_full"]
 position = Vector2( -63.405, 0 )
 scale = Vector2( 1.65043, 1.65043 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 
 [node name="Tween" type="Tween" parent="Ventana_full"]
 

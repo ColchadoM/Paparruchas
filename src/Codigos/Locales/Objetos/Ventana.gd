@@ -79,7 +79,7 @@ func _physics_process(delta):
 				position.y += speed * delta
 				rotation = lerp_angle(rotation, 0, 10 * delta)
 				# Revisa si se salio de la pantalla
-				if(position.y > get_viewport().size.y + sprite_ventana.texture.get_height()):
+				if(position.y > get_viewport().size.y + (sprite_ventana.texture.get_height()*sprite_ventana.scale.y)):
 					deleteada=true
 					#Revisa si es una paparrucha
 					if(!Helpers.esNoticiaVerdadera(Manager.figurasVerdaderas, valorFigura)):

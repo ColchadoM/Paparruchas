@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Recursos/Visuales/Interfaz/x.png" type="Texture" id=1]
+[ext_resource path="res://Recursos/Visuales/Materiales/error_cae_particulas.tres" type="Material" id=2]
+
+[node name="Error_caen_particulas" type="Particles2D"]
+emitting = false
+amount = 12
+lifetime = 2.0
+one_shot = true
+speed_scale = 2.13
+explosiveness = 0.88
+process_material = ExtResource( 2 )
+texture = ExtResource( 1 )
